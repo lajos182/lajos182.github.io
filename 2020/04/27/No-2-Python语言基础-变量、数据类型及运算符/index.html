@@ -6,35 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lajos182.github.io">
-  <title>Tag: Python | Lajos的博客</title>
+  <title>No.2 Python语言基础--变量、数据类型及运算符 | Lajos的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lajos的博客">
-<meta property="og:url" content="https://lajos182.github.io/tags/Python/index.html">
+  <meta name="description" content="2.1. 标识符、变量与常量标识符：开发人员在程序中自定义的一些符合和名称，其实就是一串字符串，如变量名、函数名等 Python标识符规则：只能由数字、字符和下划线组成，开头不能是数字，不能是关键字，大小写敏感且见名知义，要遵循小驼峰原则。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No.2 Python语言基础--变量、数据类型及运算符">
+<meta property="og:url" content="https://lajos182.github.io/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
+<meta property="og:description" content="2.1. 标识符、变量与常量标识符：开发人员在程序中自定义的一些符合和名称，其实就是一串字符串，如变量名、函数名等 Python标识符规则：只能由数字、字符和下划线组成，开头不能是数字，不能是关键字，大小写敏感且见名知义，要遵循小驼峰原则。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/Identifier.png">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/variable%20and%20constant.png">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/operate.png">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/flow%20control.png">
+<meta property="article:published_time" content="2020-04-27T06:25:47.000Z">
+<meta property="article:modified_time" content="2020-04-27T06:29:54.184Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="django">
-<meta property="article:tag" content="flask">
-<meta property="article:tag" content="scrapy">
-<meta property="article:tag" content="mySql">
-<meta property="article:tag" content="redis">
-<meta property="article:tag" content="mongoDB">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/lajos182/python-essay/blob/master/images/Identifier.png">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
   
@@ -209,41 +201,214 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-No-2-Python语言基础-变量、数据类型及运算符" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      No.2 Python语言基础--变量、数据类型及运算符
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
         <time datetime="2020-04-27T06:25:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">9分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="2-1-标识符、变量与常量"><a href="#2-1-标识符、变量与常量" class="headerlink" title="2.1. 标识符、变量与常量"></a>2.1. 标识符、变量与常量</h2><p><strong>标识符</strong>：开发人员在程序中自定义的一些符合和名称，其实就是一串字符串，如变量名、函数名等</p>
+<p>Python标识符规则：只能由数字、字符和下划线组成，开头不能是数字，不能是关键字，大小写敏感且见名知义，要遵循小驼峰原则。</p>
+<a id="more"></a>
+
+<p><img src="https://github.com/lajos182/python-essay/blob/master/images/Identifier.png" alt="标识符"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> keyword</span><br><span class="line">print(keyword.kwlist) <span class="comment"># 关键字列表</span></span><br><span class="line">&gt;&gt;&gt;[<span class="string">'False'</span>, <span class="string">'None'</span>, <span class="string">'True'</span>, <span class="string">'and'</span>, <span class="string">'as'</span>, <span class="string">'assert'</span>, <span class="string">'break'</span>, <span class="string">'class'</span>, <span class="string">'continue'</span>, <span class="string">'def'</span>, <span class="string">'del'</span>, <span class="string">'elif'</span>, <span class="string">'else'</span>, <span class="string">'except'</span>, <span class="string">'finally'</span>, <span class="string">'for'</span>, <span class="string">'from'</span>, <span class="string">'global'</span>, <span class="string">'if'</span>, <span class="string">'import'</span>, <span class="string">'in'</span>, <span class="string">'is'</span>, <span class="string">'lambda'</span>, <span class="string">'nonlocal'</span>, <span class="string">'not'</span>, <span class="string">'or'</span>, <span class="string">'pass'</span>, <span class="string">'raise'</span>, <span class="string">'return'</span>, <span class="string">'try'</span>, <span class="string">'while'</span>, <span class="string">'with'</span>, <span class="string">'yield'</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>变量</strong>：在程序运行过程中，其值可以改变的量。</p>
+<p>变量命名原则：尽量做到见名知意、尽量使用英文、推荐使用全小写加下划线的方式，如<code>user_name</code></p>
+<p><strong>常量</strong>：程序运行期间不会改变的数据，如<code>a = 1</code>。在python中没有常量，通常使用大写字母加下划线的方式模拟，如：<code>USER_NAME = &#39;xiaoming&#39;</code></p>
+<p><img src="https://github.com/lajos182/python-essay/blob/master/images/variable%20and%20constant.png" alt="变量与常量"></p>
+<p>代码注释：单行注释（<code># 注释内容</code>）、多行注释（<code>&#39;&#39;&#39;注释&#39;&#39;&#39;</code>, <code>&quot;&quot;&quot;注释&quot;&quot;&quot;</code>）</p>
+<h2 id="2-2-数据类型"><a href="#2-2-数据类型" class="headerlink" title="2.2. 数据类型"></a>2.2. 数据类型</h2><p>数据类型是为了处理不同的运算而存在，python中的数据类型有：<strong>整型(int)</strong>、<strong>浮点(float)</strong>、<strong>字符串(str)</strong>、<strong>列表(list)</strong>、<strong>元组(tuple)</strong>、<strong>字典(dict)</strong>、<strong>集合(set)</strong>、<strong>空(NoneType)</strong></p>
+<h3 id="2-2-1-字符串格式化"><a href="#2-2-1-字符串格式化" class="headerlink" title="2.2.1. 字符串格式化"></a>2.2.1. 字符串格式化</h3><p>在 Python 3.6 之前，字符串格式化方法主要有两种：<code>%格式化</code> 和 <code>str.format()</code>，Python3.6提供了一种新的字符串格式化方法：<code>f-string</code></p>
+<ul>
+<li><p>(1)<code>%-格式化</code>从 Python 刚开始时就存在了，堪称「一届元老」，但是 <a href="https://link.zhihu.com/?target=https%3A//docs.python.org/3/library/stdtypes.html%23printf-style-string-formatting">Python 官方文档</a>中并不推荐这种格式化方式：</p>
+<blockquote>
+<p>这里描述的格式化操作容易表现出各种问题，导致许多常见错误（例如无法正确显示元组和字典）。 使用较新的格式化字符串文字或 str.format() 可以有助于避免这些错误。这些替代方案还提供了更强大，灵活和可扩展的格式化文本方法。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>name = <span class="string">'lajos'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = <span class="number">18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello, %s, your age is %s ?'</span> %(name, age)</span><br><span class="line"><span class="string">'hello, lajos, your age is 18?'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>(2)<code>str.formar()</code>从Python2.6开始引入，它使用普通函数调用语法，并且可以通过 <code>__format__()</code> 方法为对象进行扩展。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"hello, &#123;&#125;. you are &#123;&#125;?"</span>.format(name,age)</span><br><span class="line"><span class="string">'hello, hoxis. you are 18?'</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"hello, &#123;1&#125;. you are &#123;0&#125;?"</span>.format(age,name)</span><br><span class="line"><span class="string">'hello, hoxis. you are 18?'</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"hello, &#123;name&#125;. you are &#123;age1&#125;?"</span>.format(age1=age,name=name)</span><br><span class="line"><span class="string">'hello, hoxis. you are 18?'</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>person = &#123;<span class="string">"name"</span>:<span class="string">"hoxis"</span>,<span class="string">"age"</span>:<span class="number">18</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"hello, &#123;name&#125;. you are &#123;age&#125;?"</span>.format(**person)</span><br><span class="line"><span class="string">'hello, hoxis. you are 18?'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>(3)<code>f-Strings</code>是指以 <code>f</code> 或 <code>F</code> 开头的字符串，其中以 <code>{}</code> 包含的表达式会进行值替换。f-string 里的 f 也许可以代表 <code>fast</code>，它比 %格式化方法和 str.format() 都要快：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>name = <span class="string">'hoxis'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = <span class="number">18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">f"hi, <span class="subst">&#123;name&#125;</span>, are you <span class="subst">&#123;age&#125;</span>"</span> <span class="comment"># 替换字符串</span></span><br><span class="line"><span class="string">'hi, hoxis, are you 18'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>F<span class="string">"hi, &#123;name&#125;, are you &#123;age&#125;"</span></span><br><span class="line"><span class="string">'hi, hoxis, are you 18'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">f"<span class="subst">&#123;name.lower()&#125;</span> is handsome."</span> <span class="comment"># 调用函数</span></span><br><span class="line"><span class="string">'hoxis is handsome.'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">Person</span>:</span></span><br><span class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line"><span class="meta">... </span>        self.name = name</span><br><span class="line"><span class="meta">... </span>        self.age = age</span><br><span class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="meta">... </span>        <span class="keyword">return</span> <span class="string">f"<span class="subst">&#123;self.name&#125;</span> is <span class="subst">&#123;self.age&#125;</span>"</span> <span class="comment"># 在类中使用</span></span><br><span class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="meta">... </span>        <span class="keyword">return</span> <span class="string">f"<span class="subst">&#123;self.name&#125;</span> is <span class="subst">&#123;self.age&#125;</span>. HAHA!"</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hoxis = Person(<span class="string">"hoxis"</span>,<span class="number">18</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">f"<span class="subst">&#123;hoxis&#125;</span>"</span></span><br><span class="line"><span class="string">'hoxis is 18'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">f"<span class="subst">&#123;hoxis!r&#125;</span>"</span></span><br><span class="line"><span class="string">'hoxis is 18. HAHA!'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(hoxis)</span><br><span class="line">hoxis <span class="keyword">is</span> <span class="number">18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hoxis</span><br><span class="line">hoxis <span class="keyword">is</span> <span class="number">18.</span> HAHA!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>name = <span class="string">'hoxis'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = <span class="number">18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>status = <span class="string">'Python'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = &#123;</span><br><span class="line"><span class="meta">... </span>    <span class="string">f'hi <span class="subst">&#123;name&#125;</span>.'</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">f'you are <span class="subst">&#123;age&#125;</span>.'</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">f'you are learning <span class="subst">&#123;status&#125;</span>.'</span></span><br><span class="line"><span class="meta">... </span>&#125;  <span class="comment"># 多行f-string</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message</span><br><span class="line">&#123;<span class="string">'hi hoxis.you are 18.you are learning Python.'</span>&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>（4）<code>f-string</code>在python3.8中加入新特性，可以在表达式的末尾添加<code>=</code>,此时可以同时显示表达式和值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; python &#x3D; 3.8</span><br><span class="line">&gt;&gt;&gt; f&#39;&#123;python&#x3D;&#125;&#39;</span><br><span class="line">&#39;python &#x3D; 3.8&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-2-列表、元组、字典、集合的区别"><a href="#2-2-2-列表、元组、字典、集合的区别" class="headerlink" title="2.2.2. 列表、元组、字典、集合的区别"></a>2.2.2. 列表、元组、字典、集合的区别</h3><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">列表</td>
+<td align="left">列表是一组任意类型的值，按照一定的顺序组合而成； <br /> 通过索引来标识元素，第一个索引为0；需要注意的是索引可以是负值；<br /> 3列表中元素是任意类型的，包括列表类型； <br />可以进行合并，删除，索引，切片等操作； 5 定义表使用中括号。</td>
+</tr>
+<tr>
+<td align="left">元组</td>
+<td align="left">元组是任意对象的有序集合（这一点和列表相同）；<br />元组是不可变的（不能 增，删，改），但可以对元组进行合并；<br />元组的速度比列表要快；<br />定义元组使用小括号；<br />需要注意的是定义一个元素时需要加上逗号，例如tuple=（333，）。</td>
+</tr>
+<tr>
+<td align="left">字典</td>
+<td align="left">字典是通过键值对进行存储的，所以字典没有顺序；<br />字典是通过键值进行索引的且键值必须唯一； <br />字典可以进行增，删，改，查等操作，可以包含任意其他类型；<br />定义字典使用大括号，各个键值对之间使用逗号隔开。</td>
+</tr>
+<tr>
+<td align="left">集合</td>
+<td align="left">集合是简单对象的无序不重复元素集合； <br />集合分为可变集合set（元素是可哈希的），不可变集合frozenset（元素不可哈希）；<br />可以进行去除重复元素；<br />可以进行并集，交集，差集等。</td>
+</tr>
+</tbody></table>
+<p>字典的创建方法：</p>
+<ul>
+<li><p>直接创建：<code>dict = {&#39;name&#39;: &#39;earth&#39;, &#39;port&#39;: 80}</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">dict</span><span class="params">(**kwarg)</span>             # **<span class="title">kwargs</span> -- 关键字</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">dict</span><span class="params">(mapping, **kwarg)</span>    # <span class="title">mapping</span> -- 元素的容器。</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">dict</span><span class="params">(iterable, **kwarg)</span>   # <span class="title">iterable</span> -- 可迭代对象。</span></span><br><span class="line"><span class="class"></span></span><br><span class="line">dict1 = &#123;"a": 1, "b": 2&#125;</span><br><span class="line">dict2 = &#123;<span class="string">"c"</span>: <span class="number">3</span>&#125;</span><br><span class="line">dict3 = dict(dict1, **dict2) <span class="comment"># dict3 = &#123;"a": 1, "b": 2, "c": 3&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>工厂方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">items = [(<span class="string">'name'</span>, <span class="string">'earth'</span>), (<span class="string">'port'</span>, <span class="number">80</span>)]</span><br><span class="line">dict1 = dict(items)</span><br><span class="line">dict2 = dict(([<span class="string">'name'</span>, <span class="string">'earth'</span>], [<span class="string">'port'</span>, <span class="string">'80'</span>]))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>fromkeys()</code>方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;&#125;.fromkeys((<span class="string">'x'</span>, <span class="string">'y'</span>), <span class="number">-1</span>)  <span class="comment"># &#123;'x': -1, 'y': -1&#125;</span></span><br><span class="line">dict2 = &#123;&#125;.fromkeys((<span class="string">'x'</span>, <span class="string">'y'</span>))   <span class="comment"># &#123;'x': None, 'y': None&#125;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="2-3-运算符与流程控制"><a href="#2-3-运算符与流程控制" class="headerlink" title="2.3. 运算符与流程控制"></a>2.3. 运算符与流程控制</h2><h3 id="2-3-1-运算符"><a href="#2-3-1-运算符" class="headerlink" title="2.3.1. 运算符"></a>2.3.1. 运算符</h3><p><img src="https://github.com/lajos182/python-essay/blob/master/images/operate.png" alt="标识符"></p>
+<p>运算符优先级：无需记录运算符的优先级，需要的时候添加()即可。</p>
+<p>灵活的<code>or</code>：<code>a = False or 2</code>， 赋值前会判断前面的值，若为真则使用，若为假，则使用or后面的值</p>
+<p><strong>海象表达式<code>:=</code>:</strong>python3.8引入的新语法，将给变量赋值，这个变量可以是表达式的一部分。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用在if中可以避免调用len()两次</span></span><br><span class="line"><span class="keyword">if</span> (n := len(a)) &gt; <span class="number">10</span>:</span><br><span class="line">    print(<span class="string">f'List is too long (<span class="subst">&#123;n&#125;</span> elements, expected &lt;= 10)'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正则表达式匹配和获取结果的时候</span></span><br><span class="line">discount = <span class="number">0.00</span></span><br><span class="line"><span class="keyword">if</span> (mo := re.search(<span class="string">r'(\d+)% discount'</span>, advertisement)):</span><br><span class="line">    discount = float(mo.group(<span class="number">1</span>)) / <span class="number">100.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用在while循环语句中，可以同时取值，并判断是否为空</span></span><br><span class="line"><span class="keyword">while</span> (block := f.read(<span class="number">256</span>) != <span class="string">''</span>):</span><br><span class="line">    process(block)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-2-流程控制"><a href="#2-3-2-流程控制" class="headerlink" title="2.3.2. 流程控制"></a>2.3.2. 流程控制</h3><p><img src="https://github.com/lajos182/python-essay/blob/master/images/flow%20control.png" alt="流程控制"></p>
+<p>列表生成式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">11</span>)])</span><br><span class="line">print([i*<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">11</span>)])</span><br><span class="line">print([i*i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">11</span>)])</span><br><span class="line">print([str(i) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">11</span>)])</span><br><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">11</span>) <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>冒泡排序法</strong>：每次比较相邻的两个元素，不合适就交换，依次向后，一圈下来可以确定一个元素；需要使用双重循环，外层循环控制循环的圈数， 内层控制一圈怎么交换</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span><span class="params">(lt, key=None, reverse=False)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(lt) - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(lt) - <span class="number">1</span> - i):</span><br><span class="line">            <span class="keyword">if</span> key == <span class="literal">None</span>:</span><br><span class="line">                temp = lt[i] &lt;= lt[i + <span class="number">1</span>] <span class="keyword">if</span> reverse <span class="keyword">else</span> lt[i] &gt; lt[i + <span class="number">1</span>]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                temp = key(lt[i]) &lt;= lt[i + <span class="number">1</span>] <span class="keyword">if</span> reverse <span class="keyword">else</span> key(lt[i]) &gt; key(lt[i + <span class="number">1</span>])</span><br><span class="line">            <span class="keyword">if</span> temp:</span><br><span class="line">                lt[i], lt[i + <span class="number">1</span>] = lt[i + <span class="number">1</span>], lt[i]</span><br><span class="line">    print(lt)</span><br><span class="line">    </span><br><span class="line">    lt1 = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>]</span><br><span class="line">lt2 = [</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'xiaoming'</span>, <span class="string">'age'</span>: <span class="number">12</span>, <span class="string">'height'</span>: <span class="number">160</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'xiaohua'</span>, <span class="string">'age'</span>: <span class="number">17</span>, <span class="string">'height'</span>: <span class="number">140</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'xiaogang'</span>, <span class="string">'age'</span>: <span class="number">11</span>, <span class="string">'height'</span>: <span class="number">180</span>&#125;</span><br><span class="line">]</span><br><span class="line">choose_sort(lt1)</span><br><span class="line">choose_sort(lt2, key=lamamb x: x[<span class="string">'age'</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>选择排序法</strong>：每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">choose_sort</span><span class="params">(lt, key=None, reverse=False)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(lt) - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(lt)):</span><br><span class="line">            <span class="keyword">if</span> key == <span class="literal">None</span>:</span><br><span class="line">                temp = lt[i] &lt;= lt[j] <span class="keyword">if</span> reverse <span class="keyword">else</span> lt[i] &gt; lt [j]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                temp = key(lt[i]) &lt;= key(lt[j]) <span class="keyword">if</span> reverse <span class="keyword">else</span> key(lt[i]) &gt; key(lt[j])</span><br><span class="line">            <span class="keyword">if</span> temp:</span><br><span class="line">                lt[i], lt[j] = lt[j], lt[i]</span><br><span class="line">    print(lt)</span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">lt1 = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>]</span><br><span class="line">lt2 = [</span><br><span class="line">	&#123;<span class="string">'name'</span>: <span class="string">'xiaoming'</span>, <span class="string">'age'</span>: <span class="number">12</span>, <span class="string">'height'</span>: <span class="number">160</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'xiaohua'</span>, <span class="string">'age'</span>: <span class="number">17</span>, <span class="string">'height'</span>: <span class="number">140</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'xiaogang'</span>, <span class="string">'age'</span>: <span class="number">11</span>, <span class="string">'height'</span>: <span class="number">180</span>&#125;</span><br><span class="line">]</span><br><span class="line">choose_sort(lt1)</span><br><span class="line">choose_sort(lt2, key=lamamb x: x[<span class="string">'age'</span>])</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" target="_blank">No.2 Python语言基础--变量、数据类型及运算符</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Lajos
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://lajos182.github.io/2020/04/27/No-2-Python语言基础-变量、数据类型及运算符/" title="No.2 Python语言基础--变量、数据类型及运算符" target="_blank">https://lajos182.github.io/2020/04/27/No-2-Python语言基础-变量、数据类型及运算符/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -255,63 +420,173 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lajos182.github.io/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-        <time datetime="2020-04-27T02:53:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">No.1 Python简介与版本介绍</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" target="_blank">No.1 Python简介与版本介绍</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-标识符、变量与常量"><span class="toc-number">1.</span> <span class="toc-text">2.1. 标识符、变量与常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-数据类型"><span class="toc-number">2.</span> <span class="toc-text">2.2. 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-字符串格式化"><span class="toc-number">2.1.</span> <span class="toc-text">2.2.1. 字符串格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-列表、元组、字典、集合的区别"><span class="toc-number">2.2.</span> <span class="toc-text">2.2.2. 列表、元组、字典、集合的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-运算符与流程控制"><span class="toc-number">3.</span> <span class="toc-text">2.3. 运算符与流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-运算符"><span class="toc-number">3.1.</span> <span class="toc-text">2.3.1. 运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-流程控制"><span class="toc-number">3.2.</span> <span class="toc-text">2.3.2. 流程控制</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
   
+  <div id="gitment-ctn"></div>
   
-    </div></section>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "No.2 Python语言基础--变量、数据类型及运算符" -->
+    var gitment = new Gitment({
+      id: "20200427142547",
+      owner: 'lajos182',
+      repo: 'lajos182.github.io',
+      oauth: {
+        client_id: 'bea4e3d4c31d7696856b',
+        client_secret: 'c4ecc1802f4bf45791573d8dc166043f2aea366d',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
   
 
-    
 
+
+
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <span class="btn-bg"></span>
+    <span class="btn-text">文章导航</span>
+    </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-标识符、变量与常量"><span class="toc-number">1.</span> <span class="toc-text">2.1. 标识符、变量与常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-数据类型"><span class="toc-number">2.</span> <span class="toc-text">2.2. 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-字符串格式化"><span class="toc-number">2.1.</span> <span class="toc-text">2.2.1. 字符串格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-列表、元组、字典、集合的区别"><span class="toc-number">2.2.</span> <span class="toc-text">2.2.2. 列表、元组、字典、集合的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-运算符与流程控制"><span class="toc-number">3.</span> <span class="toc-text">2.3. 运算符与流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-运算符"><span class="toc-number">3.1.</span> <span class="toc-text">2.3.1. 运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-流程控制"><span class="toc-number">3.2.</span> <span class="toc-text">2.3.2. 流程控制</span></a></li></ol></li></ol>
+   </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+     
+<!-- 目录内容结束 -->
 
           </div>
         </div>
@@ -351,9 +626,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
