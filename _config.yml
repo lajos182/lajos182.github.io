@@ -112,7 +112,10 @@ theme: yilia-plus
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repository: git@github.com:lajos182/lajos182.github.io.git
+  branch: master
+
 jsonContent:
   file: content.json
   meta: false
