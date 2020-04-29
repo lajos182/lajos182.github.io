@@ -9,38 +9,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lajos182.github.io">
-  <title>Lajos的博客</title>
+  <title>No.3 Python语言基础--函数及其常用函数的使用 | Lajos的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="python,django,flask,scrapy,mySql,redis,mongoDB,linux,开发者,程序猿,程序媛,编程,代码,开源,IT网站,Developer">
-    <meta name="description" content="在职小猿一枚，从事Python后端开发，了解前沿技术"> -->
-  
-  <meta name="description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lajos的博客">
-<meta property="og:url" content="https://lajos182.github.io/index.html">
+  <meta name="description" content="3.1. 函数的基本定义函数：具有特定功能的一段代码。 函数的优点：  解决代码的重复书写问题 可以将功能的实现者和使用者分开，提高开发效率 增加的代码的可移植性  函数参数：  形参：形式参数，函数定义处的参数 实参：实际参数，函数调用处的参数 必传参数：也叫位置参数，前面定义的函数中使用的都是必传参数，调用时的形式必须要与定义的一致。 默认参数：也称关键字参数，就是有默认值的参数，必须放在最后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No.3 Python语言基础--函数及其常用函数的使用">
+<meta property="og:url" content="https://lajos182.github.io/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
+<meta property="og:description" content="3.1. 函数的基本定义函数：具有特定功能的一段代码。 函数的优点：  解决代码的重复书写问题 可以将功能的实现者和使用者分开，提高开发效率 增加的代码的可移植性  函数参数：  形参：形式参数，函数定义处的参数 实参：实际参数，函数调用处的参数 必传参数：也叫位置参数，前面定义的函数中使用的都是必传参数，调用时的形式必须要与定义的一致。 默认参数：也称关键字参数，就是有默认值的参数，必须放在最后">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/recursive%2C%20lamada%2C%20closure%2C%20iteator%2C%20decorator%2C%20generator%2C%20iterable.png">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/os%20and%20shutil.png">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/time%2C%20calendar%20and%20datemate.png">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/hashlip%2C%20urllib%2C%20http.client.png">
+<meta property="article:published_time" content="2020-04-28T10:35:40.000Z">
+<meta property="article:modified_time" content="2020-04-29T10:41:28.517Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="django">
-<meta property="article:tag" content="flask">
-<meta property="article:tag" content="scrapy">
-<meta property="article:tag" content="mySql">
-<meta property="article:tag" content="redis">
-<meta property="article:tag" content="mongoDB">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="函数">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/lajos182/python-essay/blob/master/images/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
   
@@ -226,25 +216,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-No-3-Python语言基础-函数及其常用函数的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-No-3-Python语言基础-函数及其常用函数的使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_blank">No.3 Python语言基础--函数及其常用函数的使用</a>
-  
+    <h1 class="article-title" itemprop="name">
+      No.3 Python语言基础--函数及其常用函数的使用
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
         <time datetime="2020-04-28T10:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
 </a>
@@ -252,6 +242,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">8.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">36分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -701,7 +712,59 @@
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Lajos
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://lajos182.github.io/2020/04/28/No-3-Python语言基础-函数及其常用函数的使用/" title="No.3 Python语言基础--函数及其常用函数的使用" target="_blank">https://lajos182.github.io/2020/04/28/No-3-Python语言基础-函数及其常用函数的使用/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -726,16 +789,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lajos182.github.io/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">No.2 Python语言基础--变量、数据类型及运算符</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -750,197 +873,56 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-No-2-Python语言基础-变量、数据类型及运算符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" target="_blank">No.2 Python语言基础--变量、数据类型及运算符</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
-        <time datetime="2020-04-27T07:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="2-1-标识符、变量与常量"><a href="#2-1-标识符、变量与常量" class="headerlink" title="2.1. 标识符、变量与常量"></a>2.1. 标识符、变量与常量</h2><p><strong>标识符</strong>：开发人员在程序中自定义的一些符合和名称，其实就是一串字符串，如变量名、函数名等</p>
-<p>Python标识符规则：只能由数字、字符和下划线组成，开头不能是数字，不能是关键字，大小写敏感且见名知义，要遵循小驼峰原则。</p>
-    
-    <a class="article-more-a" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-函数的基本定义"><span class="toc-number">1.</span> <span class="toc-text">3.1. 函数的基本定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-变量作用域（LEGB）"><span class="toc-number">2.</span> <span class="toc-text">3.2. 变量作用域（LEGB）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-内置函数、模块函数及基本数据结构函数"><span class="toc-number">3.</span> <span class="toc-text">3.3. 内置函数、模块函数及基本数据结构函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-匿名函数"><span class="toc-number">4.</span> <span class="toc-text">3.4. 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-递归函数"><span class="toc-number">5.</span> <span class="toc-text">3.5. 递归函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-闭包与装饰器"><span class="toc-number">6.</span> <span class="toc-text">3.6. 闭包与装饰器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-迭代器与生成器"><span class="toc-number">7.</span> <span class="toc-text">3.7. 迭代器与生成器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-高级函数"><span class="toc-number">8.</span> <span class="toc-text">3.8. 高级函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-9-匿名、递归、闭包、高级函数总结"><span class="toc-number">9.</span> <span class="toc-text">3.9. 匿名、递归、闭包、高级函数总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-10-目录管理与文件操作相关模块函数"><span class="toc-number">10.</span> <span class="toc-text">3.10.目录管理与文件操作相关模块函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-11-时间、日期和日历相关模块函数"><span class="toc-number">11.</span> <span class="toc-text">3.11. 时间、日期和日历相关模块函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-12-短信邮件相关模块函数"><span class="toc-number">12.</span> <span class="toc-text">3.12. 短信邮件相关模块函数</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-No-1-Python简介与版本介绍" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" target="_blank">No.1 Python简介与版本介绍</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-        <time datetime="2020-04-27T04:08:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
 
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="1-1-Python简介"><a href="#1-1-Python简介" class="headerlink" title="1.1. Python简介"></a>1.1. Python简介</h2><ul>
-<li><p>Python是一种<strong>解释型</strong>(不需要编译)、<strong>面向对象</strong>、<strong>动态数据类型</strong>的交互式语言，Python是由由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。</p>
-</li>
-<li><p><strong>Python的优势</strong>：</p>
-<ul>
-<li><strong>易于学习</strong>：Python有相对较少的关键字，结构简单，有明确定义的语法，学习起来相对简单。 </li>
-</ul>
-    
-    <a class="article-more-a" href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
   
+  <div id="gitment-ctn"></div>
   
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "No.3 Python语言基础--函数及其常用函数的使用" -->
+    var gitment = new Gitment({
+      id: "20200428183540",
+      owner: 'lajos182',
+      repo: 'lajos182.github.io',
+      oauth: {
+        client_id: 'bea4e3d4c31d7696856b',
+        client_secret: 'c4ecc1802f4bf45791573d8dc166043f2aea366d',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
+  
+
 
 
           </div>
@@ -980,8 +962,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
