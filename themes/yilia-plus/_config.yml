@@ -1,7 +1,7 @@
 ﻿# Header-菜单
 menu:
   主页: /
-  日记本: /tags/随笔/
+  日记: /tags/随笔/
   Python: /tags/Python
 
 # subNav-子导航
