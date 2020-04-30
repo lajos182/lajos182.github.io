@@ -9,33 +9,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lajos182.github.io">
-  <title>Tag: Python | Lajos的博客</title>
+  <title>No.5 Python语言基础--正则 | Lajos的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lajos的博客">
-<meta property="og:url" content="https://lajos182.github.io/tags/Python/index.html">
+  <meta name="description" content="5.1. 正则基础应用场景：特定规律字符串的查找、替换、切割等；邮箱格式、url等的验证；爬虫项���，提取特定的有效内容；很多应用的配置文件 使用原则：只要能够通过自负床等相关函数能够解决的，就不要使用正则；正则的执行效率比较低，会降低代码的可读性； 基本使用：正则式通过re模块提供支持的，相关函数包括match、search、findall、compile  match：从头惊醒匹配，知道就立">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No.5 Python语言基础--正则">
+<meta property="og:url" content="https://lajos182.github.io/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
+<meta property="og:description" content="5.1. 正则基础应用场景：特定规律字符串的查找、替换、切割等；邮箱格式、url等的验证；爬虫项���，提取特定的有效内容；很多应用的配置文件 使用原则：只要能够通过自负床等相关函数能够解决的，就不要使用正则；正则的执行效率比较低，会降低代码的可读性； 基本使用：正则式通过re模块提供支持的，相关函数包括match、search、findall、compile  match：从头惊醒匹配，知道就立">
+<meta property="article:published_time" content="2020-04-30T10:02:38.000Z">
+<meta property="article:modified_time" content="2020-04-30T10:05:44.909Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="django">
-<meta property="article:tag" content="flask">
-<meta property="article:tag" content="scrapy">
-<meta property="article:tag" content="mySql">
-<meta property="article:tag" content="redis">
-<meta property="article:tag" content="mongoDB">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="正则">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
@@ -222,41 +210,173 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-No-5-Python语言基础-正则" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/" class="archive-article-date">
-        <time datetime="2020-04-30T10:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/" target="_blank">No.5 Python语言基础--正则</a>
   
+    <h1 class="article-title" itemprop="name">
+      No.5 Python语言基础--正则
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/" class="archive-article-date">
+        <time datetime="2020-04-30T10:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">5分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="5-1-正则基础"><a href="#5-1-正则基础" class="headerlink" title="5.1. 正则基础"></a>5.1. 正则基础</h3><p><strong>应用场景</strong>：特定规律字符串的查找、替换、切割等；邮箱格式、url等的验证；爬虫项���，提取特定的有效内容；很多应用的配置文件</p>
+<p><strong>使用原则</strong>：只要能够通过自负床等相关函数能够解决的，就不要使用正则；正则的执行效率比较低，会降低代码的可读性；</p>
+<p><strong>基本使用</strong>：正则式通过<code>re</code>模块提供支持的，相关函数包括<code>match</code>、<code>search</code>、<code>findall</code>、<code>compile</code></p>
+<ul>
+<li><code>match</code>：从头惊醒匹配，知道就立即返回正则结果对象，没有就返回<code>None</code></li>
+<li><code>search</code>：匹配全部内容，任意位置，只要找到，立即返回正则结果对象，没有返回<code>None</code></li>
+<li><code>findall</code>：匹配所有内容，返回匹配结构组成的列表，没有返回<code>None</code></li>
+<li><code>compile</code>：根据字符串生成正则表达式的对象，用于特定正则匹配，通过<code>match</code>、<code>search</code>、<code>findall</code></li>
+</ul>
+<h3 id="5-2-正则规则"><a href="#5-2-正则规则" class="headerlink" title="5.2. 正则规则"></a>5.2. 正则规则</h3><ul>
+<li><p>单个字符：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">普通字符：就是一对一的完全匹配</span><br><span class="line">[]：中间的任意一个字符</span><br><span class="line"><span class="code">	[a-z]：表示a到z的任意字符</span></span><br><span class="line"><span class="code">	[0-9]：表示0到9的任意字符</span></span><br><span class="line"><span class="code">	[^abc]：除abc之外的字符</span></span><br><span class="line">. ：匹配'\n'以外的任意字符</span><br><span class="line">\d：所有的数字字符，等价于[0-9]</span><br><span class="line">\D：所有的非数字字符，等价于[^0-9]</span><br><span class="line">\w：所有的数字、字母、中文、下划线等 (就是字的意思)</span><br><span class="line">\W：\w之外的所有字符</span><br><span class="line">\s：所有的空白字符，如：空格、\t、\n、\r</span><br><span class="line">\S：\s之外的所有字符</span><br><span class="line">\b：词边界，如：开头、结尾、标点、空格等</span><br><span class="line">\B：非词边界</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>次数控制：</p>
+<figure class="highlight re"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*：前面的字符可以是任意次</span><br><span class="line">+：前面的字符至少出现一次</span><br><span class="line">?：至多一次，<span class="number">0</span>次或<span class="number">1</span>次</span><br><span class="line">&#123;m&#125;：匹配固定的m次</span><br><span class="line">&#123;m,&#125;：至少m次</span><br><span class="line">&#123;m,n&#125;：m到n次</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>正则的匹配默认是贪婪的</p>
+<p>贪婪：最大限度的匹配，正则的匹配默认是贪婪的</p>
+<p>非贪婪：只要满足匹配条件，能少匹配就少匹配，通常使用’?’取消贪婪</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># c = re.compile(r'a.*?c')</span></span><br><span class="line">c = re.compile(<span class="string">r'a.+?c'</span>)</span><br><span class="line"></span><br><span class="line">s = c.search(<span class="string">'abcjsdhfkdkc'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> s:</span><br><span class="line">    print(<span class="string">'ok'</span>)</span><br><span class="line">    print(s.group())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>ok</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>边界限定</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">^：以指定内容开头</span><br><span class="line">$：以指定内容结尾</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分组匹配</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">|：表示或，具有最低的优先级</span><br><span class="line">()：用于表示一个整体，可以确定优先级</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">c = re.compile(<span class="string">r'(\d+)([a-z]+)(\d+)'</span>)</span><br><span class="line">s = c.search(<span class="string">'sda123ksdak456sdk'</span>)</span><br><span class="line"><span class="keyword">if</span> s:</span><br><span class="line">    print(<span class="string">'ok'</span>)</span><br><span class="line">    print(s.group())   //所有匹配的字符(即匹配正则表达式整体结果)</span><br><span class="line">    print(s.group(<span class="number">0</span>))  //与group()相同</span><br><span class="line">    print(s.group(<span class="number">1</span>))  //列出第一个括号匹配的字符</span><br><span class="line">    print(s.group(<span class="number">2</span>))  //列出第二个括号匹配部分</span><br><span class="line">    print(s.group(<span class="number">3</span>))  //列出第三个括号匹配部分</span><br><span class="line">    print(s.groups())  //返回所有括号匹配的字符，以tuple格式</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正则中的\1:表示前面第一个小阔号匹配的结果</span></span><br><span class="line"><span class="comment"># c = re.compile(r'&lt;([a-z]+)&gt;&lt;([a-z]+)&gt;\w*&lt;/\2&gt;&lt;/\1&gt;')</span></span><br><span class="line"><span class="comment"># c = re.compile(r'&lt;(?P&lt;hello&gt;[a-z]+)&gt;&lt;(?P&lt;world&gt;[a-z]+)&gt;\w*&lt;/\2&gt;&lt;/\1&gt;')</span></span><br><span class="line"><span class="comment"># 可以给指定的分组起个名字</span></span><br><span class="line">c = re.compile(<span class="string">r'&lt;(?P&lt;hello&gt;[a-z]+)&gt;&lt;(?P&lt;world&gt;[a-z]+)&gt;\w*&lt;/(?P=world)&gt;&lt;/(?P=hello)&gt;'</span>)</span><br><span class="line"></span><br><span class="line">s = c.search(<span class="string">'xxx&lt;div&gt;&lt;a&gt;百度一下&lt;/a&gt;&lt;/div&gt;yyy'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> s:</span><br><span class="line">    print(<span class="string">'ok'</span>)</span><br><span class="line">    print(s)</span><br><span class="line">    print(s.group())</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>转义字符</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在匹配所有正则中有特殊含义的字符时，都需要转义。</span><br><span class="line">正则字符串需要被处理两次，python中处理，正则解析时处理一次。</span><br><span class="line">通常在写正则字符串时，前面都加一个'r'，表示原始字符，让所有的字符失去意义。</span><br><span class="line">在匹配有如：'\'的字符时，前面再添加一个'\'就可以了，如果没有添加'r'，通常要写好几个。</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="5-3-正则高阶"><a href="#5-3-正则高阶" class="headerlink" title="5.3. 正则高阶"></a>5.3. 正则高阶</h3><ul>
+<li><p>匹配模式</p>
+<p>正则可以对匹配的模式做出整体的修饰处理，如忽略大小写等。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略大小写</span></span><br><span class="line"><span class="comment"># c = re.compile(r'hello', re.I)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多行匹配</span></span><br><span class="line"><span class="comment"># c = re.compile(r'^hello', re.M)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 作为单行处理  或  让 . 匹配 '\n'</span></span><br><span class="line">c = re.compile(<span class="string">r'&lt;div&gt;.*?&lt;/div&gt;'</span>, re.S)</span><br><span class="line">string = <span class="string">''''&lt;div&gt;\n</span></span><br><span class="line"><span class="string">hello\n&lt;/div&gt;'''</span></span><br><span class="line">s = c.search(string)</span><br><span class="line"><span class="keyword">if</span> s:</span><br><span class="line">    print(<span class="string">'ok'</span>)</span><br><span class="line">    print(s.group())</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串切割<code>split</code></p>
+<p>某些情况下，无法通过字符串函数进行切割，可以使用正则的方式处理，如：按照数字切割。可使用<code>split</code>切割，返回一个列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">c = re.compile(<span class="string">r'\d'</span>)</span><br><span class="line">string = <span class="string">'正则1其实也不难2但是学完发现自己写不出来3是这样吧'</span></span><br><span class="line">ret = c.split(string, maxsplit=<span class="number">2</span>)</span><br><span class="line">print(ret)</span><br><span class="line">print(type(ret))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="string">'正则'</span>, <span class="string">'其实也不难'</span>, <span class="string">'但是学完发现自己写不出来3是这样吧'</span>]</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">list</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串替换<code>sub</code></p>
+<p>简单的替换可以自己处理，要是按���正则规律进行替换就要使用专用的函数<code>sub</code>处理。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">c = re.compile(<span class="string">r'\d'</span>)</span><br><span class="line">string = <span class="string">'sa1erfewr2fsdfs3dfsd'</span></span><br><span class="line">ret = c.sub(<span class="string">'***'</span>, string)</span><br><span class="line">print(ret)</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Lajos
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://lajos182.github.io/2020/04/30/No-5-Python语言基础-正则/" title="No.5 Python语言基础--正则" target="_blank">https://lajos182.github.io/2020/04/30/No-5-Python语言基础-正则/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -272,195 +392,143 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lajos182.github.io/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2020-04-29T14:04:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">No.4 Python语言基础--模块使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/" target="_blank">No.4 Python语言基础--模块使用</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-正则基础"><span class="toc-number">1.</span> <span class="toc-text">5.1. 正则基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-正则规则"><span class="toc-number">2.</span> <span class="toc-text">5.2. 正则规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-正则高阶"><span class="toc-number">3.</span> <span class="toc-text">5.3. 正则高阶</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2020-04-28T10:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_blank">No.3 Python语言基础--函数及其常用函数的使用</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">函数</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
-        <time datetime="2020-04-27T07:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
 
-        </div>
-    	 
+
+
+
+
+
+
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" target="_blank">No.2 Python语言基础--变量、数据类型及运算符</a>
+  <div id="gitment-ctn"></div>
   
-    </h1>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "No.5 Python语言基础--正则" -->
+    var gitment = new Gitment({
+      id: "20200430180238",
+      owner: 'lajos182',
+      repo: 'lajos182.github.io',
+      oauth: {
+        client_id: 'bea4e3d4c31d7696856b',
+        client_secret: 'c4ecc1802f4bf45791573d8dc166043f2aea366d',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
   
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-        <time datetime="2020-04-27T04:08:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" target="_blank">No.1 Python简介与版本介绍</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -501,9 +569,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
