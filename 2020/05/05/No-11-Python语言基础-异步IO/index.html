@@ -9,33 +9,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lajos182.github.io">
-  <title>Archives: 2020/4 | Lajos的博客</title>
+  <title>No.11 Python语言基础--异步IO | Lajos的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lajos的博客">
-<meta property="og:url" content="https://lajos182.github.io/archives/2020/04/index.html">
+  <meta name="description" content="11.1. 计算密集型与IO密集型 计算密集型：要进行大量的计算，消耗CPU资源，比如计算圆周率、对视频进行高清解码等等，全靠CPU的运算能力。这种计算密集型任务虽然也可以用多任务完成，但是任务越多，花在任务切换的时间就越多，CPU执行任务的效率就越低，所以，要最高效地利用CPU，计算密集型任务同时进行的数量应当等于CPU的核心数。计算密集型任务由于主要消耗CPU资源，因此，代码运行效率至关重要。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No.11 Python语言基础--异步IO">
+<meta property="og:url" content="https://lajos182.github.io/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
+<meta property="og:description" content="11.1. 计算密集型与IO密集型 计算密集型：要进行大量的计算，消耗CPU资源，比如计算圆周率、对视频进行高清解码等等，全靠CPU的运算能力。这种计算密集型任务虽然也可以用多任务完成，但是任务越多，花在任务切换的时间就越多，CPU执行任务的效率就越低，所以，要最高效地利用CPU，计算密集型任务同时进行的数量应当等于CPU的核心数。计算密集型任务由于主要消耗CPU资源，因此，代码运行效率至关重要。">
+<meta property="article:published_time" content="2020-05-05T14:55:39.000Z">
+<meta property="article:modified_time" content="2020-05-06T09:44:38.169Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="django">
-<meta property="article:tag" content="flask">
-<meta property="article:tag" content="scrapy">
-<meta property="article:tag" content="mySql">
-<meta property="article:tag" content="redis">
-<meta property="article:tag" content="mongoDB">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="异步">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
@@ -222,41 +210,208 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-No-11-Python语言基础-异步IO" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/" class="archive-article-date">
-        <time datetime="2020-04-30T12:23:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/">No.5 Python语言基础--正则</a>
-	
+    <h1 class="article-title" itemprop="name">
+      No.11 Python语言基础--异步IO
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/" class="archive-article-date">
+        <time datetime="2020-05-05T14:55:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">3.4k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">14分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="11-1-计算密集型与IO密集型"><a href="#11-1-计算密集型与IO密集型" class="headerlink" title="11.1. 计算密集型与IO密集型"></a>11.1. 计算密集型与<code>IO</code>密集型</h3><ul>
+<li>计算密集型：要进行大量的计算，消耗CPU资源，比如计算圆周率、对视频进行高清解码等等，全靠CPU的运算能力。这种计算密集型任务虽然也可以用多任务完成，但是任务越多，花在任务切换的时间就越多，CPU执行任务的效率就越低，所以，要最高效地利用CPU，计算密集型任务同时进行的数量应当等于CPU的核心数。计算密集型任务由于主要消耗CPU资源，因此，代码运行效率至关重要。Python这样的脚本语言运行效率很低，完全不适合计算密集型任务。对于计算密集型任务，最好用C语言编写。</li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li><code>IO</code>密集型：涉及到网络、磁盘<code>IO</code>的任务都是<code>IO</code>密集型任务，这类任务的特点是CPU消耗很少，任务的大部分时间都在等待<code>IO</code>操作完成（因为<code>IO</code>的速度远远低于CPU和内存的速度）。对于<code>IO</code>密集型任务，任务越多，CPU效率越高，但也有一个限度。常见的大部分任务都是<code>IO</code>密集型任务，比如<code>Web</code>应用。<code>IO</code>密集型任务执行期间，99%的时间都花在<code>IO</code>上，花在<code>CPU</code>上的时间很少，因此，用运行速度极快的<code>C</code>语言替换用<code>Python</code>这样运行速度极低的脚本语言，完全无法提升运行效率。对于IO密集型任务，最合适的语言就是开发效率最高（代码量最少）的语言，脚本语言是首选，<code>C</code>语言最差。</li>
+</ul>
+<p>多线程和多进程的模型虽然解决了并发问题，但是系统不能无上限地增加线程。由于系统切换线程的开销也很大，所以，一旦线程数量过多，CPU的时间就花在线程切换上了，真正运行代码的时间就少了，结果导致性能严重下降。</p>
+<p>由于我们要解决的问题是CPU高速执行能力和<code>IO</code>设备的龟速严重不匹配，多线程和多进程只是解决这一问题的一种方法。</p>
+<p>另一种解决<code>IO</code>问题的方法是异步<code>IO</code>。当代码需要执行一个耗时的<code>IO</code>操作时，它只发出<code>IO</code>指令，并不等待<code>IO</code>结果，然后就去执行其他代码了。一段时间后，当<code>IO</code>返回结果时，再通知CPU进行处理。</p>
+<h3 id="11-2-协程"><a href="#11-2-协程" class="headerlink" title="11.2. 协程"></a>11.2. 协程</h3><p>协程(Corontine)，又称微线程、纤程。</p>
+<p>子程序，或者称为函数，在所有语言中都是层级调用，比如A调用B，B在执行过程中又调用了C，C执行完毕返回，B执行完毕返回，最后是A执行完毕。所以子程序调用是通过栈实现的，一个线程就是执行一个子程序。</p>
+<p>子程序调用总是一个入口，一次返回，调用顺序是明确的。而协程的调用和子程序不同。</p>
+<p>协程看上去也是子程序，但执行过程中，在子程序内部可中断，然后转而执行别的子程序，在适当的时候再返回来接着执行。</p>
+<p>注意，在一个子程序中中断，去执行其他子程序，不是函数调用，有点类似CPU的中断。比如子程序A、B：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">A</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'1'</span>)</span><br><span class="line">    print(<span class="string">'2'</span>)</span><br><span class="line">    print(<span class="string">'3'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'x'</span>)</span><br><span class="line">    print(<span class="string">'y'</span>)</span><br><span class="line">    print(<span class="string">'z'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>假设由协程执行，在执行A的过程中，可以随时中断，去执行B，B也可能在执行过程中中断再去执行A，结果如下。可以看出，在A中是没有调用B的，所以协程的调用比函数调用理解起来要难一些。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">x</span><br><span class="line">y</span><br><span class="line"><span class="number">3</span></span><br><span class="line">z</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>看起来A、B的执行有点像多线程，但协程的特点在于是一个线程执行，那和多线程比，协程有何优势？</li>
+</ul>
+<blockquote>
+<p><strong>协程执行效率极高</strong>。因为子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。</p>
+</blockquote>
+<blockquote>
+<p><strong>不需要多线程的锁机制</strong>，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了，所以执行效率比多线程高很多。</p>
+</blockquote>
+<ul>
+<li>因为协程是一个线程执行，那怎么利用多核CPU呢？</li>
+</ul>
+<blockquote>
+<p>最简单的方法是<strong>多进程+协程</strong>，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能</p>
+</blockquote>
+<ul>
+<li><code>Python</code>对协程的支持如何通过<code>generator</code>实现的？</li>
+</ul>
+<blockquote>
+<p>在<code>generato</code>r中，我们不但可以通过<code>for</code>循环来迭代，还可以不断调用<code>next()</code>函数获取由<code>yield</code>语句返回的下一个值。但是<code>Python</code>的<code>yield</code>不但可以返回一个值，它还可以接收调用者发出的参数。</p>
+</blockquote>
+<p>传统的生产者-消费者模型是一个线程写消息，一个线程取消息，通过锁机制控制队列核等待，但一不小心就可能死锁。如果改用协程，生产者生产消息后，直接通过<code>yeild</code>跳转到消费者开始执行，待消费者执行完毕后，切换生产者继续生产，效率极高。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 消费者</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">consumer</span><span class="params">()</span>:</span></span><br><span class="line">    r = <span class="string">''</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        n = <span class="keyword">yield</span> r  <span class="comment"># 此处的yield接收调用者发出的参数n，并把处理后的结果r返回</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> n:</span><br><span class="line">            <span class="keyword">return</span> </span><br><span class="line">        print(<span class="string">f'[CONSUMER] Consumering <span class="subst">&#123;n&#125;</span>...'</span>)</span><br><span class="line">        r = <span class="string">'200 OK'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生产者</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">produce</span><span class="params">(c)</span>:</span></span><br><span class="line">    c.send(<span class="literal">None</span>) <span class="comment"># 启动生成器consumer</span></span><br><span class="line">    n = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> n &lt; <span class="number">5</span>:</span><br><span class="line">        n += <span class="number">1</span></span><br><span class="line">        print(<span class="string">f'[PRODUCER] Producing <span class="subst">&#123;n&#125;</span>...'</span>)</span><br><span class="line">        r = c.send(n)  <span class="comment"># 切换至consumer执行</span></span><br><span class="line">        print(<span class="string">f'[PRODUCER] Consumer return <span class="subst">&#123;r&#125;</span>'</span>)</span><br><span class="line">    c.close()</span><br><span class="line"></span><br><span class="line">c = consumer()</span><br><span class="line">produce(c)</span><br><span class="line"><span class="comment"># 运行结果如下：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[PRODUCER] Producing <span class="number">1.</span>..</span><br><span class="line">[CONSUMER] Consumering <span class="number">1.</span>..</span><br><span class="line">[PRODUCER] Consumer <span class="keyword">return</span> <span class="number">200</span> OK</span><br><span class="line">[PRODUCER] Producing <span class="number">2.</span>..</span><br><span class="line">[CONSUMER] Consumering <span class="number">2.</span>..</span><br><span class="line">[PRODUCER] Consumer <span class="keyword">return</span> <span class="number">200</span> OK</span><br><span class="line">[PRODUCER] Producing <span class="number">3.</span>..</span><br><span class="line">[CONSUMER] Consumering <span class="number">3.</span>..</span><br><span class="line">[PRODUCER] Consumer <span class="keyword">return</span> <span class="number">200</span> OK</span><br><span class="line">[PRODUCER] Producing <span class="number">4.</span>..</span><br><span class="line">[CONSUMER] Consumering <span class="number">4.</span>..</span><br><span class="line">[PRODUCER] Consumer <span class="keyword">return</span> <span class="number">200</span> OK</span><br><span class="line">[PRODUCER] Producing <span class="number">5.</span>..</span><br><span class="line">[CONSUMER] Consumering <span class="number">5.</span>..</span><br><span class="line">[PRODUCER] Consumer <span class="keyword">return</span> <span class="number">200</span> OK</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行分析：注意到<code>consumer</code>函数是一个<code>generator</code>，把一个<code>consumer</code>传入<code>produce</code>后：</p>
+<blockquote>
+<p>(1)首先调用<code>c.send(None)</code>启动生成器；<br/><br>(2)然后，一旦生产了东西，通过<code>c.send(n)</code>切换到<code>consumer</code>执行；<br/><br>(3)<code>consumer</code>通过<code>yield</code>拿到消息，处理，又通过<code>yield</code>把结果传回；<br/><br>(4)<code>produce</code>拿到<code>consumer</code>处理的结果，继续生产下一条消息；<br/><br>(5)<code>produce</code>决定不生产了，通过<code>c.close()</code>关闭<code>consumer</code>，整个过程结束。<br/></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>整个流程无锁，由一个线程执行，<code>produce</code>和<code>consumer</code>协作完成任务，所以称为“协程”，而非线程的抢占式多任务。</p>
+</blockquote>
+<h3 id="11-3-asyncio"><a href="#11-3-asyncio" class="headerlink" title="11.3. asyncio"></a>11.3. <code>asyncio</code></h3><p><code>asynio</code>是<code>Python</code>3.4版本引入的标准库，直接内置了对异步<code>IO</code>的支持。它的编程模型就是一个消息循环。我们从<code>asyncio</code>模块中直接获取一个<code>EventLoop</code>的引用，然后把需要执行的协程扔到<code>EventLoop</code>中执行，就实现了异步<code>IO</code>。</p>
+<ul>
+<li><code>asyncio</code>提供了完善的异步IO支持；</li>
+<li>异步操作需要在<code>coroutine</code>中通过<code>yield from</code>完成；</li>
+<li>多个<code>coroutine</code>可以封装成一组<code>Task</code>然后并发执行。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"></span><br><span class="line"><span class="comment"># @asyncio.coroutine把一个generator标记为coroutine类型，然后，我们就把这个coroutine扔到EventLoop中执行。</span></span><br><span class="line"><span class="meta">@asyncio.coroutine</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'hello world!'</span>)</span><br><span class="line">    <span class="comment"># 异步调用asynico.sleep(1)，也是一个coroutine, 所以线程不会等待asynico.sleep()，而是直接中断并执行下一个消息循环。当asyncio.sleep()返回时，线程就可以从yield from拿到返回值（此处是None），然后接着执行下一行语句。asyncio.sleep(1)看成是一个耗时1秒的IO操作，在此期间，主线程并未等待，而是去执行EventLoop中其他可以执行的coroutine了，因此可以实现并发执行。</span></span><br><span class="line">    r = <span class="keyword">yield</span> <span class="keyword">from</span> asyncio.sleep(<span class="number">10</span>)</span><br><span class="line">    print(<span class="string">'hello world again!'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取EventLoop</span></span><br><span class="line">loop = asyncio.get_event_loop()</span><br><span class="line"><span class="comment"># 执行coroutine</span></span><br><span class="line">loop.run_until_complete(hello())</span><br><span class="line">loop.close()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hello world!</span><br><span class="line">hello world again!</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>task</code>封装两个<code>coroutine</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="meta">@asyncio.coroutine</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">f'hello world! (<span class="subst">&#123;threading.current_thread()&#125;</span>)'</span>)</span><br><span class="line">    <span class="keyword">yield</span> <span class="keyword">from</span> asyncio.sleep(<span class="number">1</span>)</span><br><span class="line">    print(<span class="string">f'hello world agagin! (<span class="subst">&#123;threading.current_thread()&#125;</span>)'</span>)</span><br><span class="line"></span><br><span class="line">loop = asyncio.get_event_loop()</span><br><span class="line">tasks = [hello(), hello()]</span><br><span class="line">loop.run_until_complete(asyncio.wait(tasks))</span><br><span class="line">loop.close()</span><br><span class="line"><span class="comment"># 运行结果如下：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hello world! (&lt;_MainThread(MainThread, started <span class="number">4020</span>)&gt;)</span><br><span class="line">hello world! (&lt;_MainThread(MainThread, started <span class="number">4020</span>)&gt;)</span><br><span class="line">hello world agagin! (&lt;_MainThread(MainThread, started <span class="number">4020</span>)&gt;)</span><br><span class="line">hello world agagin! (&lt;_MainThread(MainThread, started <span class="number">4020</span>)&gt;)</span><br><span class="line"><span class="comment"># 由打印的当前线程名称可以看出，两个coroutine是由同一个线程并发执行的。</span></span><br></pre></td></tr></table></figure>
+
+<p>案例：用<code>asyncio</code>的异步网络连接<code>sina</code>、<code>souhu</code>和163的网站首页</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"></span><br><span class="line"><span class="meta">@asyncio.coroutine</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wget</span><span class="params">(host)</span>:</span></span><br><span class="line">    print(<span class="string">f'wget <span class="subst">&#123;host&#125;</span>...'</span>)</span><br><span class="line">    <span class="comment"># 创建TCP客户端并连接服务器，或者说创建一个TCP连接对象</span></span><br><span class="line">    <span class="comment"># open_connection接收两个参数：主机和端口号</span></span><br><span class="line">    <span class="comment"># connect是协程，这步仅是创建协程对象，立即返回，不阻塞</span></span><br><span class="line">    connect = asyncio.open_connection(host, <span class="number">80</span>)</span><br><span class="line">    <span class="comment"># 连接创建成功后，asyncio.open_connection方法的返回值就是读写对象</span></span><br><span class="line">    <span class="comment"># 读写对象分别为StreamReader和StreamWriter实例</span></span><br><span class="line">    <span class="comment"># 它们也是协程对象，底层调用socket模块的send和recv方法实现读写</span></span><br><span class="line">    reader, writer = <span class="keyword">yield</span> <span class="keyword">from</span> connect</span><br><span class="line">    <span class="comment"># header 是发送给服务器的消息，意为获取页面的 header 信息</span></span><br><span class="line">    <span class="comment"># 这个格式是固定的，见下图</span></span><br><span class="line">    header = <span class="string">f'GET / HTTP/1.0\r\nHost: <span class="subst">&#123;host&#125;</span>\r\n\r\n'</span></span><br><span class="line">    <span class="comment"># 给服务器发消息，注意消息是二进制的</span></span><br><span class="line">    writer.write(header.encode(<span class="string">'utf-8'</span>))</span><br><span class="line">    <span class="comment"># 这是一个与底层IO输入缓冲区交互的流量控制方法</span></span><br><span class="line">    <span class="comment"># 当缓冲区达到上限时，drain()阻塞，待到缓冲区回落到下限时，写操作恢复</span></span><br><span class="line">    <span class="comment"># 当不需要等待时，drain()会立即返回，例如上面的消息内容较少，不会阻塞</span></span><br><span class="line">    <span class="comment"># 这就是一个控制消息的数据量的控制阀</span></span><br><span class="line">    <span class="keyword">yield</span> <span class="keyword">from</span> writer.drain()</span><br><span class="line">    <span class="comment"># 给服务器发送消息后，就等着读取服务器返回来的消息</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># 读取数据是阻塞操作，释放CPU</span></span><br><span class="line">        <span class="comment"># reader相当于一个水盆，服务器发来的数据是水流</span></span><br><span class="line">        <span class="comment"># readline表示读取一行，以\n作为换行符</span></span><br><span class="line">        <span class="comment"># 如果在出现\n之前，数据流中出现EO（End Of File文件结束符）也会返回</span></span><br><span class="line">        <span class="comment"># 相当于出现\n或EOF时，拧上水龙头，line就是这盆水</span></span><br><span class="line">        line = <span class="keyword">yield</span> <span class="keyword">from</span> reader.readline()</span><br><span class="line">        <span class="comment"># 数据接收完毕，会返回空字符串\r\n，退出while循环，结束数据接收</span></span><br><span class="line">        <span class="keyword">if</span> line.decode(<span class="string">'utf-8'</span>) == <span class="string">'\r\n'</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="comment"># 接收的数据是二进制数据，转换为 UTF-8 格式并打印</span></span><br><span class="line">        <span class="comment"># rstrip 方法删掉字符串的结尾处的空白字符，也就是 \n</span></span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;host&#125;</span> header &gt; <span class="subst">&#123;line.decode(<span class="string">"utf-8"</span>).rstrip()&#125;</span>'</span>)</span><br><span class="line">    writer.close()   <span class="comment"># 关闭数据流，可以省略</span></span><br><span class="line"></span><br><span class="line">loop = asyncio.get_event_loop()</span><br><span class="line">tasks = [wget(host) <span class="keyword">for</span> host <span class="keyword">in</span> [<span class="string">'www.sina.com.cn'</span>, <span class="string">'www.sohu.com'</span>, <span class="string">'www.163.com'</span>]]</span><br><span class="line">loop.run_until_complete(asyncio.wait(tasks))</span><br><span class="line">loop.close()</span><br><span class="line"><span class="comment"># 运行结果如下(3个连接由一个线程通过coroutine并完成)：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>wget www<span class="number">.163</span>.com...</span><br><span class="line">wget www.sohu.com...</span><br><span class="line">wget www.sina.com.cn...</span><br><span class="line">www.sohu.com header &gt; HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</span><br><span class="line">www.sohu.com header &gt; Content-Type: text/html;charset=UTF<span class="number">-8</span></span><br><span class="line">www.sohu.com header &gt; Connection: close</span><br><span class="line">www.sohu.com header &gt; Server: nginx</span><br><span class="line">www.sohu.com header &gt; Date: Thu, <span class="number">14</span> Nov <span class="number">2019</span> <span class="number">03</span>:<span class="number">07</span>:<span class="number">07</span> GMT</span><br><span class="line">www.sohu.com header &gt; Cache-Control: max-age=<span class="number">60</span></span><br><span class="line">www.sohu.com header &gt; X-From-Sohu: X-SRC-Cached</span><br><span class="line">www.sohu.com header &gt; Content-Encoding: gzip</span><br><span class="line">www.sohu.com header &gt; FSS-Cache: HIT <span class="keyword">from</span> <span class="number">111148311605210.19052918</span></span><br><span class="line">www.sohu.com header &gt; FSS-Proxy: Powered by <span class="number">9410870.10197312</span><span class="number">.17348930</span></span><br><span class="line">www<span class="number">.163</span>.com header &gt; HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</span><br><span class="line">www<span class="number">.163</span>.com header &gt; Date: Thu, <span class="number">14</span> Nov <span class="number">2019</span> <span class="number">03</span>:<span class="number">07</span>:<span class="number">56</span> GMT</span><br><span class="line">www<span class="number">.163</span>.com header &gt; Content-Type: text/html; charset=GBK</span><br><span class="line">www<span class="number">.163</span>.com header &gt; Connection: close</span><br><span class="line">www<span class="number">.163</span>.com header &gt; Expires: Thu, <span class="number">14</span> Nov <span class="number">2019</span> <span class="number">03</span>:<span class="number">09</span>:<span class="number">17</span> GMT</span><br><span class="line">www<span class="number">.163</span>.com header &gt; Server: nginx</span><br><span class="line">www<span class="number">.163</span>.com header &gt; Cache-Control: no-cache,no-store,private</span><br><span class="line">www<span class="number">.163</span>.com header &gt; Vary: Accept-Encoding</span><br><span class="line">www<span class="number">.163</span>.com header &gt; X-Ser: BC51_dx-lt-yd-shandong-jinan<span class="number">-5</span>-cache<span class="number">-6</span>, BC51_dx-lt-yd-shandong-jinan<span class="number">-5</span>-cache<span class="number">-6</span>, BC138_dx-zhejiang-zhou<span class="number">-1</span>-cache<span class="number">-3</span></span><br><span class="line">www<span class="number">.163</span>.com header &gt; cdn-user-ip: <span class="number">60.176</span><span class="number">.229</span><span class="number">.93</span></span><br><span class="line">www<span class="number">.163</span>.com header &gt; cdn-ip: <span class="number">115.231</span><span class="number">.128</span><span class="number">.142</span></span><br><span class="line">www<span class="number">.163</span>.com header &gt; X-Cache-Remote: HIT</span><br><span class="line">www<span class="number">.163</span>.com header &gt; cdn-source: baishan</span><br><span class="line">www.sina.com.cn header &gt; HTTP/<span class="number">1.1</span> <span class="number">302</span> Moved Temporarily</span><br><span class="line">www.sina.com.cn header &gt; Server: nginx</span><br><span class="line">www.sina.com.cn header &gt; Date: Thu, <span class="number">14</span> Nov <span class="number">2019</span> <span class="number">03</span>:<span class="number">07</span>:<span class="number">56</span> GMT</span><br><span class="line">www.sina.com.cn header &gt; Content-Type: text/html</span><br><span class="line">www.sina.com.cn header &gt; Content-Length: <span class="number">154</span></span><br><span class="line">www.sina.com.cn header &gt; Connection: close</span><br><span class="line">www.sina.com.cn header &gt; Location: https://www.sina.com.cn/</span><br><span class="line">www.sina.com.cn header &gt; X-Via-CDN: f=edge,s=ctc.nanjing.ha2ts4<span class="number">.63</span>.nb.sinaedge.com,c=<span class="number">60.176</span><span class="number">.229</span><span class="number">.93</span>;</span><br><span class="line">www.sina.com.cn header &gt; X-Via-Edge: <span class="number">15737008765135</span>de5b03c7c5e66ca1bf1580f</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-4-async-await"><a href="#11-4-async-await" class="headerlink" title="11.4. async/await"></a>11.4. <code>async</code>/<code>await</code></h3><p>为了简化并更好地标识异步<code>IO</code>，从<code>Python</code>3.5开始引入新的语法<code>async</code>和<code>await</code>，可以让<code>corountine</code>的代码更简洁易读。与<code>Python</code>3.4的<code>asyncio</code>和<code>yield from</code>的区别：</p>
+<ul>
+<li>把<code>@asyncio.coroutine</code>替换为<code>async</code></li>
+<li>把<code>yield from</code>替换为<code>await</code>。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'hello world!'</span>)</span><br><span class="line">    r = <span class="keyword">await</span> asyncio.sleep(<span class="number">10</span>)</span><br><span class="line">    print(<span class="string">'hello world again!'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取EventLoop</span></span><br><span class="line">loop = asyncio.get_event_loop()</span><br><span class="line"><span class="comment"># 执行coroutine</span></span><br><span class="line">loop.run_until_complete(hello())</span><br><span class="line">loop.close()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hello world!</span><br><span class="line">hello world again!</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-5-aiohttp"><a href="#11-5-aiohttp" class="headerlink" title="11.5. aiohttp"></a>11.5. <code>aiohttp</code></h3><p><code>aiohttp</code>可以实现单线程并发<code>IO</code>操作。如果仅用在客户端，发货的威力不大。如果把<code>asyncio</code>用在服务端，例如<code>Web</code>服务器，由于<code>HTTP</code>连接就是<code>IO</code>操作，因此可以用单线程+<code>coroutine</code>实现多用户的高并发。</p>
+<p><code>asyncio</code>实现了<code>TCP</code>、<code>UDP</code>、<code>SSL</code>等协议，<code>aiohttp</code>则是基于<code>asyncio</code>实现的<code>HTTP</code>框架。</p>
+<ul>
+<li>安装<code>aiohttp</code>：<code>pip install aiohttp</code></li>
+<li>编写<code>HTTP</code>服务器，分别处理以下<code>URL</code>:<ul>
+<li><code>/</code>-首页返回<code>b&#39;&lt;h1&gt;Index&lt;/h1&gt;&#39;</code>；</li>
+<li><code>/hello/{name}</code>-根据<code>URL</code>参数返回文本<code>hello, %s!</code>。</li>
+</ul>
+</li>
+<li>用<code>aiohttp</code>创建服务</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> web</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">await</span> asyncio.sleep(<span class="number">0.5</span>)</span><br><span class="line">    <span class="keyword">return</span> web.Response(body=<span class="string">b'&lt;h1&gt;Index&lt;/h1&gt;'</span>, content_type=<span class="string">'text/html'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">await</span> asyncio.sleep(<span class="number">0.5</span>)</span><br><span class="line">    text = <span class="string">f'&lt;h1&gt;hello, <span class="subst">&#123;request.match_info[<span class="string">"name"</span>]&#125;</span>&lt;/h1&gt;'</span></span><br><span class="line">    <span class="keyword">return</span> web.Response(body=text.encode(<span class="string">'utf-8'</span>), content_type=<span class="string">'text/html'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">init</span><span class="params">(loop)</span>:</span></span><br><span class="line">    app = web.Application(loop=loop)</span><br><span class="line">    app.router.add_route(<span class="string">'GET'</span>, <span class="string">'/'</span>, index)</span><br><span class="line">    app.router.add_route(<span class="string">'GET'</span>, <span class="string">'/hello/&#123;name&#125;'</span>, hello)</span><br><span class="line">    runner = web.AppRunner(app)</span><br><span class="line">    srv = <span class="keyword">await</span> loop.create_server(runner, <span class="string">'127.0.0.1'</span>, <span class="number">9000</span>)</span><br><span class="line">    print(<span class="string">'Server started at http://127.0.0.1:9000...'</span>)</span><br><span class="line">    <span class="keyword">return</span> srv</span><br></pre></td></tr></table></figure>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Lajos
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://lajos182.github.io/2020/05/05/No-11-Python语言基础-异步IO/" title="No.11 Python语言基础--异步IO" target="_blank">https://lajos182.github.io/2020/05/05/No-11-Python语言基础-异步IO/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -266,201 +421,149 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">异步</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lajos182.github.io/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2020-04-29T14:04:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/05/No-10-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E7%BA%BF%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">No.10 Python语言基础--线程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/">No.4 Python语言基础--模块使用</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-计算密集型与IO密集型"><span class="toc-number">1.</span> <span class="toc-text">11.1. 计算密集型与IO密集型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-协程"><span class="toc-number">2.</span> <span class="toc-text">11.2. 协程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-asyncio"><span class="toc-number">3.</span> <span class="toc-text">11.3. asyncio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-async-await"><span class="toc-number">4.</span> <span class="toc-text">11.4. async&#x2F;await</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-aiohttp"><span class="toc-number">5.</span> <span class="toc-text">11.5. aiohttp</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2020-04-28T10:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
-</a>
-
-        </div>
-    	 
+  <div id="gitment-ctn"></div>
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/">No.3 Python语言基础--函数及其常用函数的使用</a>
-	
-    </h1>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
+  <script>
+    <!-- id: "No.11 Python语言基础--异步IO" -->
+    var gitment = new Gitment({
+      id: "20200505225539",
+      owner: 'lajos182',
+      repo: 'lajos182.github.io',
+      oauth: {
+        client_id: 'bea4e3d4c31d7696856b',
+        client_secret: 'c4ecc1802f4bf45791573d8dc166043f2aea366d',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">函数</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
-        <time datetime="2020-04-27T07:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/">No.2 Python语言基础--变量、数据类型及运算符</a>
-	
-    </h1>
   
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-        <time datetime="2020-04-27T04:08:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/">No.1 Python简介与版本介绍</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -501,8 +604,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
