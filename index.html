@@ -126,6 +126,8 @@
 				
 					<a class="github" href="https://github.com/lajos182" target="_blank" rel="noopener" title="GitHub" ><i class="icon-github"></i></a>
 				
+					<a class="gitee" href="https://github.com/lajos" target="_blank" rel="noopener" title="码云" ><i class="icon-gitee"></i></a>
+				
 					<a class="csdn" href="https://blog.csdn.net/sinat_41898105" target="_blank" rel="noopener" title="CSDN" ><i class="icon-csdn"></i></a>
 				
 					<a class="zhihu" href="https://www.zhihu.com/" target="_blank" rel="noopener" title="知乎" ><i class="icon-zhihu"></i></a>
@@ -193,6 +195,8 @@
 					
 						<a class="github" target="_blank" href="https://github.com/lajos182" title="GitHub"><i class="icon-github"></i></a>
 			        
+						<a class="gitee" target="_blank" href="https://github.com/lajos" title="码云"><i class="icon-gitee"></i></a>
+			        
 						<a class="csdn" target="_blank" href="https://blog.csdn.net/sinat_41898105" title="CSDN"><i class="icon-csdn"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="知乎"><i class="icon-zhihu"></i></a>
@@ -227,6 +231,114 @@
           </div>
           <div id="js-content" class="content-ll">
             
+
+  
+    <article id="post-hexo-github快速制作个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/07/hexo-github%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">hexo+github快速制作个人博客</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/07/hexo-github%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+        <time datetime="2020-05-07T01:06:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="1-为何采用Github-pages服务"><a href="#1-为何采用Github-pages服务" class="headerlink" title="1. 为何采用Github pages服务"></a>1. 为何采用<code>Github pages</code>服务</h2><p><code>Hexo</code>是一个简单、快速、强大的基于 <code>Github Pages</code>的博客发布工具，支持<code>Markdown</code>格式，有众多优秀插件和主题。</p>
+<p>使用<code>github pages</code>服务搭建博客的好处有：</p>
+<blockquote>
+<p>（1）全是静态文件，访问速度快；</p>
+<p>（2）免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</p>
+<p>（3）可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于<code>github</code>的；</p>
+<p>（4）数据绝对安全，基于<code>github</code>的版本管理，想恢复到哪个历史版本都行；</p>
+<p>（5）博客内容可以轻松打包、转移、发布到其它平台；</p>
+</blockquote>
+<h2 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2. 准备工作"></a>2. 准备工作</h2><p>在开始一切之前，首先要准备以下工作：</p>
+<ul>
+<li><code>Github</code>账号，<a href="https://github.com/" target="_blank" rel="noopener"><code>https://github.com/</code></a></li>
+<li><code>node.js</code>、<code>npm</code>，<a href="http://nodejs.cn/download/" target="_blank" rel="noopener"><code>http://nodejs.cn/download/</code></a></li>
+<li><code>git for windows</code>(或者其他<code>git</code>客户端)，<a href="https://git-scm.com/downloads" target="_blank" rel="noopener"><code>https://git-scm.com/downloads</code></a></li>
+</ul>
+<h2 id="3-搭建博客"><a href="#3-搭建博客" class="headerlink" title="3. 搭建博客"></a>3. 搭建博客</h2><h3 id="3-1-创建仓库"><a href="#3-1-创建仓库" class="headerlink" title="3.1 创建仓库"></a>3.1 创建仓库</h3><h4 id="3-1-1-注册github账号，如果有可忽略"><a href="#3-1-1-注册github账号，如果有可忽略" class="headerlink" title="3.1.1 注册github账号，如果有可忽略"></a>3.1.1 注册<code>github</code>账号，如果有可忽略</h4><h3 id="3-2-绑定域名"><a href="#3-2-绑定域名" class="headerlink" title="3.2 绑定域名"></a>3.2 绑定域名</h3><h3 id="3-3-配置SSH-key"><a href="#3-3-配置SSH-key" class="headerlink" title="3.3 配置SSH key"></a>3.3 配置<code>SSH key</code></h3><h3 id="3-4-hexo安装并初始化"><a href="#3-4-hexo安装并初始化" class="headerlink" title="3.4 hexo安装并初始化"></a>3.4 <code>hexo</code>安装并初始化</h3><h3 id="3-5-hexo修改主题"><a href="#3-5-hexo修改主题" class="headerlink" title="3.5 hexo修改主题"></a>3.5 <code>hexo</code>修改主题</h3><h3 id="3-6-git管理与多端同步"><a href="#3-6-git管理与多端同步" class="headerlink" title="3.6 git管理与多端同步"></a>3.6 <code>git</code>管理与多端同步</h3><h3 id="3-7-常见的问题"><a href="#3-7-常见的问题" class="headerlink" title="3.7 常见的问题"></a>3.7 常见的问题</h3><h2 id="4-本文参考"><a href="#4-本文参考" class="headerlink" title="4 本文参考"></a>4 本文参考</h2>
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/07/hexo-github%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
 
   
     <article id="post-No-11-Python语言基础-异步IO" class="article article-type-post  article-index" itemscope itemprop="blogPost">
@@ -556,7 +668,7 @@
 </li>
 <li><p><strong>对象</strong>：某个类的具象。其实是某个类型的变量。</p>
 <blockquote>
-<p>定义类需要使用关键字：<strong>class</strong>，也可以使用元类进行定义</p>
+<p>定义类需要使用关键字：<strong><code>class</code></strong>，也可以使用元类进行定义</p>
 <p>类名：原则上只要符合标识符的命名规范即可，但是我们通常使用大驼峰风格(每个单词首字母大写)命名</p>
     
     <a class="article-more-a" href="/2020/05/03/No-8-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/#more">more >></a>
@@ -745,7 +857,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h3 id="6-1-文件读写"><a href="#6-1-文件读写" class="headerlink" title="6.1. 文件读写"></a>6.1. 文件读写</h3><p>读写文件是最常见的IO操作。Python内置了读写文件的函数，用法和C是兼容的。</p>
+    <h3 id="6-1-文件读写"><a href="#6-1-文件读写" class="headerlink" title="6.1. 文件读写"></a>6.1. 文件读写</h3><p>读写文件是最常见的<code>IO</code>操作。<code>Python</code>内置了读写文件的函数，用法和C是兼容的。</p>
 <p>读写文件前，我们先必须了解一下，在磁盘上读写文件的功能都是由操作系统提供的，现代操作系统不允许普通的程序直接操作磁盘，所以，读写文件就是请求操作系统打开一个文件对象（通常称为文件描述符），然后，通过操作系统提供的接口从这个文件对象中读取数据（读文件），或者把数据写入这个文件对象（写文件）。</p>
     
     <a class="article-more-a" href="/2020/05/03/No-6-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-IO%E7%BC%96%E7%A8%8B/#more">more >></a>
@@ -1096,95 +1208,6 @@
 
 
   
-    <article id="post-No-2-Python语言基础-变量、数据类型及运算符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/">No.2 Python语言基础--变量、数据类型及运算符</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
-        <time datetime="2020-04-27T07:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="2-1-标识符、变量与常量"><a href="#2-1-标识符、变量与常量" class="headerlink" title="2.1. 标识符、变量与常量"></a>2.1. 标识符、变量与常量</h2><p><strong>标识符</strong>：开发人员在程序中自定义的一些符合和名称，其实就是一串字符串，如变量名、函数名等</p>
-<p>Python标识符规则：只能由数字、字符和下划线组成，开头不能是数字，不能是关键字，大小写敏感且见名知义，要遵循小驼峰原则。</p>
-    
-    <a class="article-more-a" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/27/No-2-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &gt;&gt;</a>
@@ -1322,15 +1345,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">线程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IO</a>
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1338,7 +1361,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+                <a href="javascript:void(0)" class="js-tag color3">IO</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1351,6 +1374,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1416,6 +1451,15 @@
                   <i class="icon-link icon"></i>
                 
                 GitHub
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gitee.com/lajos" target="_blank" class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                码云
               </a>
             </li>
           

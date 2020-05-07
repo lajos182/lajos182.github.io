@@ -19,13 +19,13 @@
 <meta property="og:url" content="https://lajos182.github.io/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="Lajos的博客">
 <meta property="og:description" content="1.1. Python简介 Python是一种解释型(不需要编译)、面向对象、动态数据类型的交互式语言，Python是由由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。  Python的优势：  易于学习：Python有相对较少的关键字，结构简单，有明确定义的语法，学习起来相对简单。">
-<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/the%20design%20pattern%20of%20python.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/the%20design%20pattern%20of%20python.png">
 <meta property="article:published_time" content="2020-04-27T04:08:33.000Z">
-<meta property="article:modified_time" content="2020-04-29T09:54:48.522Z">
+<meta property="article:modified_time" content="2020-05-07T08:41:17.839Z">
 <meta property="article:author" content="Lajos">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/lajos182/python-essay/blob/master/images/the%20design%20pattern%20of%20python.png">
+<meta name="twitter:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/the%20design%20pattern%20of%20python.png">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
   
@@ -111,6 +111,8 @@
 				
 					<a class="github" href="https://github.com/lajos182" target="_blank" rel="noopener" title="GitHub" ><i class="icon-github"></i></a>
 				
+					<a class="gitee" href="https://github.com/lajos" target="_blank" rel="noopener" title="码云" ><i class="icon-gitee"></i></a>
+				
 					<a class="csdn" href="https://blog.csdn.net/sinat_41898105" target="_blank" rel="noopener" title="CSDN" ><i class="icon-csdn"></i></a>
 				
 					<a class="zhihu" href="https://www.zhihu.com/" target="_blank" rel="noopener" title="知乎" ><i class="icon-zhihu"></i></a>
@@ -177,6 +179,8 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/lajos182" title="GitHub"><i class="icon-github"></i></a>
+			        
+						<a class="gitee" target="_blank" href="https://github.com/lajos" title="码云"><i class="icon-gitee"></i></a>
 			        
 						<a class="csdn" target="_blank" href="https://blog.csdn.net/sinat_41898105" title="CSDN"><i class="icon-csdn"></i></a>
 			        
@@ -316,7 +320,7 @@
 </li>
 </ul>
 <p><strong>Python的设计模式</strong>：</p>
-<p><img src="https://github.com/lajos182/python-essay/blob/master/images/the%20design%20pattern%20of%20python.png" alt="the design pattern of python"></p>
+<p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/the%20design%20pattern%20of%20python.png" alt="the design pattern of python"></p>
 <p>二十三设计模式案例详情，可参考：<a href="https://www.cnblogs.com/Liqiongyu/p/5916710.html" target="_blank" rel="noopener">https://www.cnblogs.com/Liqiongyu/p/5916710.html</a></p>
 <h2 id="1-3-单例模式"><a href="#1-3-单例模式" class="headerlink" title="1.3. 单例模式"></a>1.3. 单例模式</h2><blockquote>
 <p><strong>单利模式</strong>是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例类的特殊类。通过单例模式可以保证系统中一个类只有一个实例而且该实例易于外界访问，从而方便对实例个数的控制并节约系统资源。如果希望在系统中某个类的对象只能存在一个，单例模式是最好的解决方案。</p>
@@ -420,7 +424,7 @@
 <h3 id="1-12-3-分代技术"><a href="#1-12-3-分代技术" class="headerlink" title="1.12.3. 分代技术"></a>1.12.3. 分代技术</h3><p>分代回收的整体思想是：将系统中的所有内存块根据其存活时间划分为不同的集合，每个集合就成为一个“代”，垃圾收集频率随着“代”的存活时间的增大而减小，存活时间通常利用经过几次垃圾回收来度量。</p>
 <p>Python默认定义了三代对象集合，索引数越大，对象存活时间越长。</p>
 <p>举例： 当某些内存块M经过了3次垃圾收集的清洗之后还存活时，我们就将内存块M划到一个集合A中去，而新分配的内存都划分到集合B中去。当垃圾收集开始工作时，大多数情况都只对集合B进行垃圾回收，而对集合A进行垃圾回收要隔相当长一段时间后才进行，这就使得垃圾收集机制需要处理的内存少了，效率自然就提高了。在这个过程中，集合B中的某些内存块由于存活时间长而会被转移到集合A中，当然，集合A中实际上也存在一些垃圾，这些垃圾的回收会因为这种分代的机制而被延迟。</p>
-<h2 id="1-13-Python2-x与Python3-x区别"><a href="#1-13-Python2-x与Python3-x区别" class="headerlink" title="1.13. Python2.x与Python3.x区别"></a>1.13. Python2.x与Python3.x区别</h2><p><a href="https://github.com/lajos182/python-essay/blob/master/images/Python2.x%E4%B8%8EPython3.x%E7%9A%84%E5%8C%BA%E5%88%AB.pdf" target="_blank" rel="noopener">Python2.x与Python3.x区别</a></p>
+<h2 id="1-13-Python2-x与Python3-x区别"><a href="#1-13-Python2-x与Python3-x区别" class="headerlink" title="1.13. Python2.x与Python3.x区别"></a>1.13. Python2.x与Python3.x区别</h2><p><a href="https://gitee.com/lajos/image_bucket/raw/master/skill/Python2.x与Python3.x的区别.pdf" target="_blank" rel="noopener">Python2.x与Python3.x区别</a></p>
 
     
 
@@ -768,15 +772,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">线程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IO</a>
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -784,7 +788,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+                <a href="javascript:void(0)" class="js-tag color3">IO</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -797,6 +801,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
             
             <div class="clearfix"></div>
@@ -862,6 +878,15 @@
                   <i class="icon-link icon"></i>
                 
                 GitHub
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gitee.com/lajos" target="_blank" class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                码云
               </a>
             </li>
           

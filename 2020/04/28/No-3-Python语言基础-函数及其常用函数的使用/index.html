@@ -19,18 +19,18 @@
 <meta property="og:url" content="https://lajos182.github.io/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Lajos的博客">
 <meta property="og:description" content="3.1. 函数的基本定义函数：具有特定功能的一段代码。 函数的优点：  解决代码的重复书写问题 可以将功能的实现者和使用者分开，提高开发效率 增加的代码的可移植性">
-<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png">
-<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/recursive%2C%20lamada%2C%20closure%2C%20iteator%2C%20decorator%2C%20generator%2C%20iterable.png">
-<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/os%20and%20shutil.png">
-<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/time%2C%20calendar%20and%20datemate.png">
-<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/hashlip%2C%20urllib%2C%20http.client.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/recursive%2C%20lamada%2C%20closure%2C%20iteator%2C%20decorator%2C%20generator%2C%20iterable.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/os%20and%20shutil.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/time%2C%20calendar%20and%20datemate.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/hashlip%2C%20urllib%2C%20http.client.png">
 <meta property="article:published_time" content="2020-04-28T10:35:40.000Z">
-<meta property="article:modified_time" content="2020-04-29T10:43:42.839Z">
+<meta property="article:modified_time" content="2020-05-07T08:50:15.077Z">
 <meta property="article:author" content="Lajos">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="函数">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/lajos182/python-essay/blob/master/images/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png">
+<meta name="twitter:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
   
@@ -116,6 +116,8 @@
 				
 					<a class="github" href="https://github.com/lajos182" target="_blank" rel="noopener" title="GitHub" ><i class="icon-github"></i></a>
 				
+					<a class="gitee" href="https://github.com/lajos" target="_blank" rel="noopener" title="码云" ><i class="icon-gitee"></i></a>
+				
 					<a class="csdn" href="https://blog.csdn.net/sinat_41898105" target="_blank" rel="noopener" title="CSDN" ><i class="icon-csdn"></i></a>
 				
 					<a class="zhihu" href="https://www.zhihu.com/" target="_blank" rel="noopener" title="知乎" ><i class="icon-zhihu"></i></a>
@@ -182,6 +184,8 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/lajos182" title="GitHub"><i class="icon-github"></i></a>
+			        
+						<a class="gitee" target="_blank" href="https://github.com/lajos" title="码云"><i class="icon-gitee"></i></a>
 			        
 						<a class="csdn" target="_blank" href="https://blog.csdn.net/sinat_41898105" title="CSDN"><i class="icon-csdn"></i></a>
 			        
@@ -297,7 +301,7 @@
 <p>位置参数：调用参数时比较灵活，加不加关键字都可以，但python3.8引入新的语法控制这种灵活性，<code>&#39;/&#39;</code>之前的参数必须不加关键字，<code>&#39;*&#39;</code>之后的参数必须加关键字，其他参数依旧随意。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python3.8之前定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">center</span><span class="params">(txt, border=<span class="string">'='</span>, width=<span class="number">50</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">f'<span class="subst">&#123;txt&#125;</span>'</span>.center(width, border)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用结果：</span></span><br><span class="line">&gt;&gt;&gt;center(<span class="string">'python'</span>)</span><br><span class="line"><span class="string">'=========================python========================'</span></span><br><span class="line">&gt;&gt;&gt;center(<span class="string">'python'</span>, <span class="string">'*'</span>, <span class="number">10</span>)</span><br><span class="line"><span class="string">'**python**'</span></span><br><span class="line">&gt;&gt;&gt;center(<span class="string">'python'</span>, border=<span class="string">'*'</span>, width=<span class="number">10</span>)</span><br><span class="line"><span class="string">'**python**'</span></span><br><span class="line">&gt;&gt;&gt;center(txt=<span class="string">'python'</span>, border=<span class="string">'*'</span>, width=<span class="number">10</span>)</span><br><span class="line"><span class="string">'**python**'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># python3.8新特性：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">center</span><span class="params">(txt, /, border=<span class="string">'='</span>, *, width=<span class="number">50</span>)</span>:</span></span><br><span class="line">     <span class="keyword">return</span> <span class="string">f'<span class="subst">&#123;txt&#125;</span>'</span>.center(width, border)</span><br><span class="line"><span class="comment"># 调用结果</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>center(txt = <span class="string">'中心'</span>,border=<span class="string">'$'</span>,width = <span class="number">10</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#68&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    center(txt = <span class="string">'中心'</span>,border=<span class="string">'$'</span>,width = <span class="number">10</span>)</span><br><span class="line">TypeError: center() got some positional-only arguments passed <span class="keyword">as</span> keyword arguments: <span class="string">'txt'</span></span><br><span class="line">&gt;&gt;&gt;center( <span class="string">'中心'</span>,<span class="string">'$'</span>, <span class="number">10</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#69&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    center( <span class="string">'中心'</span>,<span class="string">'$'</span>, <span class="number">10</span>)</span><br><span class="line">TypeError: center() takes <span class="keyword">from</span> <span class="number">1</span> to <span class="number">2</span> positional arguments but <span class="number">3</span> were given</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>center(<span class="string">'中心'</span>,border=<span class="string">'$'</span>,width = <span class="number">10</span>)</span><br><span class="line"><span class="string">'$$$$中心$$$$'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>center(<span class="string">'中心'</span>,<span class="string">'$'</span>,width = <span class="number">10</span>)</span><br><span class="line"><span class="string">'$$$$中心$$$$'</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="3-2-变量作用域（LEGB）"><a href="#3-2-变量作用域（LEGB）" class="headerlink" title="3.2. 变量作用域（LEGB）"></a>3.2. 变量作用域（LEGB）</h3><p>LEGB规则：local &gt; enclosed &gt; global &gt; bulit-in</p>
+<h3 id="3-2-变量作用域（LEGB）"><a href="#3-2-变量作用域（LEGB）" class="headerlink" title="3.2. 变量作用域（LEGB）"></a>3.2. 变量作用域（<code>LEGB</code>）</h3><p><code>LEGB</code>规则：<code>local</code> &gt; <code>enclosed</code>&gt; <code>global</code> &gt; <code>bulit-in</code></p>
 <ul>
 <li><p>（1）<strong>块级作用域</strong>：Python不存在块级作用域，下民的代码可以正常运行。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="literal">True</span>:</span><br><span class="line">    name = <span class="string">'xiaoming'</span></span><br><span class="line"></span><br><span class="line">print(name)</span><br></pre></td></tr></table></figure>
@@ -313,7 +317,7 @@
 
 </li>
 </ul>
-<h3 id="3-3-内置函数、模块函数及基本数据结构函数"><a href="#3-3-内置函数、模块函数及基本数据结构函数" class="headerlink" title="3.3. 内置函数、模块函数及基本数据结构函数"></a>3.3. 内置函数、模块函数及基本数据结构函数</h3><p><img src="https://github.com/lajos182/python-essay/blob/master/images/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png" alt="内置函数、模块函数及基本数据结构函数"></p>
+<h3 id="3-3-内置函数、模块函数及基本数据结构函数"><a href="#3-3-内置函数、模块函数及基本数据结构函数" class="headerlink" title="3.3. 内置函数、模块函数及基本数据结构函数"></a>3.3. 内置函数、模块函数及基本数据结构函数</h3><p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png" alt="内置函数、模块函数及基本数据结构函数"></p>
 <h3 id="3-4-匿名函数"><a href="#3-4-匿名函数" class="headerlink" title="3.4. 匿名函数"></a>3.4. 匿名函数</h3><p><strong>匿名函数<code>lambda</code></strong>：就是没有名字的函数，使用<code>lambda</code>关键字定义。</p>
 <p>特点：</p>
 <ul>
@@ -391,7 +395,7 @@
 <p>注意：<code>sort</code>也可用来排序，它是<code>list</code>的排序方法，用于对列表的成员进行排序，而且改变的是原列表。</p>
 </li>
 </ul>
-<h3 id="3-9-匿名、递归、闭包、高级函数总结"><a href="#3-9-匿名、递归、闭包、高级函数总结" class="headerlink" title="3.9. 匿名、递归、闭包、高级函数总结"></a>3.9. 匿名、递归、闭包、高级函数总结</h3><p><img src="https://github.com/lajos182/python-essay/blob/master/images/recursive%2C%20lamada%2C%20closure%2C%20iteator%2C%20decorator%2C%20generator%2C%20iterable.png" alt=" 匿名、递归、闭包、高级函数总结"></p>
+<h3 id="3-9-匿名、递归、闭包、高级函数总结"><a href="#3-9-匿名、递归、闭包、高级函数总结" class="headerlink" title="3.9. 匿名、递归、闭包、高级函数总结"></a>3.9. 匿名、递归、闭包、高级函数总结</h3><p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/recursive%2C%20lamada%2C%20closure%2C%20iteator%2C%20decorator%2C%20generator%2C%20iterable.png" alt=" 匿名、递归、闭包、高级函数总结"></p>
 <h3 id="3-10-目录管理与文件操作相关模块函数"><a href="#3-10-目录管理与文件操作相关模块函数" class="headerlink" title="3.10.目录管理与文件操作相关模块函数"></a>3.10.目录管理与文件操作相关模块函数</h3><ul>
 <li><p><strong>目录管理(<code>os</code>)</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># system, 执行系统命令</span></span><br><span class="line">os.system(<span class="string">'cls'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># name, 获取操作系统名称，nt代表Windows, posix代表unix</span></span><br><span class="line">print(os.name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># environ, 获取环境变量</span></span><br><span class="line">os.environ.get(<span class="string">'path'</span>)</span><br><span class="line">os.environ.get([<span class="string">'path'</span>])</span><br><span class="line">os.getenv(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># getcwd, 获取当前工作目录</span></span><br><span class="line">os.getcwd()</span><br><span class="line"></span><br><span class="line"><span class="comment"># mkdir, 创建目录，该方法创建中间目录会报错</span></span><br><span class="line">os.mkdir(<span class="string">'hello'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># makedirs, 创建目录，会创建中间目录</span></span><br><span class="line">os.makedirs(<span class="string">'a/b/c'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># rmdir, 删除目录，只能删除空目录</span></span><br><span class="line">os.rmdir(<span class="string">'a'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># rename, 修改文件名(可以是目录)</span></span><br><span class="line">os.rename(<span class="string">'a'</span>, <span class="string">'c'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># stat, 查看文件信息</span></span><br><span class="line">os.stat(<span class="string">'123.py'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># listdir, 列出直接子文件</span></span><br><span class="line">os.listdir(<span class="string">'c'</span>)</span><br></pre></td></tr></table></figure>
@@ -466,7 +470,7 @@
 </li>
 <li><p><strong><code>ignore_patterns(*patterns)</code></strong>：忽略模式，用于配合<code>copytree()</code>方法，传递文件将会被忽略，不会被拷贝。<code>patterns</code>是文件名称、元组。</p>
 </li>
-<li><p>**<code>copytree(src, dst, symlinks=False, ignore=None,</code>copy_function=copy2,</p>
+<li><p>**`copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2,</p>
 <pre><code>ignore_dangling_symlinks=False`)`**：拷贝文档树，将`src`文件夹里的所有内容拷贝至`dst`文件夹，文件夹不存在会自动创建。`symlinks`代表是否复制软连接，`True`复制软连接，`False`不复制，软连接会被当成文件复制过来，默认`False`。`ignore`为忽略模式，可传入`ignore_patterns()`。`copy_function`为拷贝文件的方式，可传入一个可执行的处理函数，默认为`copy2`，`ignore_dangling_symlinks`设置为`False`，拷贝指向文件已删除的软连接时，将会报错，如果想消除这个异常，可以设置此值为True，默认为`False`。</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil,os</span><br><span class="line">folder1 = os.path.join(os.getcwd(),<span class="string">"aaa"</span>)</span><br><span class="line"><span class="comment"># bbb与ccc文件夹都可以不存在,会自动创建</span></span><br><span class="line">folder2 = os.path.join(os.getcwd(),<span class="string">"bbb"</span>,<span class="string">"ccc"</span>)</span><br><span class="line"><span class="comment"># 将"abc.txt","bcd.txt"忽略，不复制</span></span><br><span class="line">shutil.copytree(folder1,folder2,ignore=shutil.ignore_patterns(<span class="string">"abc.txt"</span>,<span class="string">"bcd.txt"</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong><code>rmtree(path, ignore_errors=False, onerror=None)</code></strong>：移除文档树，将文件夹目录删除。<code>ignore_errors</code>代表是否忽略错误，默认<code>False</code>，<code>onerror</code>定义错误处理函数，需传递一个可执行的处理函数，该处理函数接收三个参数：函数、路径和<code>excinfo</code></p>
@@ -487,7 +491,7 @@
 <li><p><strong><code>make_archive(base_name, format, root_dir, …)</code></strong>：生成压缩文件。<code>base_name</code>指压缩文件的文件名，不允许有扩展名(因为会根据压缩格式生成相应的扩展名)，<code>format</code>表示压缩格式，<code>root_dir</code>表示将指定文件夹进行压缩。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil,os</span><br><span class="line">base_name = os.path.join(os.getcwd(),<span class="string">"aaa"</span>)</span><br><span class="line">format = <span class="string">"zip"</span></span><br><span class="line">root_dir = os.path.join(os.getcwd(),<span class="string">"aaa"</span>)</span><br><span class="line"><span class="comment"># 将会root_dir文件夹下的内容进行压缩，生成一个aaa.zip文件</span></span><br><span class="line">shutil.make_archive(base_name, format, root_dir)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong><code>get_archive_formats()</code></strong>：获取支持的压缩文件格式。目前支持的有：<code>tar</code>、<code>zip</code>、<code>gztar</code>、<code>bztar</code>。在Python3还多支持一种格式<code>xztar</code>。</p>
+<li><p><strong><code>get_archive_formats()</code></strong>：获取支持的压缩文件格式。目前支持的有：<code>tar</code>、<code>zip</code>、<code>gztar</code>、<code>bztar</code>。在<code>Python3</code>还多支持一种格式<code>xztar</code>。</p>
 </li>
 <li><p><strong><code>unpack_archive(filename, extract_dir=None, format=None)</code></strong>：解压操作，<code>extract_dir</code>解压至的文件夹路径，文件夹可以不存在，会自动生成。<code>format</code>解压格式，默认为<code>None</code>，会根据扩展名自动选择解压格式。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil,os</span><br><span class="line">zip_path = os.path.join(os.getcwd(),<span class="string">"aaa.zip"</span>)</span><br><span class="line">extract_dir = os.path.join(os.getcwd(),<span class="string">"aaa"</span>)</span><br><span class="line">shutil.unpack_archive(zip_path, extract_dir)</span><br></pre></td></tr></table></figure>
@@ -497,7 +501,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://github.com/lajos182/python-essay/blob/master/images/os%20and%20shutil.png" alt="目录及文件管理"></p>
+<p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/os%20and%20shutil.png" alt="目录及文件管理"></p>
 <ul>
 <li><p><strong>经典练习</strong></p>
 <ul>
@@ -535,7 +539,7 @@
 <p>年、月、日、时、分、秒、星期(0~6)、今年的第几天、夏令时</p>
 </blockquote>
 </li>
-<li><p><code>mktime</code>：根据元组形式的时间生成一���时间戳</p>
+<li><p><code>mktime</code>：根据元组形式的时间生成一个时间的时间戳</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">print(time.mktime((<span class="number">2019</span>, <span class="number">4</span>, <span class="number">28</span>, <span class="number">9</span>, <span class="number">25</span>, <span class="number">34</span>, <span class="number">6</span>, <span class="number">118</span>, <span class="number">0</span>))) <span class="comment"># 注意一定是一个元组</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1556414734.0</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>strftime</code>：将一个元组形式的时间格式化为字符串，不传时间默认转换当前时间</p>
@@ -619,7 +623,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://github.com/lajos182/python-essay/blob/master/images/time%2C%20calendar%20and%20datemate.png" alt="时间、日期、日历"></p>
+<p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/time%2C%20calendar%20and%20datemate.png" alt="时间、日期、日历"></p>
 <h3 id="3-12-短信邮件相关模块函数"><a href="#3-12-短信邮件相关模块函数" class="headerlink" title="3.12. 短信邮件相关模块函数"></a>3.12. 短信邮件相关模块函数</h3><ul>
 <li><p><strong><code>hashlib</code></strong>：用来进行<code>hash</code>或者<code>md5</code>加密，而且这种加密是不可逆的，所以这种算法又被称为摘要算法。其支持<code>Openssl</code>库提供的所有算法，包括<code>md5</code>、<code>sha1</code>、<code>sha224</code>、<code>sha256</code>、<code>sha512</code>等。</p>
 <ul>
@@ -709,7 +713,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://github.com/lajos182/python-essay/blob/master/images/hashlip%2C%20urllib%2C%20http.client.png" alt="短信邮件相关"></p>
+<p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/hashlip%2C%20urllib%2C%20http.client.png" alt="短信邮件相关"></p>
 
     
 
@@ -1066,15 +1070,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">线程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IO</a>
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1082,7 +1086,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+                <a href="javascript:void(0)" class="js-tag color3">IO</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1095,6 +1099,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1160,6 +1176,15 @@
                   <i class="icon-link icon"></i>
                 
                 GitHub
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gitee.com/lajos" target="_blank" class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                码云
               </a>
             </li>
           

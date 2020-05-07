@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Lajos的博客">
 <meta property="og:description" content="9.1. 进程简介 进程（任务）： 在计算机中，其实进程就是一个任务。 在操作系统中，进程是程序执行和资源分配的基本单元。 单核CPU实现多任务 只是将CPU的时间快速的切换和分配到不同的任务上。 主频足够高，切换足够快，人的肉眼无法分辨而已。">
 <meta property="article:published_time" content="2020-05-04T04:26:11.000Z">
-<meta property="article:modified_time" content="2020-05-06T09:44:38.172Z">
+<meta property="article:modified_time" content="2020-05-07T09:02:08.024Z">
 <meta property="article:author" content="Lajos">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="进程">
@@ -110,6 +110,8 @@
 				
 					<a class="github" href="https://github.com/lajos182" target="_blank" rel="noopener" title="GitHub" ><i class="icon-github"></i></a>
 				
+					<a class="gitee" href="https://github.com/lajos" target="_blank" rel="noopener" title="码云" ><i class="icon-gitee"></i></a>
+				
 					<a class="csdn" href="https://blog.csdn.net/sinat_41898105" target="_blank" rel="noopener" title="CSDN" ><i class="icon-csdn"></i></a>
 				
 					<a class="zhihu" href="https://www.zhihu.com/" target="_blank" rel="noopener" title="知乎" ><i class="icon-zhihu"></i></a>
@@ -176,6 +178,8 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/lajos182" title="GitHub"><i class="icon-github"></i></a>
+			        
+						<a class="gitee" target="_blank" href="https://github.com/lajos" title="码云"><i class="icon-gitee"></i></a>
 			        
 						<a class="csdn" target="_blank" href="https://blog.csdn.net/sinat_41898105" title="CSDN"><i class="icon-csdn"></i></a>
 			        
@@ -284,14 +288,14 @@
 </li>
 </ul>
 <p><code>Unix/Linux</code>操作系统提供了一个<code>fork()</code>系统调用，它非常特殊。普通的函数调用，调用一次，返回一次，但是<code>fork()</code>调用一次，返回两次，因为操作系统自动把当前进程（称为父进程）复制了一份（称为子进程），然后，分别在父进程和子进程内返回。</p>
-<p>子进程永远返回0，而父进程返回子进程的ID。这样做的理由是，一个父进程可以fork出很多子进程，所以，父进程要记下每个子进程的ID，而子进程只需要调用<code>getppid()</code>就可以拿到父进程的ID。</p>
+<p>子进程永远返回0，而父进程返回子进程的ID。这样做的理由是，一个父进程可以<code>fork</code>出很多子进程，所以，父进程要记下每个子进程的ID，而子进程只需要调用<code>getppid()</code>就可以拿到父进程的ID。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">print(<span class="string">f'Process <span class="subst">&#123;os.getpid()&#125;</span> start...'</span>)</span><br><span class="line"><span class="comment"># Only works on Unix/Linux/Mac:</span></span><br><span class="line">pid = os.fork()</span><br><span class="line">print(pid)</span><br><span class="line"><span class="keyword">if</span> pid == <span class="number">0</span>:</span><br><span class="line">    print(<span class="string">f'I am child process (<span class="subst">&#123;os.getpid()&#125;</span>) and my parent is <span class="subst">&#123;os.getppid()&#125;</span>)'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">f'I (<span class="subst">&#123;os.getpid()&#125;</span>) just created a child process <span class="subst">&#123;pid&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Process (<span class="number">876</span>) start...</span><br><span class="line">I (<span class="number">876</span>) just created a child process (<span class="number">877</span>).</span><br><span class="line">I am child process (<span class="number">877</span>) <span class="keyword">and</span> my parent <span class="keyword">is</span> <span class="number">876.</span></span><br></pre></td></tr></table></figure>
 
-<p>由于Windows没有fork调用，上面的代码在Windows上无法运行。有了fork调用，一个进程在接到新任务时就可以复制出一个子进程来处理新任务，常见的<code>Apache</code>服务器就是由父进程监听端口，每当有新的http请求时，就fork出子进程来处理新的http请求。</p>
+<p>由于<code>Windows</code>没有<code>fork</code>调用，上面的代码在<code>Windows</code>上无法运行。有了<code>fork</code>调用，一个进程在接到新任务时就可以复制出一个子进程来处理新任务，常见的<code>Apache</code>服务器就是由父进程监听端口，每当有新的<code>http</code>请求时，就<code>fork</code>出子进程来处理新的<code>http</code>请求。</p>
 <h3 id="9-2-进程的并发与并行"><a href="#9-2-进程的并发与并行" class="headerlink" title="9.2. 进程的并发与并行"></a>9.2. 进程的并发与并行</h3><ul>
-<li><strong>并发</strong>：并发是指在资源有限的情况下，两者交替轮流使用资源，比如一段路(单核CPU资源)同时只能过一个人，A走一段后，让给B，B用完继续给A，交替使用，目的是提高效率。</li>
-<li><strong>并行</strong>：并行是指两者同时执行，比如赛跑，两个人都在不停的往前跑（资源够用，比如三个线程，四核的CPU）；</li>
-<li><strong>区别</strong>：并发是从宏观上，在一个时间段上可以看出是同时执行的，比如一个服务器同时处理多个session。并行是从微观上，也就是在一个精确的时间片刻，有不同的程序在执行，这就要求必须有多个处理器。</li>
+<li><strong>并发</strong>：并发是指在资源有限的情况下，两者交替轮流使用资源，比如一段路(单核<code>CPU</code>资源)同时只能过一个人，A走一段后，让给B，B用完继续给A，交替使用，目的是提高效率。</li>
+<li><strong>并行</strong>：并行是指两者同时执行，比如赛跑，两个人都在不停的往前跑（资源够用，比如三个线程，四核的<code>CPU</code>）；</li>
+<li><strong>区别</strong>：并发是从宏观上，在一个时间段上可以看出是同时执行的，比如一个服务器同时处理多个<code>session</code>。并行是从微观上，也就是在一个精确的时间片刻，有不同的程序在执行，这就要求必须有多个处理器。</li>
 </ul>
 <h3 id="9-3-进程管理"><a href="#9-3-进程管理" class="headerlink" title="9.3. 进程管理"></a>9.3. 进程管理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">f'Run child process <span class="subst">&#123;name&#125;</span> (<span class="subst">&#123;os.getpid()&#125;</span>)'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    print(<span class="string">f'Parent process <span class="subst">&#123;os.getpid()&#125;</span>'</span>)</span><br><span class="line">    <span class="comment"># 创建进程，指定任务函数，target就是指定任务的函数，name代表进程名称， args和kwargs表示传递给子进程任务函数的参数</span></span><br><span class="line">    p = Process(target=run, args=(<span class="string">'test'</span>,))</span><br><span class="line">    print(<span class="string">'Child process will start...'</span>)</span><br><span class="line">    p.start()</span><br><span class="line">    p.join()</span><br><span class="line">    print(<span class="string">'Child process end...'</span>)</span><br></pre></td></tr></table></figure>
 
@@ -300,16 +304,16 @@
 </li>
 <li><p><code>os.getppid()</code>：获取主进程id</p>
 </li>
-<li><p><code>Process([group [, target [, name [, args [, kwargs]]]]])</code>：由该类实例化得到的对象，表示一个子进程中的任务（尚未启动），需要使用关键字的方式来指定参数，args指定的为传给target函数的位置参数，是一个元组形式，必须有逗号</p>
-<p>-group参数未使用，值始终为None<br>-target表示调用对象，即子进程要执行的任务<br>-name为子进程的名称<br>-args表示调用对象的位置参数元组，args=(1, 2, ‘egon’,)<br>-kwargs表示调用对象的字典，kwargs={‘name’: ‘egon’, ‘age’: 18}</p>
+<li><p><code>Process([group [, target [, name [, args [, kwargs]]]]])</code>：由该类实例化得到的对象，表示一个子进程中的任务（尚未启动），需要使用关键字的方式来指定参数，<code>args</code>指定的为传给<code>target</code>函数的位置参数，是一个元组形式，必须有逗号</p>
+<p>-<code>group</code>参数未使用，值始终为<code>None</code><br>-<code>target</code>表示调用对象，即子进程要执行的任务<br>-<code>name</code>为子进程的名称<br>-<code>args</code>表示调用对象的位置参数元组，<code>args=(1, 2, &#39;egon&#39;,)</code><br>-<code>kwargs</code>表示调用对象的字典，<code>kwargs={&#39;name&#39;: &#39;egon&#39;, &#39;age&#39;: 18}</code></p>
 </li>
-<li><p><code>p.daemone</code>：默认值为<code>False</code>，如果设为<code>True</code>，代表p为后台运行的守护进程，当p的父进程终止时，p也随之终止，并且设定为True后，p不能创建自己的新进程，必须在<code>p.start()</code>之前设置</p>
+<li><p><code>p.daemone</code>：默认值为<code>False</code>，如果设为<code>True</code>，代表<code>p</code>为后台运行的守护进程，当<code>p</code>的父进程终止时，<code>p</code>也随之终止，并且设定为<code>True</code>后，<code>p</code>不能创建自己的新进程，必须在<code>p.start()</code>之前设置</p>
 </li>
 <li><p><code>p.name</code>：进程的名称</p>
 </li>
-<li><p><code>p.pid</code>：进程pid</p>
+<li><p><code>p.pid</code>：进程<code>pid</code></p>
 </li>
-<li><p><code>p.exitcode</code>：进程在运行时为None、如果为–N，表示被信号N结束(了解即可)</p>
+<li><p><code>p.exitcode</code>：进程在运行时为<code>None</code>、如果为–<code>N</code>，表示被信号<code>N</code>结束(了解即可)</p>
 </li>
 <li><p><code>p.authkey</code>：进程的身份验证键,默认是由<code>os.urandom()</code>随机生成的32字符的字符串。这个键的用途是为涉及网络连接的底层进程间通信提供安全性，这类连接只有在具有相同的身份验证键时才能成功（了解即可）</p>
 </li>
@@ -317,11 +321,11 @@
 </li>
 <li><p><code>p.run()</code>：进程启动时运行的方法，正是它去调用<code>target</code>指定的函数，我们自定义类的类中一定要实现该方法</p>
 </li>
-<li><p><code>p.terminate()</code>：强制终止进程p，不会进行任何清理操作，如果p创建了子进程，该子进程就成了僵尸进程，使用该方法需要特别小心这种情况。如果p还保存了一个锁那么也将不会被释放，进而导致死锁</p>
+<li><p><code>p.terminate()</code>：强制终止进程<code>p</code>，不会进行任何清理操作，如果<code>p</code>创建了子进程，该子进程就成了僵尸进程，使用该方法需要特别小心这种情况。如果<code>p</code>还保存了一个锁那么也将不会被释放，进而导致死锁</p>
 </li>
-<li><p><code>p.is_alive()</code>：如果p仍然运行，返回True</p>
+<li><p><code>p.is_alive()</code>：如果p仍然运行，返回<code>True</code></p>
 </li>
-<li><p><code>p.join[timeout])</code>：主线程等待p终止（强调：是主线程处于等的状态，而p是处于运行的状态）。<code>timeout</code>是可选的超时时间，需要强调的是，<code>p.join</code>只能<code>join</code>住<code>start</code>开启的进程，而不能<code>join</code>住<code>run</code>开启的进程</p>
+<li><p><code>p.join[timeout])</code>：主线程等待<code>p</code>终止（强调：是主线程处于等的状态，而p是处于运行的状态）。<code>timeout</code>是可选的超时时间，需要强调的是，<code>p.join</code>只能<code>join</code>住<code>start</code>开启的进程，而不能<code>join</code>住<code>run</code>开启的进程</p>
 </li>
 </ul>
 <h3 id="9-4-进程锁"><a href="#9-4-进程锁" class="headerlink" title="9.4. 进程锁"></a>9.4. 进程锁</h3><p>当多个进程操作同一资源时，可能会造成混乱，甚至错误（如写文件），通常采用加锁的方式进行解决</p>
@@ -335,9 +339,9 @@
 
 <ul>
 <li><code>Pool([numprocess[, initializer[, initargs]]])</code>：创建进程池，<code>numprocess</code>为要创建的进程数，默认使用<code>multiprocessing.cpu_count()</code>的CPU核心数；<code>initializer</code>是每个工作进程启动时要执行的可调用对象，默认为<code>None</code>；<code>initargs</code>是要传给<code>initializer</code>的参数组。</li>
-<li><code>pool.apply(func[, args[, kwargs]])</code>同步执行(阻塞式)：在<strong>一个池工作进程中</strong>执行<code>func(*args,**kwargs)</code>,然后返回结果，<strong>同步运行，阻塞，直到本次任务执行完毕后返回结果</strong>。此操作并不会在所有池工作进程中并执行<code>func</code>函数。如果要通过不同参数并发地执行<code>fun</code>c函数，必须从不同线程调用<code>pool.apply()</code>函数或者使用<code>pool.apply_async()</code>。</li>
+<li><code>pool.apply(func[, args[, kwargs]])</code>同步执行(阻塞式)：在<strong>一个池工作进程中</strong>执行<code>func(*args,**kwargs)</code>,然后返回结果，<strong>同步运行，阻塞，直到本次任务执行完毕后返回结果</strong>。此操作并不会在所有池工作进程中并执行<code>func</code>函数。如果要通过不同参数并发地执行<code>func</code>函数，必须从不同线程调用<code>pool.apply()</code>函数或者使用<code>pool.apply_async()</code>。</li>
 <li><code>pool.map(func, iterable[, chunksize=None])</code>：和<code>pool.apply()</code>类似，只不过需要接收一个可迭代的参数对象。</li>
-<li><code>pool.apply_async(func[, args[, kwargs[, callback=None[, error_callback=None]]]])</code>异步执行(非阻塞)：在<strong>一个池工作进程中</strong>执行<code>func(*args,**kwargs)</code>，然后返回结果。此方法的结果是<code>AsyncResult</code>类的实例，callback是可调用对象，接收输入参数。当func的结果变为可用时，将理解传给callback。callback禁止执行任何阻塞操作，否则将接收其他异步操作中的结果。</li>
+<li><code>pool.apply_async(func[, args[, kwargs[, callback=None[, error_callback=None]]]])</code>异步执行(非阻塞)：在<strong>一个池工作进程中</strong>执行<code>func(*args,**kwargs)</code>，然后返回结果。此方法的结果是<code>AsyncResult</code>类的实例，callback是可调用对象，接收输入参数。当<code>func</code>的结果变为可用时，将理解传给<code>callback</code>。<code>callback</code>禁止执行任何阻塞操作，否则将接收其他异步操作中的结果。</li>
 <li><code>pool.map_async(func, iterable[, chunksize=None[, callback=None[, error_callback=None]]]])</code>：和<code>pool.apply_async()</code>类似，只不过需要接收一个可迭代的参数对象。</li>
 </ul>
 <h3 id="9-7-数据共享"><a href="#9-7-数据共享" class="headerlink" title="9.7. 数据共享"></a>9.7. 数据共享</h3><p><code>Process</code>之间肯定是需要通信的，操作系统提供了很多机制来实现进程间的通信。<code>Python</code>的<code>multiprocessing</code>模块包装了底层的机制，提供了<code>Queue</code>、<code>Pipes</code>等多种方式来交换数据。但要注意的是，<strong>全局变量不能共享</strong>。</p>
@@ -734,15 +738,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">线程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IO</a>
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -750,7 +754,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+                <a href="javascript:void(0)" class="js-tag color3">IO</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -763,6 +767,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
             
             <div class="clearfix"></div>
@@ -828,6 +844,15 @@
                   <i class="icon-link icon"></i>
                 
                 GitHub
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gitee.com/lajos" target="_blank" class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                码云
               </a>
             </li>
           
