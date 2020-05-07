@@ -35,6 +35,12 @@ toc: true
 
 #### 3.1.1 注册`github`账号，如果有可忽略
 
+直接打开[`Github`官网](https://github.com/)，完成注册
+
+#### 3.1.2 创建仓库
+
+新建一个名为`github用户名.github.io`的仓库，比如，`github`用户名为`lajos182`，那么就新建`lajos182.github.io`的仓库(其他名称无效)，以后部署上线就可以使用`http://lajos182.github.io`(如果使用`https`，就使用`https://lajos182.github.io`)访问
+
 
 
 ### 3.2 绑定域名

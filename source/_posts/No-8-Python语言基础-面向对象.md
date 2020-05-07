@@ -239,7 +239,7 @@ toc: true
 
 - **`__repr__()`**：是给机器用的，在Python解释器里面直接敲对象名再回车后调用的方法。在没有str时就相当于它本身的作用
 
-  ![__repr__用法](https://github.com/lajos182/python-essay/blob/master/images/__repr___%20and%20__str__.png)
+  ![__repr__用法](https://gitee.com/lajos/image_bucket/raw/master/skill/__repr___%20and%20__str__.png)
 
 - **`__del__()`**：对象在程序运行结束之后进行垃圾回收的时候调用这个方法，来释放资源。此时，此方法是被自动调用的。总而言之，`__del__`魔法方法是在对象没有变量再引用，其**引用计数**减为0，进行垃圾回收的时候自动调用的。
 
