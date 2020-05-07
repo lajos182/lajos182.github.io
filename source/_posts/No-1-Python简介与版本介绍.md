@@ -56,9 +56,7 @@ toc: Toc
 
 **Python的设计模式**：
 
-![the design pattern of python](https://github.com/lajos182/python-essay/blob/master/images/the%20design%20pattern%20of%20python.png)
-
-
+![the design pattern of python](https://gitee.com/lajos/image_bucket/raw/master/skill/the%20design%20pattern%20of%20python.png)
 
 二十三设计模式案例详情，可参考：https://www.cnblogs.com/Liqiongyu/p/5916710.html
 
@@ -358,13 +356,15 @@ def outer():
 
 优点:
 
-1. 简单
-2. 实时性
++ 简单
+
++ 实时性
 
 缺点:
 
-1. 维护引用计数消耗资源
-2. 循环引用
++ 维护引用计数消耗资源
+
++ 循环引用
 
 ### 1.12.2. 标记-清除机制
 
@@ -380,4 +380,4 @@ Python默认定义了三代对象集合，索引数越大，对象存活时间�
 
 ## 1.13. Python2.x与Python3.x区别
 
-[Python2.x与Python3.x区别](https://github.com/lajos182/python-essay/blob/master/images/Python2.x%E4%B8%8EPython3.x%E7%9A%84%E5%8C%BA%E5%88%AB.pdf)
+[Python2.x与Python3.x区别](https://gitee.com/lajos/image_bucket/raw/master/skill/Python2.x与Python3.x的区别.pdf)

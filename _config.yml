@@ -148,5 +148,5 @@ feed:
 
 # https://github.com/JoeyBling/hexo-filter-image
 filter_image:
-   # 日志是否启用
-   #   log: true
+  # 日志是否启用
+  log: true

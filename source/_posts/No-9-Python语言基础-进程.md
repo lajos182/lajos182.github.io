@@ -23,7 +23,7 @@ toc: true
 
 `Unix/Linux`操作系统提供了一个`fork()`系统调用，它非常特殊。普通的函数调用，调用一次，返回一次，但是`fork()`调用一次，返回两次，因为操作系统自动把当前进程（称为父进程）复制了一份（称为子进程），然后，分别在父进程和子进程内返回。
 
-子进程永远返回0，而父进程返回子进程的ID。这样做的理由是，一个父进程可以fork出很多子进程，所以，父进程要记下每个子进程的ID，而子进程只需要调用`getppid()`就可以拿到父进程的ID。
+子进程永远返回0，而父进程返回子进程的ID。这样做的理由是，一个父进程可以`fork`出很多子进程，所以，父进程要记下每个子进程的ID，而子进程只需要调用`getppid()`就可以拿到父进程的ID。
 
 ```python
 import os
@@ -42,13 +42,13 @@ I (876) just created a child process (877).
 I am child process (877) and my parent is 876.
 ```
 
-由于Windows没有fork调用，上面的代码在Windows上无法运行。有了fork调用，一个进程在接到新任务时就可以复制出一个子进程来处理新任务，常见的`Apache`服务器就是由父进程监听端口，每当有新的http请求时，就fork出子进程来处理新的http请求。
+由于`Windows`没有`fork`调用，上面的代码在`Windows`上无法运行。有了`fork`调用，一个进程在接到新任务时就可以复制出一个子进程来处理新任务，常见的`Apache`服务器就是由父进程监听端口，每当有新的`http`请求时，就`fork`出子进程来处理新的`http`请求。
 
 ### 9.2. 进程的并发与并行
 
-- **并发**：并发是指在资源有限的情况下，两者交替轮流使用资源，比如一段路(单核CPU资源)同时只能过一个人，A走一段后，让给B，B用完继续给A，交替使用，目的是提高效率。
-- **并行**：并行是指两者同时执行，比如赛跑，两个人都在不停的往前跑（资源够用，比如三个线程，四核的CPU）；
-- **区别**：并发是从宏观上，在一个时间段上可以看出是同时执行的，比如一个服务器同时处理多个session。并行是从微观上，也就是在一个精确的时间片刻，有不同的程序在执行，这就要求必须有多个处理器。
+- **并发**：并发是指在资源有限的情况下，两者交替轮流使用资源，比如一段路(单核`CPU`资源)同时只能过一个人，A走一段后，让给B，B用完继续给A，交替使用，目的是提高效率。
+- **并行**：并行是指两者同时执行，比如赛跑，两个人都在不停的往前跑（资源够用，比如三个线程，四核的`CPU`）；
+- **区别**：并发是从宏观上，在一个时间段上可以看出是同时执行的，比如一个服务器同时处理多个`session`。并行是从微观上，也就是在一个精确的时间片刻，有不同的程序在执行，这就要求必须有多个处理器。
 
 ### 9.3. 进程管理
 
@@ -73,21 +73,21 @@ if __name__ == "__main__":
 
 - `os.getppid()`：获取主进程id
 
-- `Process([group [, target [, name [, args [, kwargs]]]]])`：由该类实例化得到的对象，表示一个子进程中的任务（尚未启动），需要使用关键字的方式来指定参数，args指定的为传给target函数的位置参数，是一个元组形式，必须有逗号
+- `Process([group [, target [, name [, args [, kwargs]]]]])`：由该类实例化得到的对象，表示一个子进程中的任务（尚未启动），需要使用关键字的方式来指定参数，`args`指定的为传给`target`函数的位置参数，是一个元组形式，必须有逗号
 
-  -group参数未使用，值始终为None
-  -target表示调用对象，即子进程要执行的任务
-  -name为子进程的名称
-  -args表示调用对象的位置参数元组，args=(1, 2, 'egon',)
-  -kwargs表示调用对象的字典，kwargs={'name': 'egon', 'age': 18}
+  -`group`参数未使用，值始终为`None`
+  -`target`表示调用对象，即子进程要执行的任务
+  -`name`为子进程的名称
+  -`args`表示调用对象的位置参数元组，`args=(1, 2, 'egon',)`
+  -`kwargs`表示调用对象的字典，`kwargs={'name': 'egon', 'age': 18}`
 
-- `p.daemone`：默认值为`False`，如果设为`True`，代表p为后台运行的守护进程，当p的父进程终止时，p也随之终止，并且设定为True后，p不能创建自己的新进程，必须在`p.start()`之前设置
+- `p.daemone`：默认值为`False`，如果设为`True`，代表`p`为后台运行的守护进程，当`p`的父进程终止时，`p`也随之终止，并且设定为`True`后，`p`不能创建自己的新进程，必须在`p.start()`之前设置
 
 - `p.name`：进程的名称
 
-- `p.pid`：进程pid
+- `p.pid`：进程`pid`
 
-- `p.exitcode`：进程在运行时为None、如果为–N，表示被信号N结束(了解即可)
+- `p.exitcode`：进程在运行时为`None`、如果为–`N`，表示被信号`N`结束(了解即可)
 
 - `p.authkey`：进程的身份验证键,默认是由`os.urandom()`随机生成的32字符的字符串。这个键的用途是为涉及网络连接的底层进程间通信提供安全性，这类连接只有在具有相同的身份验证键时才能成功（了解即可）
 
@@ -95,11 +95,11 @@ if __name__ == "__main__":
 
 - `p.run()`：进程启动时运行的方法，正是它去调用`target`指定的函数，我们自定义类的类中一定要实现该方法
 
-- `p.terminate()`：强制终止进程p，不会进行任何清理操作，如果p创建了子进程，该子进程就成了僵尸进程，使用该方法需要特别小心这种情况。如果p还保存了一个锁那么也将不会被释放，进而导致死锁
+- `p.terminate()`：强制终止进程`p`，不会进行任何清理操作，如果`p`创建了子进程，该子进程就成了僵尸进程，使用该方法需要特别小心这种情况。如果`p`还保存了一个锁那么也将不会被释放，进而导致死锁
 
-- `p.is_alive()`：如果p仍然运行，返回True
+- `p.is_alive()`：如果p仍然运行，返回`True`
 
-- `p.join[timeout])`：主线程等待p终止（强调：是主线程处于等的状态，而p是处于运行的状态）。`timeout`是可选的超时时间，需要强调的是，`p.join`只能`join`住`start`开启的进程，而不能`join`住`run`开启的进程
+- `p.join[timeout])`：主线程等待`p`终止（强调：是主线程处于等的状态，而p是处于运行的状态）。`timeout`是可选的超时时间，需要强调的是，`p.join`只能`join`住`start`开启的进程，而不能`join`住`run`开启的进程
 
 ### 9.4. 进程锁
 
@@ -236,9 +236,9 @@ All subprocess done.
 ```
 
 - `Pool([numprocess[, initializer[, initargs]]])`：创建进程池，`numprocess`为要创建的进程数，默认使用`multiprocessing.cpu_count()`的CPU核心数；`initializer`是每个工作进程启动时要执行的可调用对象，默认为`None`；`initargs`是要传给`initializer`的参数组。
-- `pool.apply(func[, args[, kwargs]])`同步执行(阻塞式)：在**一个池工作进程中**执行`func(*args,**kwargs)`,然后返回结果，**同步运行，阻塞，直到本次任务执行完毕后返回结果**。此操作并不会在所有池工作进程中并执行`func`函数。如果要通过不同参数并发地执行`fun`c函数，必须从不同线程调用`pool.apply()`函数或者使用`pool.apply_async()`。
+- `pool.apply(func[, args[, kwargs]])`同步执行(阻塞式)：在**一个池工作进程中**执行`func(*args,**kwargs)`,然后返回结果，**同步运行，阻塞，直到本次任务执行完毕后返回结果**。此操作并不会在所有池工作进程中并执行`func`函数。如果要通过不同参数并发地执行`func`函数，必须从不同线程调用`pool.apply()`函数或者使用`pool.apply_async()`。
 - `pool.map(func, iterable[, chunksize=None])`：和`pool.apply()`类似，只不过需要接收一个可迭代的参数对象。
-- `pool.apply_async(func[, args[, kwargs[, callback=None[, error_callback=None]]]])`异步执行(非阻塞)：在**一个池工作进程中**执行`func(*args,**kwargs)`，然后返回结果。此方法的结果是`AsyncResult`类的实例，callback是可调用对象，接收输入参数。当func的结果变为可用时，将理解传给callback。callback禁止执行任何阻塞操作，否则将接收其他异步操作中的结果。
+- `pool.apply_async(func[, args[, kwargs[, callback=None[, error_callback=None]]]])`异步执行(非阻塞)：在**一个池工作进程中**执行`func(*args,**kwargs)`，然后返回结果。此方法的结果是`AsyncResult`类的实例，callback是可调用对象，接收输入参数。当`func`的结果变为可用时，将理解传给`callback`。`callback`禁止执行任何阻塞操作，否则将接收其他异步操作中的结果。
 - `pool.map_async(func, iterable[, chunksize=None[, callback=None[, error_callback=None]]]])`：和`pool.apply_async()`类似，只不过需要接收一个可迭代的参数对象。
 
 ### 9.7. 数据共享

@@ -8,7 +8,7 @@ menu:
 # subNav-子导航
 subNav:
   github: "https://github.com/lajos182"
-  # gitee: "#" # 码云
+  gitee: "https://gitee.com/lajos" # 码云
   # jianshu: "#" #简书
   # cnblog: "#"
   #blog: "#"
@@ -275,8 +275,8 @@ friends:
     # description: 记录工作和学习过程中的笔记：Java、前端开发、Hexo博客、聚合支付、Linux笔记、ElasticSearch、ELK日志分析
   GitHub:
     url: https://github.com/lajos182
-  # 码云:
-  #   url: https://gitee.com/zhousiwei
+  码云:
+    url: https://gitee.com/lajos
   # 简书:
   #   url: https://www.jianshu.com/u/02cbf31a043a
   CSDN:

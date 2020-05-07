@@ -13,7 +13,7 @@ Python标识符规则：只能由数字、字符和下划线组成，开头不�
 
  <!--more-->
 
-![标识符](https://github.com/lajos182/python-essay/blob/master/images/Identifier.png)
+![标识符](https://gitee.com/lajos/image_bucket/raw/master/skill/Identifier.png)
 
 ```python
 import keyword
@@ -27,7 +27,7 @@ print(keyword.kwlist) # 关键字列表
 
 **常量**：程序运行期间不会改变的数据，如`a = 1`。在python中没有常量，通常使用大写字母加下划线的方式模拟，如：`USER_NAME = 'xiaoming'`
 
-![变量与常量](https://github.com/lajos182/python-essay/blob/master/images/variable%20and%20constant.png)
+![变量与常量](https://gitee.com/lajos/image_bucket/raw/master/skill/variable%20and%20constant.png)
 
 代码注释：单行注释（`# 注释内容`）、多行注释（`'''注释'''`, `"""注释"""`）
 
@@ -169,7 +169,7 @@ print(keyword.kwlist) # 关键字列表
 
 ### 2.3.1. 运算符
 
-![标识符](https://github.com/lajos182/python-essay/blob/master/images/operate.png)
+![标识符](https://gitee.com/lajos/image_bucket/raw/master/skill/operate.png)
 
 运算符优先级：无需记录运算符的优先级，需要的时候添加()即可。
 
@@ -195,7 +195,7 @@ while (block := f.read(256) != ''):
 
 ### 2.3.2. 流程控制
 
-![流程控制](https://github.com/lajos182/python-essay/blob/master/images/flow%20control.png)
+![流程控制](https://gitee.com/lajos/image_bucket/raw/master/skill/flow%20control.png)
 
 列表生成式：
 

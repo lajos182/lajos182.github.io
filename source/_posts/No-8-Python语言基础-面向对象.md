@@ -11,7 +11,7 @@ toc: true
 
 - **对象**：某个类的具象。其实是某个类型的变量。
 
-  > 定义类需要使用关键字：**class**，也可以使用元类进行定义
+  > 定义类需要使用关键字：**`class`**，也可以使用元类进行定义
   >
   > 类名：原则上只要符合标识符的命名规范即可，但是我们通常使用大驼峰风格(每个单词首字母大写)命名
   >
@@ -27,7 +27,7 @@ toc: true
   >
   > 成员访问：成员属性(对象.属性名)，成员方法(对象.方法名())
 
-  ![类的属性与方法](https://github.com/lajos182/python-essay/blob/master/images/class.png)
+  ![类的属性与方法](https://gitee.com/lajos/image_bucket/raw/master/skill/class.png)
 
 - 示例：小明手里有两张牌，左手♥K，右手♠A，问：小明交换两手的牌后，手里分别是什么？
 
@@ -623,9 +623,9 @@ else：
   >>> play basketball
   ```
 
-- `MRO`即`method resolution order`，用于判断子类调用的属性来自于哪个父类。在Python2.3之前，`MRO`是基于**深度优先算**法的，自2.3开始使用`C3`算法，定义类时需要继承`object`，这样的类称为**新式类**，否则为**旧式类**。案例可查看<a name='#1.7'>第一部分(1.7)新式类和旧式类</a>
+- `MRO`即`method resolution order`，用于判断子类调用的属性来自于哪个父类。在Python2.3之前，`MRO`是基于**深度优先算**法的，自2.3开始使用`C3`算法，定义类时需要继承`object`，这样的类称为**新式类**，否则为**旧式类**。案例可查看[https://www.lajos.top/2020/04/27/No-1-Python%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D/](https://www.lajos.top/2020/04/27/No-1-Python简介与版本介绍/)
 
-  ![旧式类和新式类](https://github.com/lajos182/python-essay/blob/master/images/MRO%20and%20C3.png)
+  ![旧式类和新式类](https://gitee.com/lajos/image_bucket/raw/master/skill/MRO%20and%20C3.png)
 
 ### 8.6. 多态性
 
@@ -846,7 +846,7 @@ print(Person.__dict__)
 print(p.__dict__)
 ```
 
-### 8.9. 类方法(classmethod)
+### 8.9. 类方法(`classmethod`)
 
 **类方法**：定义时使用装饰器`@classmethod`，通过类名进行调用。可以创建对象或者简介的创建对象，对外提供简单易用的接口。传入的第一个参数为`cls`，是类本身，并且，类方法可以通过类直接调用，或通过实例直接调用。但无论哪种调用方式，最左侧传入的参数一定是类本身。
 
@@ -862,7 +862,7 @@ a = A()
 a.func() # 通过实例对象调用
 ```
 
-### 8.10. 静态方法(staticmethod)
+### 8.10. 静态方法(`staticmethod`)
 
 **静态方法**：使用装饰器`@staticmethod`进行装饰，定义是不需要第一个参数`cls`。调用过程中，无需进行实例化。
 

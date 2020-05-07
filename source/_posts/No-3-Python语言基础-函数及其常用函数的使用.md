@@ -90,9 +90,9 @@ TypeError: center() takes from 1 to 2 positional arguments but 3 were given
 '$$$$中心$$$$'
 ```
 
-### 3.2. 变量作用域（LEGB）
+### 3.2. 变量作用域（`LEGB`）
 
-LEGB规则：local > enclosed > global > bulit-in
+`LEGB`规则：`local` > `enclosed `> `global` > `bulit-in`
 
 + （1）**块级作用域**：Python不存在块级作用域，下民的代码可以正常运行。
 
@@ -145,7 +145,7 @@ LEGB规则：local > enclosed > global > bulit-in
 
 ### 3.3. 内置函数、模块函数及基本数据结构函数
 
-![内置函数、模块函数及基本数据结构函数](https://github.com/lajos182/python-essay/blob/master/images/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png)
+![内置函数、模块函数及基本数据结构函数](https://gitee.com/lajos/image_bucket/raw/master/skill/builtin%2C%20module%2C%20str%2C%20list%2C%20tuple%2C%20set%2C%20dict.png)
 
 ### 3.4. 匿名函数
 
@@ -317,7 +317,7 @@ print(isinstance(lt, Iterable))
 
 ### 3.9. 匿名、递归、闭包、高级函数总结
 
-![ 匿名、递归、闭包、高级函数总结](https://github.com/lajos182/python-essay/blob/master/images/recursive%2C%20lamada%2C%20closure%2C%20iteator%2C%20decorator%2C%20generator%2C%20iterable.png)
+![ 匿名、递归、闭包、高级函数总结](https://gitee.com/lajos/image_bucket/raw/master/skill/recursive%2C%20lamada%2C%20closure%2C%20iteator%2C%20decorator%2C%20generator%2C%20iterable.png)
 
 ### 3.10.目录管理与文件操作相关模块函数
 
@@ -554,8 +554,8 @@ print(isinstance(lt, Iterable))
 
   + **`ignore_patterns(*patterns)`**：忽略模式，用于配合`copytree()`方法，传递文件将会被忽略，不会被拷贝。`patterns`是文件名称、元组。
 
-  + **`copytree(src, dst, symlinks=False, ignore=None, `copy_function=copy2,
-                 ignore_dangling_symlinks=False`)`**：拷贝文档树，将`src`文件夹里的所有内容拷贝至`dst`文件夹，文件夹不存在会自动创建。`symlinks`代表是否复制软连接，`True`复制软连接，`False`不复制，软连接会被当成文件复制过来，默认`False`。`ignore`为忽略模式，可传入`ignore_patterns()`。`copy_function`为拷贝文件的方式，可传入一个可执行的处理函数，默认为`copy2`，`ignore_dangling_symlinks`设置为`False`，拷贝指向文件已删除的软连接时，将会报错，如果想消除这个异常，可以设置此值为True，默认为`False`。
+  + **`copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2,
+             ignore_dangling_symlinks=False`)`**：拷贝文档树，将`src`文件夹里的所有内容拷贝至`dst`文件夹，文件夹不存在会自动创建。`symlinks`代表是否复制软连接，`True`复制软连接，`False`不复制，软连接会被当成文件复制过来，默认`False`。`ignore`为忽略模式，可传入`ignore_patterns()`。`copy_function`为拷贝文件的方式，可传入一个可执行的处理函数，默认为`copy2`，`ignore_dangling_symlinks`设置为`False`，拷贝指向文件已删除的软连接时，将会报错，如果想消除这个异常，可以设置此值为True，默认为`False`。
 
     ```python
     import shutil,os
@@ -627,7 +627,7 @@ print(isinstance(lt, Iterable))
     shutil.make_archive(base_name, format, root_dir)
     ```
 
-  + **`get_archive_formats()`**：获取支持的压缩文件格式。目前支持的有：`tar`、`zip`、`gztar`、`bztar`。在Python3还多支持一种格式`xztar`。
+  + **`get_archive_formats()`**：获取支持的压缩文件格式。目前支持的有：`tar`、`zip`、`gztar`、`bztar`。在`Python3`还多支持一种格式`xztar`。
 
   + **`unpack_archive(filename, extract_dir=None, format=None)`**：解压操作，`extract_dir`解压至的文件夹路径，文件夹可以不存在，会自动生成。`format`解压格式，默认为`None`，会根据扩展名自动选择解压格式。
 
@@ -640,7 +640,7 @@ print(isinstance(lt, Iterable))
 
   + **`get_unpack_formats()`**：获取支持的解压文件格式。目前支持的有：`tar`、`zip`、`gztar`、`bztar`和`xztar`。
 
-![目录及文件管理](https://github.com/lajos182/python-essay/blob/master/images/os%20and%20shutil.png)
+![目录及文件管理](https://gitee.com/lajos/image_bucket/raw/master/skill/os%20and%20shutil.png)
 
 + **经典练习**
 
@@ -823,7 +823,7 @@ print(isinstance(lt, Iterable))
 
     > 年、月、日、时、分、秒、星期(0~6)、今年的第几天、夏令时
 
-  + `mktime`：根据元组形式的时间生成一���时间戳
+  + `mktime`：根据元组形式的时间生成一个时间的时间戳
 
     ```python
     import time
@@ -920,7 +920,7 @@ print(isinstance(lt, Iterable))
     ```
 
 
-![时间、日期、日历](https://github.com/lajos182/python-essay/blob/master/images/time%2C%20calendar%20and%20datemate.png)
+![时间、日期、日历](https://gitee.com/lajos/image_bucket/raw/master/skill/time%2C%20calendar%20and%20datemate.png)
 
 ### 3.12. 短信邮件相关模块函数
 
@@ -1264,4 +1264,4 @@ print(isinstance(lt, Iterable))
     print(str(response, encoding='utf-8'))
     ```
 
-![短信邮件相关](https://github.com/lajos182/python-essay/blob/master/images/hashlip%2C%20urllib%2C%20http.client.png)
+![短信邮件相关](https://gitee.com/lajos/image_bucket/raw/master/skill/hashlip%2C%20urllib%2C%20http.client.png)
