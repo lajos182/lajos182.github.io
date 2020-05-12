@@ -9,36 +9,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.lajos.top">
-  <title>相册 | Lajos的博客</title>
+  <title>No.1 Python与数据库--MySql | Lajos的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript &#x3D; function(path) {       var $script &#x3D; document.createElement(&#39;script&#39;)       document.getElementsByTagName(&#39;body&#39;)[0].appendChild($scrip">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="https://www.lajos.top/photos/index.html">
+  <meta name="description" content="1.1 数据库简介数据库简介：  用途：用于存储生活的几乎一切数据 概念：数据库服务器、数据库、数据表、一行数据(一条)、一列数据(字段) 分类：关系型数据库(MySql, Oracle, SQL Server)、非关系型数据库(Redis, MongoDB) SQL：Structured Query Language，结构化查询语言 SQL分类：数据定义语言(DDL)、数据操作语言(DML)、数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No.1 Python与数据库--MySql">
+<meta property="og:url" content="https://www.lajos.top/2020/05/12/No-1-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MySql/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript &#x3D; function(path) {       var $script &#x3D; document.createElement(&#39;script&#39;)       document.getElementsByTagName(&#39;body&#39;)[0].appendChild($scrip">
-<meta property="article:published_time" content="2020-05-12T01:24:12.909Z">
-<meta property="article:modified_time" content="2020-05-11T10:53:45.609Z">
+<meta property="og:description" content="1.1 数据库简介数据库简介：  用途：用于存储生活的几乎一切数据 概念：数据库服务器、数据库、数据表、一行数据(一条)、一列数据(字段) 分类：关系型数据库(MySql, Oracle, SQL Server)、非关系型数据库(Redis, MongoDB) SQL：Structured Query Language，结构化查询语言 SQL分类：数据定义语言(DDL)、数据操作语言(DML)、数">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/DDL.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/DML.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/DQL.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/DCL.png">
+<meta property="article:published_time" content="2020-05-12T05:40:50.000Z">
+<meta property="article:modified_time" content="2020-05-12T06:04:13.086Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="django">
-<meta property="article:tag" content="flask">
-<meta property="article:tag" content="scrapy">
-<meta property="article:tag" content="mySql">
-<meta property="article:tag" content="redis">
-<meta property="article:tag" content="mongoDB">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="MySql">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/DDL.png">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
   
@@ -234,17 +225,28 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-No-1-Python与数据库-MySql" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      相册
+      No.1 Python与数据库--MySql
     </h1>
   
 
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/05/12/No-1-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MySql/" class="archive-article-date">
+        <time datetime="2020-05-12T05:40:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
+</a>
 
   
   
@@ -256,7 +258,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">36字</span>
+      <span class="post-count">6.8k字</span>
     </span>
   </span>
 
@@ -265,7 +267,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">29分</span>
     </span>
   </span>
 </div>
@@ -276,26 +278,397 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <link rel="stylesheet" href="./ins.css">
-<div class="photos-btn-wrap">
-	<a class="photos-btn active" href="javascript:void(0)">Photos</a>
-	<a class="photos-btn" href="#">待续</a>
-</div>
-<div class="instagram itemscope">
-	<a href="https://www.instagram.com/lawlitewang20/" target="_blank" class="open-ins">图片正在加载中…</a>
-</div>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-      loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
+    <h2 id="1-1-数据库简介"><a href="#1-1-数据库简介" class="headerlink" title="1.1 数据库简介"></a>1.1 数据库简介</h2><p>数据库简介：</p>
+<ul>
+<li>用途：用于存储生活的几乎一切数据</li>
+<li>概念：数据库服务器、数据库、数据表、一行数据(一条)、一列数据(字段)</li>
+<li>分类：关系型数据库(<code>MySql</code>, <code>Oracle</code>, <code>SQL Server</code>)、非关系型数据库(<code>Redis</code>, <code>MongoDB</code>)</li>
+<li><code>SQL</code>：<code>Structured Query Language</code>，结构化查询语言</li>
+<li><code>SQL</code>分类：数据定义语言(<code>DDL</code>)、数据操作语言(<code>DML</code>)、数据查询语言(<code>DQL</code>)、数据控制语言(<code>DCL</code>)、数据事务语言(<code>DTL</code>)</li>
+</ul>
+<a id="more"></a>
+
+<p><code>RDBMS</code> (关系数据库管理系统(<code>Relational Database Management System</code>))术语:</p>
+<ul>
+<li><strong>数据库:</strong> 数据库是一些关联表的集合。</li>
+<li><strong>数据表:</strong> 表是数据的矩阵。在一个数据库中的表看起来像一个简单的电子表格。</li>
+<li><strong>列:</strong> 一列(数据元素) 包含了相同类型的数据, 例如邮政编码的数据。</li>
+<li><strong>行：</strong>一行（=元组，或记录）是一组相关的数据，例如一条用户订阅的数据。</li>
+<li><strong>冗余</strong>：存储两倍数据，冗余降低了性能，但提高了数据的安全性。</li>
+<li><strong>主键</strong>：主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据。</li>
+<li><strong>外键：</strong>外键用于关联两个表。</li>
+<li><strong>复合键</strong>：复合键（组合键）将多个列作为一个索引键，一般用于复合索引。</li>
+<li><strong>索引：</strong>使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录。</li>
+<li><strong>参照完整性:</strong> 参照的完整性要求关系中不允许引用不存在的实体。与实体完整性是关系模型必须满足的完整性约束条件，目的是保证数据的一致性。</li>
+</ul>
+<p><code>MySQL</code> 是一个关系型数据库管理系统，由瑞典 <code>MySQL AB</code>公司开发，目前属于 <code>Oracle</code>公司。<code>MySQL</code> 是一种关联数据库管理系统，关联数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</p>
+<h2 id="1-2-MySQL-Ubuntu-的安装"><a href="#1-2-MySQL-Ubuntu-的安装" class="headerlink" title="1.2. MySQL(Ubuntu)的安装"></a>1.2. <code>MySQL</code>(<code>Ubuntu</code>)的安装</h2><ul>
+<li><p>安装：<code>sudo apt-get install mysql-server</code>(若出现问题，应该删除自己添加的系统服务)</p>
+</li>
+<li><p>安全配置：<code>sudo  mysql_secure_installation</code></p>
+</li>
+<li><p>连接测试：<code>mysql -h 主机 -u 用户名(默认root) -p</code></p>
+</li>
+<li><p>其他：端口3306；提出<code>\h</code>或<code>help</code>；所有命令都<code>;</code>结尾</p>
+</li>
+</ul>
+<h2 id="1-3-数据库定义语言-DDL"><a href="#1-3-数据库定义语言-DDL" class="headerlink" title="1.3. 数据库定义语言(DDL)"></a>1.3. 数据库定义语言(<code>DDL</code>)</h2><p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/DDL.png" alt=" 数据库定义语言(`DDL`)"></p>
+<ul>
+<li><p>数据类型：</p>
+<ul>
+<li>整型(<code>_int</code>)：<ul>
+<li><code>tinyint</code>：有符号(-128, 127)，无符号(0, 255)，一个字节；</li>
+<li><code>smallint</code>：有符号(-32768,  32767)，无符号(0, 65535)，两个字节；</li>
+<li><code>mediumint</code>：3个字节，范围(-8388608~8388607)；</li>
+<li><code>int</code>：4个字节，范围(-2147483648~2147483647)；</li>
+<li><code>bigint</code>：8个字节，范围(+-9.22*10的18次方)；</li>
+<li>注意：<code>tinyint</code>(4)中的4并不表示存储的长度，只有字段指定<code>zerofill</code>是有用，如0002</li>
+</ul>
+</li>
+<li>浮点型(<code>float</code>, <code>double</code>)：<ul>
+<li><code>float(m, d)</code>：单精度浮点数，4个字节，<code>m</code>表示总位数，<code>d</code>表示小数位数；</li>
+<li><code>double(m, d)</code>：双精度浮点数，8个字节，<code>m</code>表示总位置，<code>d</code>表示小数位数</li>
+</ul>
+</li>
+<li>定点数：<code>decimal(m, d)</code>：参数<code>m</code>&lt;65是总个数，<code>d</code>&lt;30且 <code>d</code>&lt;<code>m</code>是小数位，以字符串的形式存储浮点数，用于金融领域等要求严格的场景</li>
+<li>字符串(<code>char</code>, <code>varchar</code>, <code>_text</code>)：<ul>
+<li><code>char(n)</code>：固定长度，最多255个字符；</li>
+<li><code>varchar(n)</code>：固定长度，最多65535个长度；</li>
+<li><code>tinytext</code>：可变长度，最多255个字符；</li>
+<li><code>text</code>：可变长度，最多65535个字符；</li>
+<li><code>mediumtext</code>：可变长度，最多2的24次方-1个字符；</li>
+<li><code>longtext</code>：可变长度，最多2的32次方-1个字符</li>
+<li>注意：<code>char(n)</code>若存入字符数小于<code>n</code>，则以空格补于其后，查询之时再将空格去掉。所以char类型存储的字符串末尾不能有空格，<code>varchar</code>不限于此；</li>
+<li>注意：<code>char(n)</code>固定长度，<code>char(4)</code>不管是存入几个字符，都将占用4个字节，<code>varchar</code>是存入的实际字符数+1个字节（n&lt;=255）或2个字节(n&gt;255)，所以<code>varchar(4)</code>,存入3个字符将占用4个字节；</li>
+<li>注意：<code>char</code>类型的字符串检索速度要比<code>varchar</code>类型的快。</li>
+</ul>
+</li>
+<li>二进制数据(<code>_Blob</code>)：<ul>
+<li><code>_Blob</code>和<code>_text</code>存储方式不同，<code>_Text</code>以文本方式存储，英文存储区分大小写，而<code>_Blob</code>是以二进制方式存储，不分大小写；</li>
+<li><code>_Blob</code>存储的数据只能整体读出；</li>
+<li><code>_Text</code>可以指定字符集，<code>_Blob</code>不用指定字符集</li>
+</ul>
+</li>
+<li>日期时间类型(<code>date</code>, <code>time</code>, <code>datetime</code>, <code>timestamp</code>)：<ul>
+<li><code>date</code>：日期，以<code>YYYY-MM-DD</code>的格式显示，如’2019-11-19’；</li>
+<li><code>time</code>：时间，以<code>HH:MM:SS</code>的格式显示，如’15:44:36’；</li>
+<li><code>datetime</code>：日期时间，以<code>YYYY-MM-DD HH:MM:SS</code>的格式显示，如’2019-11-19 15:44:36’；</li>
+<li><code>timestamp</code>：以<code>YYYY-MM-DD</code>的格式显示，自动存储记录修改时间，数据会随其他字段修改的时候自动刷新</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据类型的属性：</p>
+<ul>
+<li><code>NULL</code>：数据列可包含<code>NULL</code>值；</li>
+<li><code>NOT NULL</code>：数据列不包含<code>NULL</code>值；</li>
+<li><code>DEFAULT</code>：默认值；</li>
+<li><code>PRIMARY KEY</code>：主键；</li>
+<li><code>AUTO_INCREMENT</code>：自动递增，适用于整数类型；</li>
+<li><code>UNSIGNED</code>：无符号；</li>
+<li><code>CHARACTER SET name</code>：指定字符集</li>
+</ul>
+</li>
+<li><p>数据库引擎：常见的<code>MySQL</code>数据库引擎有<code>InnoDB</code>，<code>MyIsam</code>，<code>Memory</code>，<code>Mrg_Myisam</code>，<code>Blackhole</code>等。</p>
+<ul>
+<li><code>InnoDB</code>：事务型存储引擎，提供了对数据库<code>ACID</code>事务的支持，并实现了<code>SQL</code>标准的<strong>四种隔离级别</strong>，具有行级锁定及外键支持，该引擎的设计目标便是处理大容量数据的数据库系统，<code>MySQL</code>在运行时<code>InnoDB</code>会在内存中建立缓冲池，用于缓存数据及索引；</li>
+<li><code>MyIsam</code>：MySQL主流引擎之一，不支持事务操作，不支持行锁及外键，效率较低；</li>
+<li><code>Memory(Heap)</code>：<code>MEMORY</code>类型的表访问非常得快，因为它的数据是放在内存中的，并且默认使用<code>HASH</code>索引，但是一旦服务关闭，表中的数据就会丢失掉；<code>HEAP</code>允许只驻留在内存里的临时表格。驻留在内存里让<code>HEAP</code>要比<code>ISAM</code>和<code>MYISAM</code>都快，但是它所管理的数据是不稳定的，而且如果在关机之前没有进行保存，那么所有的数据都会丢失;</li>
+<li><code>Mrg_MyIsam</code>：一个相同的可以被当作一个来用的<code>MyISAM</code>表的集合，它将<code>MyIsam</code>引擎的多个表聚合起来，但是它的内部没有数据，真正的数据依然是<code>MyIsam</code>引擎的表中，但是可以直接进行查询、删除更新等操作；</li>
+<li><code>Blackhole</code>：任何写入到此引擎的数据均会被丢弃掉，不做实际存储；<code>Select</code>语句的内容永远是空，它会丢弃所有的插入的数据，服务器会记录下<code>Blackhole</code>表的日志，所以可以用于复制数据到备份数据库。</li>
+</ul>
+</li>
+<li><p>数据库索引：用于快速找出在某个列中有一特定值的行</p>
+<ul>
+<li>普通索引(<code>index()</code>)：<code>MySQL</code>中基本索引类型，没有什么限制，允许在定义索引的列中插入重复值和空值，纯粹为了查询数据更快一点；</li>
+<li>唯一索引(<code>unique()</code>)：索引列中的值必须是唯一的，但是允许为空值；</li>
+<li>主键索引(<code>primary key()</code>)：是一种特殊的唯一索引，不允许有空值；</li>
+<li>组合索引：在表中的多个字段组合上创建的索引，只有在查询条件中使用了这些字段的左边字段时，索引才会被使用，使用组合索引时遵循最左前缀集合；</li>
+<li>全文索引：只有在<code>MyISAM</code>引擎上才能使用，只能在<code>CHAR</code>, <code>VARCHAR</code>, <code>TEXT</code>类型字段上使用全文索引；</li>
+<li>空间索引：对空间数据类型的字段建立的索引，<code>MySQL</code>中的空间数据类型有四种，<code>GEOMETRY</code>、<code>POINT</code>、<code>LINESTRING</code>、<code>POLYGON</code>。在创建空间索引时，使用<code>SPATIAL</code>关键字。要求，引擎为<code>MyISAM</code>，创建空间索引的列，必须将其声明为<code>NOT NULL</code>。</li>
+</ul>
+</li>
+</ul>
+<p>很多选项都可以在创建表时指定，如：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">user</span>(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> auto_increment,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    primary <span class="keyword">key</span>(<span class="keyword">id</span>),</span><br><span class="line">    <span class="keyword">unique</span>(<span class="keyword">name</span>)</span><br><span class="line">)<span class="keyword">engine</span>=<span class="keyword">innodb</span> <span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</span><br></pre></td></tr></table></figure>
+
+<p>添加索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">add</span> <span class="keyword">index</span>(em);				<span class="comment"># 给em字段添加普通索引</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">add</span> <span class="keyword">unique</span>(username);		<span class="comment"># 给username字段添加唯一索引</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">add</span> primary <span class="keyword">key</span>(<span class="keyword">id</span>);		<span class="comment"># 将id设置为主键索引</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">user</span> <span class="keyword">drop</span> <span class="keyword">index</span> em;				<span class="comment"># 删除em字段的普通索引</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4-数据库操作语言-DML"><a href="#1-4-数据库操作语言-DML" class="headerlink" title="1.4. 数据库操作语言(DML)"></a>1.4. 数据库操作语言(<code>DML</code>)</h2><p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/DML.png" alt="数据库操作语言(`DML`)"></p>
+<ul>
+<li>创建一张<code>star</code>表：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> star(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> auto_increment,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    money <span class="built_in">float</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    province <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">default</span> <span class="literal">null</span>,</span><br><span class="line">    age <span class="built_in">tinyint</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    sex <span class="built_in">tinyint</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    primary <span class="keyword">key</span>(<span class="keyword">id</span>)</span><br><span class="line">)<span class="keyword">engine</span>=<span class="keyword">innodb</span> <span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>插入数据：</p>
+<ul>
+<li>方式1：不指定字段，按照数据表的数据添加一条数据的全部字段</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> star <span class="keyword">values</span>(<span class="number">1</span>,<span class="string">'黄晓明'</span>,<span class="number">200000</span>,<span class="string">'山东'</span>,<span class="number">28</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以同时插入多条数据，每条一个小括号</p>
+</blockquote>
+<ul>
+<li>方式2：指定字段，只需要传递指定字段的值</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> star(<span class="keyword">name</span>,money,age,sex,province) <span class="keyword">values</span>(<span class="string">'小岳岳'</span>,<span class="number">4000000</span>, <span class="number">33</span>, <span class="number">0</span>, <span class="string">'河南'</span>)；</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以同时插入多条数据，每条一个小括号</p>
+</blockquote>
+</li>
+<li><p>查询数据：</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> star;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除数据：删除操作一定不要忘了指定条件，否则后果自负。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> star <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改数据：修改操作一定不要忘了指定条件，否则后果自负。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> star <span class="keyword">set</span> age=<span class="number">22</span>, money=<span class="number">8000000</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">6</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-5-数据库查询语言-DQL"><a href="#1-5-数据库查询语言-DQL" class="headerlink" title="1.5. 数据库查询语言(DQL)"></a>1.5. 数据库查询语言(<code>DQL</code>)</h2><p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/DQL.png" alt="数据库查询语言(`DQL`)"></p>
+<ul>
+<li><p>基础查询：<code>select * from star;</code></p>
+</li>
+<li><p>指定字段查询：<code>select id,name,money from star;</code></p>
+</li>
+<li><p>排除重复记录：<code>select distinct name from star;</code>(使用<code>distinct</code>修饰的字段组合不能重复)</p>
+</li>
+<li><p>指定条件查询：</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span>,money <span class="keyword">from</span> star <span class="keyword">where</span> <span class="keyword">id</span> &gt; <span class="number">4</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span> <span class="keyword">from</span> star <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">between</span> <span class="number">2</span> <span class="keyword">and</span> <span class="number">5</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span> <span class="keyword">from</span> star <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span>(<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span> <span class="keyword">from</span> star <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span> <span class="string">'小%'</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>结果集排序：<code>select id,name,money from star order by money desc;</code> </p>
+<ul>
+<li><code>order by</code>：指定排序字段，<code>asc</code>表示升序，默认的，<code>desc</code>表示降序</li>
+<li>也可以多字段排序，先按照前面的字段排序，再按照后面字段排序。<code>select id,name,money,age from star order by money desc,age asc;</code></li>
+</ul>
+</li>
+<li><p>限制结果集：</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span>,money <span class="keyword">from</span> star <span class="keyword">limit</span> <span class="number">3</span>;					<span class="comment"># 取3条数据</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span>,money <span class="keyword">from</span> star <span class="keyword">limit</span> <span class="number">2</span>,<span class="number">3</span>;				<span class="comment"># 偏移2条，然后取3条数据</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span>,money <span class="keyword">from</span> star <span class="keyword">limit</span> <span class="number">3</span> <span class="keyword">offset</span> <span class="number">2</span>;		<span class="comment"># 偏移2条，然后取3条数据</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>常用的集合函数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>count</td>
+<td>统计个数</td>
+</tr>
+<tr>
+<td>sum</td>
+<td>求和</td>
+</tr>
+<tr>
+<td>max</td>
+<td>最大值</td>
+</tr>
+<tr>
+<td>min</td>
+<td>最小值</td>
+</tr>
+<tr>
+<td>avg</td>
+<td>平均值</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ol>
+<li>使用count时指定任何字段都行</li>
+<li>使用其他函数时必须要指定字段</li>
+</ol>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> star;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">max</span>(money) <span class="keyword">as</span> m <span class="keyword">from</span> star;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>as</code>可以给字段其别名</p>
+</blockquote>
+<ul>
+<li>分组操作</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> star <span class="keyword">group</span> <span class="keyword">by</span> sex;					<span class="comment"># 分组</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*), sex <span class="keyword">from</span> star <span class="keyword">group</span> <span class="keyword">by</span> sex;		<span class="comment"># 分组统计</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>结果集过滤：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">as</span> c,province <span class="keyword">from</span> star <span class="keyword">group</span> <span class="keyword">by</span> province <span class="keyword">having</span> c&gt;<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>搜索所有记录，然后按照省份分组，统计成员大于1的省份</p>
+</blockquote>
+<h2 id="1-6-数据控制语言-DCL"><a href="#1-6-数据控制语言-DCL" class="headerlink" title="1.6. 数据控制语言(DCL)"></a>1.6. 数据控制语言(<code>DCL</code>)</h2><p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/DCL.png" alt=" 数据控制语言(`DCL`)"></p>
+<h2 id="1-7-多表联合查询"><a href="#1-7-多表联合查询" class="headerlink" title="1.7. 多表联合查询"></a>1.7. 多表联合查询</h2><ul>
+<li>隐式内连接：没有出现<code>join</code>关键的连接, <code>select 字段 from 表1, 表2 where 关联条件;</code></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> username, <span class="keyword">name</span> <span class="keyword">from</span> <span class="keyword">user</span>, goods <span class="keyword">where</span> user.gid = goods.gid;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>查看用户买的商品名</p>
+</blockquote>
+<ul>
+<li>显示内连接：会出现<code>join</code>关键字，后面的条件使用<code>on</code>，<code>select 字段 from 表1 [inner/cross] join 表2 on user.gid = goods.gid;</code></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> username, <span class="keyword">name</span> <span class="keyword">from</span> <span class="keyword">user</span> [<span class="keyword">inner</span>/<span class="keyword">cross</span>] <span class="keyword">join</span> goods <span class="keyword">on</span> user.gid = goods.gid;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>功能同上</p>
+</blockquote>
+<ul>
+<li>外左连接：以左表为主，<code>select 字段 from 表1 left [outer] join 表2 on 关联条件;</code></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> username, <span class="keyword">name</span> <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">left</span> [<span class="keyword">outer</span>] <span class="keyword">join</span> goods <span class="keyword">on</span> user.gid = goods.gid;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以左表为主，显示左边所有内容，右表不匹配的选项显示<code>NULL</code></p>
+</blockquote>
+<ul>
+<li>外右连接：以右表为主，<code>select 字段 from 表1 right [outer] join 表2 on 关联条件;</code></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> username, <span class="keyword">name</span> <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">right</span> [<span class="keyword">outer</span>] <span class="keyword">join</span> goods <span class="keyword">on</span> user.gid = goods.gid;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以右表为主，显示右边所有内容，左表不匹配的选项显示<code>NULL</code></p>
+</blockquote>
+<h2 id="1-8-多表联合操作"><a href="#1-8-多表联合操作" class="headerlink" title="1.8. 多表联合操作"></a>1.8. 多表联合操作</h2><ul>
+<li><p>子(嵌套)查询操作</p>
+<ul>
+<li>说明：一条<code>sql</code>语句的查询结果作为另一条<code>sql</code>语句的条件</li>
+<li>示例：<code>select * from user where gid in (select gid from goods);</code></li>
+</ul>
+</li>
+<li><p>联合更新(同时更新多个表的数据)</p>
+<ul>
+<li>示例：<code>update user u, good g set u.gid=0, g.price=8000 where u.gid = g.gid and u.id=1</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-9-事务处理语言-DTL"><a href="#1-9-事务处理语言-DTL" class="headerlink" title="1.9. 事务处理语言(DTL)"></a>1.9. 事务处理语言(<code>DTL</code>)</h2><ul>
+<li><p>事务：<code>MySQL</code>使用<code>INNODB</code>数据库引擎，用来维持数据库的完整性，常用来管理<code>insert</code>、<code>delete</code>、<code>update</code></p>
+</li>
+<li><p>开启事务：禁止自动提交，<code>set autocommit=0;</code></p>
+</li>
+<li><p>操作回滚：出现异常时使用，<code>rollback;</code></p>
+</li>
+<li><p>提交操作：没有异常，<code>commit;</code></p>
+</li>
+</ul>
+<h2 id="1-10-外键索引-约束"><a href="#1-10-外键索引-约束" class="headerlink" title="1.10. 外键索引(约束)"></a>1.10. 外键索引(约束)</h2><ul>
+<li>所谓<strong>外键</strong>就是一个表的主键作为了另一个表的关联字段，然后在添加一点设置就成为了外键，可以简化多个关联表之间的操作，如：删除一个另一个跟着删除</li>
+</ul>
+<p>示例：一个表示用户组的表<code>t_group</code>，一个用户表<code>t_user</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_group(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    primary <span class="keyword">key</span>(<span class="keyword">id</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_user(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    groupid <span class="built_in">int</span>,</span><br><span class="line">    primary <span class="keyword">key</span>(<span class="keyword">id</span>),</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(groupid) <span class="keyword">references</span> t_group(<span class="keyword">id</span>) <span class="keyword">on</span> <span class="keyword">delete</span> restrict <span class="keyword">on</span> <span class="keyword">update</span> restrict</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>约束行为：</p>
+<ul>
+<li><code>NO ACTION</code>或<code>RESTRICT</code>：删除或修改时不做任何操作，直接报错</li>
+<li><code>SET NULL</code>：删除或更新时，都设置为<code>null</code></li>
+<li><code>CASCADE</code>：删除或更新时，同时删除或更新从表的数据</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-11-数据清空-DELETE与TRUNCATE"><a href="#1-11-数据清空-DELETE与TRUNCATE" class="headerlink" title="1.11. 数据清空(DELETE与TRUNCATE)"></a>1.11. 数据清空(<code>DELETE</code>与<code>TRUNCATE</code>)</h2><ul>
+<li><p><code>delete from 表名;</code>：再次插入数据时，自增字段的值接着清空前的数据增加</p>
+</li>
+<li><p><code>truncate table 表名;</code>：删除数据，同时将<code>AUTO_INCREMENT</code>的初始值设为1</p>
+</li>
+</ul>
+<h2 id="1-12-数据库的备份与恢复"><a href="#1-12-数据库的备份与恢复" class="headerlink" title="1.12. 数据库的备份与恢复"></a>1.12. 数据库的备份与恢复</h2><ul>
+<li><p>备份：<code>mysqldump -uroot -p test &gt; test.sql</code></p>
+</li>
+<li><p>恢复：<code>mysql -uroot -p test &lt; test.sql</code></p>
+</li>
+</ul>
+<h2 id="1-13-Python操作MySql"><a href="#1-13-Python操作MySql" class="headerlink" title="1.13. Python操作MySql"></a>1.13. <code>Python</code>操作<code>MySql</code></h2><p><code>Python</code>操作<code>MySQL</code>有5中方式，<code>MySQLdb</code>、<code>mysqlclient</code>、<code>PyMySQL</code>、<code>peewee</code>、<code>SQLAlchemy</code>，在<code>Python</code>的<code>Web</code>框架<code>Flask</code>和<code>Django</code>中都采用<code>orm</code>进行封。</p>
+<h3 id="1-13-1-MySQLdb"><a href="#1-13-1-MySQLdb" class="headerlink" title="1.13.1. MySQLdb"></a>1.13.1. <code>MySQLdb</code></h3><p><code>MySQLdb</code>又叫<code>MySQL-python</code>，是<code>Python</code>连接<code>MySQL</code>最流行的一个驱动，很多框架都也是基于此库进行开发，遗憾的是它只支持<code>Python2.x</code>，而且安装的时候有很多前置条件，因为它是基于<code>C</code>开发的库，在<code>Windows</code>平台安装非常不友好，经常出现失败的情况，现在基本不推荐使用，取代的是它的衍生版本。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">  前置条件</span></span><br><span class="line">sudo apt-get install python-dev libmysqlclient-dev  # Ubuntu</span><br><span class="line">sudo yum install python-devel mysql-devel  # Red Hat / CentOS</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">pip install Mysql-python</span><br><span class="line"><span class="meta">#</span><span class="bash"> Windwos直接通过exe文件安装</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Mysqldb</span><br><span class="line"></span><br><span class="line">db = Mysqldb.connect(</span><br><span class="line">    host=<span class="string">'localhost'</span>,  <span class="comment"># 主机名</span></span><br><span class="line">    user=<span class="string">'root'</span>,  <span class="comment"># 用户名</span></span><br><span class="line">    passwd=<span class="string">'pythontab.com'</span>,  <span class="comment"># 密码</span></span><br><span class="line">    db=<span class="string">'testdb'</span>  <span class="comment"># 数据库名称</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"># 获取游标</span></span><br><span class="line">cur = db.cursor()</span><br><span class="line"><span class="comment"># 执行的都是原生的SQL语句</span></span><br><span class="line">cur.execute(<span class="string">'select * from mytable;'</span>)</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> cur.fetchall():</span><br><span class="line">    print(row[<span class="number">0</span>])</span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-13-2-mysqlclient"><a href="#1-13-2-mysqlclient" class="headerlink" title="1.13.2. mysqlclient"></a>1.13.2. <code>mysqlclient</code></h3><p>由于<code>MySQL-python(MySQLdb)</code>年久失修，后来出现了它的<code>Fork</code>版本<code>mysqlclient</code>，完全兼容<code>MySQLdb</code>，同时支持<code>Python3.x</code>，是<code>Django ORM</code>的依赖工具，如果你想使用原生<code>SQL</code>来操作数据库，那么推荐此驱动。安装方式和<code>MySQLdb</code>是一样的，<code>Windows</code>可以在<code>https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient</code>网站找到对应版本的<code>whl</code>包下载安装。</p>
+<ul>
+<li>安装方式：<code>pip install mysqlclient</code>, 如果安装出现问题，需要安装<code>Python3.x-dev</code>、<code>libmysqlclient-dev</code></li>
+</ul>
+<h3 id="1-13-3-PyMySQL"><a href="#1-13-3-PyMySQL" class="headerlink" title="1.13.3. PyMySQL"></a>1.13.3. <code>PyMySQL</code></h3><p><code>PyMySQL</code>是纯<code>Python</code>实现的驱动，速度上比不上<code>MySQLdb</code>和<code>mysqlclient</code>，最大的特点可能就是它的安装方式没那么繁琐，同时也兼容<code>MySQL-python</code></p>
+<ul>
+<li>安装方式：<code>pip install PyMySQL</code>，为了兼容<code>mysqldb</code>，只需要加入<code>pymysql.install_as_MySQLdb()</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'127.0.0.1'</span>, user=<span class="string">'root'</span>, passwd=<span class="string">"pythontab.com"</span>, db=<span class="string">'testdb'</span>)</span><br><span class="line">cur = conn.cursor()</span><br><span class="line">cur.execute(<span class="string">"SELECT Host,User FROM user"</span>)</span><br><span class="line"><span class="keyword">for</span> r <span class="keyword">in</span> cur:</span><br><span class="line">    print(r)</span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-13-4-peewee"><a href="#1-13-4-peewee" class="headerlink" title="1.13.4. peewee"></a>1.13.4. <code>peewee</code></h3><p>写原生<code>SQL</code>的过程非常繁琐，代码重复，没有面向对象思维，继而诞生了很多封装<code>wrapper</code>包和<code>ORM</code>框架，<code>ORM</code>是<code>Python</code>对象与数据库关系表的一种映射关系，有了 <code>ORM</code>你不再需要写<code>SQL</code>语句。提高了写代码的速度，同时兼容多种数据库系统，如<code>sqlite</code>, <code>mysql</code>、<code>postgresql</code>，付出的代价可能就是性能上的一些损失。如果你对 <code>Django</code>自带的<code>ORM</code>熟悉的话，那么<code>peewee</code>的学习成本几乎为零。它是<code>Python</code>中是最流行的 <code>ORM</code> 框架。</p>
+<ul>
+<li><p>安装：<code>pip install peewee</code></p>
+<ul>
+<li><p><code>MySQL</code>数据库连接：<code>db = MySQLDatabase(database=&#39;test&#39;, host=&#39;localhost&#39;, port=3306, user=&#39;root&#39;, passwd=&#39;jiang&#39;)</code></p>
+</li>
+<li><p><code>Sqlite</code>数据库连接：<code>db = SqliteDatabase(database=dbpath)</code>, <code>dbpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;test.db&#39;</code></p>
+</li>
+<li><p>创建数据表：<code>模型类名.create_table()</code></p>
+</li>
+<li><p>插入数据：</p>
+<ul>
+<li>一般的<code>create</code>插入数据：<code>类名.create(username=&#39;lajos&#39;)</code></li>
+<li>事务插入:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"username"</span>: <span class="string">"lajos"</span>,</span><br><span class="line">        <span class="string">"age"</span>: <span class="number">14</span></span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">]</span><br><span class="line"><span class="keyword">with</span> db.atomic():</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">        User.create(**i)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>insert_many()</code>插入多条数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"username"</span>: <span class="string">"lajos"</span>,</span><br><span class="line">        <span class="string">"age"</span>: <span class="number">14</span></span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">]</span><br><span class="line"><span class="keyword">with</span> db.atomic():</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(data), <span class="number">100</span>)</span><br><span class="line">        User.insert_many(data[i: i+<span class="number">100</span>]).excute()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>查询数据：可以使用<code>get()</code>和<code>filter()</code>，也可以使用<code>select()</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> peewee <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">db = MySQLDatabase(database=<span class="string">'test'</span>, host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, passwd=<span class="string">'jiang'</span>)</span><br><span class="line">db.connect()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseModel</span><span class="params">(Model)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        database = db</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(BaseModel)</span>:</span></span><br><span class="line">    username = CharField(unique=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tweet</span><span class="params">(BaseModel)</span>:</span></span><br><span class="line">    user = ForeignKeyField(User, related_name=<span class="string">'tweets'</span>)</span><br><span class="line">    message = TextField()</span><br><span class="line">    created_date = DateTimeField(default=datetime.datetime.now())</span><br><span class="line">    is_published = BooleanField(default=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_table</span><span class="params">(table)</span>:</span></span><br><span class="line">    <span class="comment"># 如果不存在表就创建</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> table.table_exists():</span><br><span class="line">        table.create_table()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">drop_table</span><span class="params">(table)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> table.table_exists():</span><br><span class="line">        table.drop_table()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 创建表</span></span><br><span class="line">    create_table(User)</span><br><span class="line">    create_table(Tweet)</span><br><span class="line">    <span class="comment"># 插入数据</span></span><br><span class="line">    data = [&#123;</span><br><span class="line">        <span class="string">'user_id'</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">'message'</span>: <span class="string">'hello world'</span></span><br><span class="line">    &#125;]</span><br><span class="line">    user = User.create(username=<span class="string">'lajos'</span>)</span><br><span class="line">    Tweet.create(user=user, message=<span class="string">'lajos is a handsome man'</span>)</span><br><span class="line">    <span class="keyword">with</span> db.atomic():</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">            Tweet.create(**i)</span><br><span class="line">    <span class="comment"># 插入大量数据时可以采用，速度快</span></span><br><span class="line">    <span class="keyword">with</span> db.atomic():</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(data), <span class="number">100</span>):</span><br><span class="line">            Tweet.insert_many(data[i: i+<span class="number">100</span>]).execute()</span><br><span class="line">    <span class="comment"># 查询数据</span></span><br><span class="line">    user = User.get(username=<span class="string">'lajos'</span>)</span><br><span class="line">    User.filter()</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-13-5-SQLAlchemy"><a href="#1-13-5-SQLAlchemy" class="headerlink" title="1.13.5. SQLAlchemy"></a>1.13.5. <code>SQLAlchemy</code></h3><p>如果想找一种既支持原生<code>SQL</code>，又支持<code>ORM</code>的工具，那么<code>SQLAlchemy</code>是最好的选择，它非常接近<code>Java</code>中的<code>Hibernate</code>框架。安装使用<code>pip install sqlalchemy</code></p>
+<ul>
+<li>原生<code>SQL</code>使用：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> sqlalchemy</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.engine.base <span class="keyword">import</span> Engine</span><br><span class="line"></span><br><span class="line">conn_pool=create_engine( <span class="comment">#创建sqlalchemy引擎</span></span><br><span class="line">     <span class="string">"mysql+pymysql://webproject:web@192.168.1.18:3306/web?charset=utf8"</span>,  <span class="comment">#数据库类型+数据库驱动://用户名:密码@主机:端口/数据库</span></span><br><span class="line">     max_overflow=<span class="number">2</span>, <span class="comment">#超过连接池大小之后，允许最大扩展连接数，如果不指定默认为5；</span></span><br><span class="line">     pool_size=<span class="number">5</span>,   <span class="comment">#连接池大小</span></span><br><span class="line">     pool_timeout=<span class="number">30</span>,<span class="comment">#连接池如果没有连接了，最长等待时间</span></span><br><span class="line">     pool_recycle=<span class="number">-1</span>,<span class="comment">#多久之后对连接池中连接进行一次回收</span></span><br><span class="line"></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#多线程操作线程池</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">task</span><span class="params">(arg)</span>:</span></span><br><span class="line">    conn = conn_pool.raw_connection()</span><br><span class="line">    cursor = conn.cursor()</span><br><span class="line">    cursor.execute(</span><br><span class="line">        <span class="comment">#"select * from cmdb_worker_order"</span></span><br><span class="line">        <span class="string">"select sleep(2)"</span></span><br><span class="line">    )</span><br><span class="line">    result = cursor.fetchall()</span><br><span class="line">    cursor.close()</span><br><span class="line">    conn.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>：</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">        t = threading.Thread(target=task, args=(i,)) <span class="comment">#5个线程 执行2秒 然后5个线程在去执行2秒</span></span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>ORM</code>使用</li>
+</ul>
+<p>使用<code>ORM</code>方式创建数据表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, Text, ForeignKey, DateTime, UniqueConstraint, Index</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> relationship</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Users</span><span class="params">(Base)</span>:</span></span><br><span class="line">    __tablename__ = <span class="string">'users'</span>                <span class="comment">#表名称</span></span><br><span class="line">    id = Column(Integer, primary_key=<span class="literal">True</span>) <span class="comment"># primary_key=True设置主键</span></span><br><span class="line">    name = Column(String(<span class="number">32</span>), index=<span class="literal">True</span>, nullable=<span class="literal">False</span>) <span class="comment">#index=True创建索引， nullable=False不为空。</span></span><br><span class="line">    age = Column(Integer, default=<span class="number">18</span>)        <span class="comment">#数字字段</span></span><br><span class="line">    email = Column(String(<span class="number">32</span>), unique=<span class="literal">True</span>)  <span class="comment">#设置唯一索引</span></span><br><span class="line">    ctime = Column(DateTime, default=datetime.datetime.now) <span class="comment">#设置默认值为当前时间（注意千万不要datetime.datetime.now()）</span></span><br><span class="line">    extra = Column(Text, nullable=<span class="literal">True</span>)         <span class="comment">#文本内容字段</span></span><br><span class="line">    __table_args__ = (</span><br><span class="line">        <span class="comment"># UniqueConstraint('id', 'name', name='uix_id_name'), #设置联合唯一索引</span></span><br><span class="line">        <span class="comment"># Index('ix_id_name', 'name', 'extra'),                #设置联合索引</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hosts</span><span class="params">(Base)</span>:</span></span><br><span class="line">    __tablename__ = <span class="string">'hosts'</span></span><br><span class="line"></span><br><span class="line">    id = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String(<span class="number">32</span>), index=<span class="literal">True</span>)</span><br><span class="line">    ctime = Column(DateTime, default=datetime.datetime.now)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ##################### 一对多示例 #########################</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hobby</span><span class="params">(Base)</span>:</span></span><br><span class="line">    __tablename__ = <span class="string">'hobby'</span></span><br><span class="line">    id = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    caption = Column(String(<span class="number">50</span>), default=<span class="string">'篮球'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(Base)</span>:</span></span><br><span class="line">    __tablename__ = <span class="string">'person'</span></span><br><span class="line">    nid = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String(<span class="number">32</span>), index=<span class="literal">True</span>, nullable=<span class="literal">True</span>)</span><br><span class="line">    hobby_id = Column(Integer, ForeignKey(<span class="string">"hobby.id"</span>))</span><br><span class="line">    <span class="comment"># 与生成表结构无关，仅用于查询方便</span></span><br><span class="line">    hobby = relationship(<span class="string">"Hobby"</span>, backref=<span class="string">'pers'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ##################### 多对多示例 #########################</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Server2Group</span><span class="params">(Base)</span>:</span></span><br><span class="line">    __tablename__ = <span class="string">'server2group'</span></span><br><span class="line">    id = Column(Integer, primary_key=<span class="literal">True</span>, autoincrement=<span class="literal">True</span>)</span><br><span class="line">    server_id = Column(Integer, ForeignKey(<span class="string">'server.id'</span>))</span><br><span class="line">    group_id = Column(Integer, ForeignKey(<span class="string">'group.id'</span>))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Group</span><span class="params">(Base)</span>:</span></span><br><span class="line">    __tablename__ = <span class="string">'group'</span></span><br><span class="line">    id = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String(<span class="number">64</span>), unique=<span class="literal">True</span>, nullable=<span class="literal">False</span>)</span><br><span class="line">    <span class="comment"># 与生成表结构无关，仅用于查询方便</span></span><br><span class="line">    servers = relationship(<span class="string">'Server'</span>, secondary=<span class="string">'server2group'</span>, backref=<span class="string">'groups'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Server</span><span class="params">(Base)</span>:</span></span><br><span class="line">    __tablename__ = <span class="string">'server'</span></span><br><span class="line">    id = Column(Integer, primary_key=<span class="literal">True</span>, autoincrement=<span class="literal">True</span>)</span><br><span class="line">    hostname = Column(String(<span class="number">64</span>), unique=<span class="literal">True</span>, nullable=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_db</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    根据类创建数据库表</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    engine = create_engine(</span><br><span class="line">        <span class="string">"mysql+pymysql://webproject:web@192.168.1.18:3306/web?charset=utf8"</span>,</span><br><span class="line">        max_overflow=<span class="number">0</span>,  <span class="comment"># 超过连接池大小外最多创建的连接</span></span><br><span class="line">        pool_size=<span class="number">5</span>,  <span class="comment"># 连接池大小</span></span><br><span class="line">        pool_timeout=<span class="number">30</span>,  <span class="comment"># 池中没有线程最多等待的时间，否则报错</span></span><br><span class="line">        pool_recycle=<span class="number">-1</span>  <span class="comment"># 多久之后对线程池中的线程进行一次连接的回收（重置）</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    Base.metadata.create_all(engine)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">drop_db</span><span class="params">()</span>:</span> <span class="comment">#根据类 删除数据库表</span></span><br><span class="line">    engine = create_engine(</span><br><span class="line">        <span class="string">"mysql+pymysql://webproject:web@192.168.1.18:3306/web?charset=utf8"</span>,</span><br><span class="line">        max_overflow=<span class="number">0</span>,   <span class="comment"># 超过连接池大小外最多创建的连接</span></span><br><span class="line">        pool_size=<span class="number">5</span>,      <span class="comment"># 连接池大小</span></span><br><span class="line">        pool_timeout=<span class="number">30</span>,  <span class="comment"># 池中没有线程最多等待的时间，否则报错</span></span><br><span class="line">        pool_recycle=<span class="number">-1</span>   <span class="comment"># 多久之后对线程池中的线程进行一次连接的回收（重置）</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    Base.metadata.drop_all(engine) <span class="comment">#这行代码很关键哦！！ 读取继承了Base类的所有表在数据库中进行删除表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    init_db()                      <span class="comment">#执行创建</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<code>ORM</code>方式操作数据库</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> SqlALchemy.models <span class="keyword">import</span> Users</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"></span><br><span class="line">engine = create_engine( <span class="string">"mysql+pymysql://webproject:web@192.168.1.18:3306/web?charset=utf8"</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 每次执行数据库操作时，都需要创建一个会话</span></span><br><span class="line">session = Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># ############# 执行ORM操作 #############</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加一条数据</span></span><br><span class="line">obj1 = Users(username=<span class="string">"张根"</span>， age=<span class="number">18</span>, email=<span class="string">"1320168@qq.com"</span>, extra=<span class="string">"handsome"</span>) <span class="comment">#创建Users对象=1行数据</span></span><br><span class="line">session.add(obj1)          <span class="comment">#添加到表中</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 批量添加多条</span></span><br><span class="line">session.add_all([</span><br><span class="line">    Users(name=<span class="string">"lajos"</span>, age=<span class="number">21</span>, email=<span class="string">"lajos@163.com"</span>, extra=<span class="string">"merchant"</span>),</span><br><span class="line">    Users(name=<span class="string">"刘峻轩"</span>, age=<span class="number">20</span>, email=<span class="string">"ljunxuan@163.com"</span>, extra=<span class="string">"scientist"</span>)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除操作</span></span><br><span class="line">session.query(Users).filter(users.id==<span class="number">5</span>).delete()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改操作</span></span><br><span class="line">session.query(Users).filter(Users.id==<span class="number">4</span>).update(&#123;<span class="string">'name'</span>:<span class="string">'Martin'</span>&#125;)</span><br><span class="line">session.query(Users).filter(Users.id==<span class="number">4</span>).update(&#123;Users.name: Users.name + <span class="string">"666"</span>&#125;, synchronize_session=<span class="literal">False</span>)<span class="comment">#在原来的基础上做字符串</span></span><br><span class="line">session.query(Users).filter(Users.id==<span class="number">18</span>).update(&#123;Users.id: Users.id - <span class="number">12</span>&#125;,synchronize_session=<span class="string">"evaluate"</span>)<span class="comment">#在原来的基础上做数字+,-操作</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询</span></span><br><span class="line">r0=session.query(Users).all()                             <span class="comment">#查询user表中全部数据；</span></span><br><span class="line">r1=session.query(Users).filter(Users.id &gt; <span class="number">2</span>)              <span class="comment">#查询user表中，id&gt;2的记录；</span></span><br><span class="line">r2=session.query(Users.age).all()                         <span class="comment">#查询User表中的 age列； ##[(18,), (19,)]</span></span><br><span class="line">r3=session.query(Users.age.label(<span class="string">'cname'</span>)).all()          <span class="comment">#使用别名查询</span></span><br><span class="line"></span><br><span class="line">r4=session.query(Users).filter(Users.name==<span class="string">'Martin'</span>).all()      <span class="comment">#查询姓名==Martin的用户</span></span><br><span class="line">r5=session.query(Users).filter_by(name=<span class="string">'Martin'</span>,age=<span class="number">19</span>).all()   <span class="comment">#filter_by方式查询</span></span><br><span class="line">r6=session.query(Users).filter_by(name=<span class="string">'Martin'</span>,age=<span class="number">19</span>).first() <span class="comment">#获取第 单个对象 print(r6.name)</span></span><br><span class="line">r7=session.query(Users).filter(text(<span class="string">"id&lt;:value and name=:name"</span>)).params(value=<span class="number">18</span>, name=<span class="string">'Martin'</span>).order_by(Users.id).all() <span class="comment">#查询 id&gt;18 name=Martin的Users 根据 id排序，params支持传参数；</span></span><br><span class="line">r8 = session.query(Users).from_statement(text(<span class="string">"SELECT * FROM users where name=:name"</span>)).params(name=<span class="string">'ed'</span>).all()<span class="comment">#from_statement,申请使用原生sql</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#条件查询</span></span><br><span class="line">ret0 = session.query(Users).filter(Users.id.between(<span class="number">0</span>,<span class="number">7</span>), Users.name == <span class="string">'Martin'</span>).all()  <span class="comment">#between: 查询 user id在0--7之间，用户名为Martin 的数据;</span></span><br><span class="line">ret1= session.query(Users).filter(Users.id.in_([<span class="number">1</span>,<span class="number">6</span>])).all()  <span class="comment">#查询user_id in [1,6] 的数据</span></span><br><span class="line">ret2 = session.query(Users).filter(~Users.id.in_([<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>])).all()  <span class="comment">#查询user_id  not in [1,6] 的数据</span></span><br><span class="line">ret = session.query(Users).filter(Users.id.in_(session.query(Users.id).filter_by(name=<span class="string">'Martin'</span>))).all()</span><br><span class="line"><span class="comment">#1.session.query(Users.id).filter_by(name='Martin') 查询name=Martin'的id</span></span><br><span class="line"><span class="comment">#2.在user表中 按1的结果 查询</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多查询条件 逻辑运算、嵌套查询</span></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> and_, or_</span><br><span class="line">ret0 = session.query(Users).filter(and_(Users.id &gt; <span class="number">3</span>, Users.name == <span class="string">'eric'</span>)).all()</span><br><span class="line">ret1 = session.query(Users).filter(or_(Users.id &lt; <span class="number">2</span>, Users.name == <span class="string">'eric'</span>)).all()</span><br><span class="line">ret2 = session.query(Users).filter(</span><br><span class="line">    or_(</span><br><span class="line">        Users.id &lt; <span class="number">2</span>,</span><br><span class="line">        and_(Users.name == <span class="string">'eric'</span>, Users.id &gt; <span class="number">3</span>),</span><br><span class="line">        Users.extra != <span class="string">""</span></span><br><span class="line">    )).all()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串、模糊匹配查询</span></span><br><span class="line">ret0 = session.query(Users).filter(Users.name.like(<span class="string">'M%'</span>)).first().name</span><br><span class="line">ret1 = session.query(Users).filter(~Users.name.like(<span class="string">'%r%'</span>)).first().name</span><br><span class="line">print(ret0,ret1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 限制分页</span></span><br><span class="line">ret = session.query(Users)[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">print(ret)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 排序</span></span><br><span class="line">ret0 = session.query(Users).order_by(Users.id.desc()).all()                   <span class="comment">#根据id,由大到小排序(desc).</span></span><br><span class="line">ret1 = session.query(Users).order_by(Users.id.asc(),Users.age.desc()).all()   <span class="comment">#根据id,由小到大排序(asc)，如id相等,由大到小排序(desc).</span></span><br><span class="line">print([i.id <span class="keyword">for</span> i <span class="keyword">in</span> ret0])</span><br><span class="line">print([i.id <span class="keyword">for</span> i <span class="keyword">in</span> ret1])</span><br><span class="line"></span><br><span class="line"><span class="comment"># group_by分组查询和having二次筛选</span></span><br><span class="line"><span class="keyword">from</span> sqlalchemy.sql <span class="keyword">import</span> func</span><br><span class="line"></span><br><span class="line">ret0 = session.query(Users).group_by(Users.age).all() <span class="comment">#根据name字段进行分组</span></span><br><span class="line"></span><br><span class="line">ret1 = session.query(     <span class="comment">#使用name字段进行分组，求每组中 最大id 、最小id 、id 之和</span></span><br><span class="line">    func.max(Users.id),</span><br><span class="line">    func.sum(Users.id),</span><br><span class="line">    func.min(Users.id)</span><br><span class="line">).group_by(Users.name).all()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ret2 = session.query(</span><br><span class="line">    func.max(Users.id),</span><br><span class="line">    func.sum(Users.id),                          <span class="comment">#对分组之后的数据进行 having筛选，</span></span><br><span class="line">    func.min(Users.id)</span><br><span class="line">).group_by(Users.name).having(func.min(Users.id) &gt;<span class="number">2</span>).all()</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">having的作用：</span></span><br><span class="line"><span class="string">例如：查询公司中 部门人数大于3人的部门，先按照部门分组，然后求人数，然后再having 大于3的；</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 连表查询</span></span><br><span class="line">ret = session.query(models.Users).join(models.Hobby, models.Users.id == models.Hobby.id,isouter=<span class="literal">True</span>).filter(models.Users.id &gt;<span class="number">1</span>)</span><br><span class="line"><span class="comment">#2个没有外键关系的表 做连表查询</span></span><br><span class="line">print(ret)</span><br><span class="line"></span><br><span class="line">ret = session.query(models.Person).join(models.Hobby).all()              <span class="comment">#inin_join</span></span><br><span class="line">print(ret)</span><br><span class="line">ret = session.query(models.Person).join(models.Hobby,isouter=<span class="literal">True</span>).all() <span class="comment">#left_join 调换位置 更换为 right_join</span></span><br><span class="line">print(ret)</span><br><span class="line"></span><br><span class="line"><span class="string">''''</span></span><br><span class="line"><span class="string">left join：以左表为准，显示符合搜索条件的记录；</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">aID　　　　　aNum　　　　　bID　　　　　bName</span></span><br><span class="line"><span class="string">　　　　  a20050115　　　 NULL　　　　　NULL</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">right join：以右表为准，显示符合搜索条件的记录；</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">aID　　　　　aNum　　　　　bID　　　　　bName</span></span><br><span class="line"><span class="string">NULL　　　　 NULL　　　　　 8　　　　2006032408</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">inin_join：并不以谁为基础,它只显示符合条件</span></span><br><span class="line"><span class="string">aID　　　　　aNum　　　　　bID　　　　　bName</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 连表方式1：指定字段获取</span></span><br><span class="line">persons=session.query(models.Person.name,models.Hobby.caption.label(<span class="string">'hobby_caption'</span>)).join(models.Hobby)</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span>  persons:</span><br><span class="line">    print(row.name,row.hobby_caption,)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 连表方式2：获取所有字段</span></span><br><span class="line">persons = session.query(models.Person, models.Hobby).join(models.Hobby)</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> persons:</span><br><span class="line">    <span class="comment">#print(row)=2个对象</span></span><br><span class="line">    print(row[<span class="number">0</span>].name,row[<span class="number">1</span>].caption)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 连表方式3：relationship 连表查询</span></span><br><span class="line">persons = session.query(models.Person).all()</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> persons:</span><br><span class="line">    print(row.name,row.hobby.caption)</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string"> hobby = relationship("Hobby", backref='pers')</span></span><br><span class="line"><span class="string"> Hobby：正向查询</span></span><br><span class="line"><span class="string"> backref：反向查询</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">ps:查询喜欢姑娘的所有人</span></span><br><span class="line"><span class="string">hobby_obj=session.query(models.Hobby).filter(models.Hobby.id==2).first()</span></span><br><span class="line"><span class="string">print(hobby_obj.pers)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment">################################relationship增加######################</span></span><br><span class="line"><span class="comment"># 1.relationship正向增加</span></span><br><span class="line">person_obj=models.Person(name=<span class="string">'Tony'</span>,hobby=models.Hobby(caption=<span class="string">'any'</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.relationship 反向增加</span></span><br><span class="line">hobby_obj=models.Hobby(caption=<span class="string">'人妖'</span>)</span><br><span class="line">hobby_obj.pers=[</span><br><span class="line">        models.Person(name=<span class="string">'李渊'</span>),</span><br><span class="line">        models.Person(name=<span class="string">'西门庆'</span>),</span><br><span class="line">    ]</span><br><span class="line">session.add(person_obj,hobby_obj)</span><br><span class="line"></span><br><span class="line">基于relationship 做<span class="number">1</span>对多操作</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#############################多对多添加#################################</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#添加方式1：同时添加男、女对象，直接添加相亲表；前提是 知道新添加男、女对象的ID；</span></span><br><span class="line">session.add_all([</span><br><span class="line">    models.Boy(name=<span class="string">'张无忌'</span>),</span><br><span class="line">    models.Boy(name=<span class="string">'宋青书'</span>),</span><br><span class="line">    models.Girl(name=<span class="string">'周芷若'</span>),</span><br><span class="line">    models.Girl(name=<span class="string">'赵敏'</span>),</span><br><span class="line">])</span><br><span class="line">session.commit()</span><br><span class="line"></span><br><span class="line">s2g =models.G2B(girl_id=<span class="number">1</span>,boy_id=<span class="number">1</span>)</span><br><span class="line">session.add(s2g)</span><br><span class="line">session.commit()</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加方式2：通过女生对象 添加 相亲记录表</span></span><br><span class="line">girl_obj = models.Girl(name=<span class="string">'灭绝师太'</span>)                                     <span class="comment">#创建1位女性朋友 灭绝</span></span><br><span class="line">girl_obj.boys = [models.Boy(name=<span class="string">'张三丰'</span>),models.Boy(name=<span class="string">'方正大师'</span>)]    <span class="comment">#然后灭绝和 张三丰、方正大师分别相了1次亲</span></span><br><span class="line">session.add(girl_obj)</span><br><span class="line">session.commit()</span><br><span class="line"></span><br><span class="line"><span class="comment">##添加方式3：通过男生对象 添加 相亲记录</span></span><br><span class="line">boy_obj = session.query(models.Boy).filter(models.Boy.name==<span class="string">'尹志平'</span>).first()  <span class="comment">#创建1位男性朋友 尹志平</span></span><br><span class="line">boy_obj.girls = [models.Girl(name=<span class="string">'小龙女'</span>),models.Girl(name=<span class="string">'黄蓉'</span>)]         <span class="comment">#然后尹志平 和小龙女、黄蓉分别 相了一次亲</span></span><br><span class="line">session.add(boy_obj)</span><br><span class="line">session.commit()</span><br><span class="line"></span><br><span class="line"><span class="comment">##################################多对多查询###################################</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#boys = relationship('Boy', secondary='g2b', backref='girls')</span></span><br><span class="line"><span class="comment">#1.基于 relationship 正向查询</span></span><br><span class="line">mie_jue = session.query(models.Girl).filter(models.Girl.name==<span class="string">'灭绝师太'</span>).first()</span><br><span class="line">print( [i.name <span class="keyword">for</span> i <span class="keyword">in</span> mie_jue.boys]) <span class="comment">#['方正大师', '张三丰']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#2.基于 relationship 反向查询</span></span><br><span class="line">yi_zhi_ping = session.query(models.Boy).filter(models.Boy.name==<span class="string">'尹志平'</span>).first()</span><br><span class="line">print( [i.name <span class="keyword">for</span> i <span class="keyword">in</span> yi_zhi_ping.girls]) <span class="comment">#['小龙女', '黄蓉']</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交事务，上面的每次操作都要执行</span></span><br><span class="line">session.commit()</span><br><span class="line"><span class="comment"># 关闭session</span></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>filter</code>与<code>filter_by</code>的区别：<br><code>filter</code>传入的参数要用这样的格式：类名.列明，判断要用<code>==</code>表示，<code>session.query(Users).filter(Users.name ==&#39;Martin&#39;).filter(Users.age == 19).all()</code>;<br><code>filter_by</code>使用的语法和<code>Python</code>更接近，<code>session.query(Users).filter(name=&#39;Martin&#39;, age=19).all()</code></p>
+</blockquote>
+<h3 id="1-13-6-Flask-SQLAlchemy"><a href="#1-13-6-Flask-SQLAlchemy" class="headerlink" title="1.13.6. Flask-SQLAlchemy"></a>1.13.6. <code>Flask-SQLAlchemy</code></h3><ul>
+<li><p><code>SQLAlchemy</code>是一个关系型数据库框架，它提供了高层的<code>ORM</code>和底层的原生数据库的操作，让开发者不用直接和<code>SQL</code>语句打交道，而是通过<code>Python</code>对象来操作数据库，在舍弃一些性能开销的同时，换来的是开发效率的较大提升。一句话：就是对数据库的抽象！</p>
+</li>
+<li><p><code>Flask-SQLAlchemy</code>是一个简化了<code>SQLAlchemy</code>操作的<code>flask</code>扩展，是<code>SQLAlchemy</code>的具体实现，封装了对数据库的基本操作。举例：如果说动物园是<code>SQLAlchemy</code>，那<code>Flask-SQLAlchemy</code>只是其中的一只。</p>
+</li>
+</ul>
+
     
 
     
@@ -341,7 +714,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://www.lajos.top/photos/index.html" title="相册" target="_blank">https://www.lajos.top/photos/index.html</a>
+          <a href="https://www.lajos.top/2020/05/12/No-1-Python与数据库-MySql/" title="No.1 Python与数据库--MySql" target="_blank">https://www.lajos.top/2020/05/12/No-1-Python与数据库-MySql/</a>
         </li>
         
         <li>
@@ -358,6 +731,21 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -408,7 +796,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://www.lajos.top/photos/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://www.lajos.top/2020/05/12/No-1-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MySql/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -420,6 +808,16 @@
   </div>
 </article>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/12/No-12-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">No.12 Python语言基础--网络编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 <aside class="wrap-side-operation">
@@ -435,9 +833,55 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-数据库简介"><span class="toc-number">1.</span> <span class="toc-text">1.1 数据库简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-MySQL-Ubuntu-的安装"><span class="toc-number">2.</span> <span class="toc-text">1.2. MySQL(Ubuntu)的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-数据库定义语言-DDL"><span class="toc-number">3.</span> <span class="toc-text">1.3. 数据库定义语言(DDL)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-数据库操作语言-DML"><span class="toc-number">4.</span> <span class="toc-text">1.4. 数据库操作语言(DML)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-数据库查询语言-DQL"><span class="toc-number">5.</span> <span class="toc-text">1.5. 数据库查询语言(DQL)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-数据控制语言-DCL"><span class="toc-number">6.</span> <span class="toc-text">1.6. 数据控制语言(DCL)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-多表联合查询"><span class="toc-number">7.</span> <span class="toc-text">1.7. 多表联合查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8-多表联合操作"><span class="toc-number">8.</span> <span class="toc-text">1.8. 多表联合操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-9-事务处理语言-DTL"><span class="toc-number">9.</span> <span class="toc-text">1.9. 事务处理语言(DTL)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-10-外键索引-约束"><span class="toc-number">10.</span> <span class="toc-text">1.10. 外键索引(约束)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-11-数据清空-DELETE与TRUNCATE"><span class="toc-number">11.</span> <span class="toc-text">1.11. 数据清空(DELETE与TRUNCATE)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-12-数据库的备份与恢复"><span class="toc-number">12.</span> <span class="toc-text">1.12. 数据库的备份与恢复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-13-Python操作MySql"><span class="toc-number">13.</span> <span class="toc-text">1.13. Python操作MySql</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-1-MySQLdb"><span class="toc-number">13.1.</span> <span class="toc-text">1.13.1. MySQLdb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-2-mysqlclient"><span class="toc-number">13.2.</span> <span class="toc-text">1.13.2. mysqlclient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-3-PyMySQL"><span class="toc-number">13.3.</span> <span class="toc-text">1.13.3. PyMySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-4-peewee"><span class="toc-number">13.4.</span> <span class="toc-text">1.13.4. peewee</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-5-SQLAlchemy"><span class="toc-number">13.5.</span> <span class="toc-text">1.13.5. SQLAlchemy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-6-Flask-SQLAlchemy"><span class="toc-number">13.6.</span> <span class="toc-text">1.13.6. Flask-SQLAlchemy</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
+
+
+
+
+
+
+
+
+
+
+  
+  <div id="gitment-ctn"></div>
+  
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "No.1 Python与数据库--MySql" -->
+    var gitment = new Gitment({
+      id: "20200512134050",
+      owner: 'lajos182',
+      repo: 'lajos182.github.io',
+      oauth: {
+        client_id: 'bea4e3d4c31d7696856b',
+        client_secret: 'c4ecc1802f4bf45791573d8dc166043f2aea366d',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
+  
 
 
 
@@ -479,7 +923,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
