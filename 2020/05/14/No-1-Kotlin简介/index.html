@@ -13,31 +13,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
+  <meta name="description" content="Kotlin 是一种在 Java 虚拟机上运行的静态类型编程语言，被称之为 Android世界的Swift，由 JetBrains设计开发并开源。 Kotlin 可以编译成Java字节码，也可以编译成 JavaScript，方便在没有JVM 的设备上运行。 在Google I&#x2F;O 2017中，Google 宣布Kotlin 成为 Android官方开发语言。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="No.1 Kotlin简介">
 <meta property="og:url" content="https://www.lajos.top/2020/05/14/No-1-Kotlin%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
+<meta property="og:description" content="Kotlin 是一种在 Java 虚拟机上运行的静态类型编程语言，被称之为 Android世界的Swift，由 JetBrains设计开发并开源。 Kotlin 可以编译成Java字节码，也可以编译成 JavaScript，方便在没有JVM 的设备上运行。 在Google I&#x2F;O 2017中，Google 宣布Kotlin 成为 Android官方开发语言。">
 <meta property="article:published_time" content="2020-05-14T08:12:41.000Z">
-<meta property="article:modified_time" content="2020-05-14T08:12:41.079Z">
+<meta property="article:modified_time" content="2020-05-14T08:15:27.270Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="django">
-<meta property="article:tag" content="flask">
-<meta property="article:tag" content="scrapy">
-<meta property="article:tag" content="mySql">
-<meta property="article:tag" content="redis">
-<meta property="article:tag" content="mongoDB">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
+<meta property="article:tag" content="Kotlin">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
@@ -267,7 +252,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">532字</span>
     </span>
   </span>
 
@@ -276,7 +261,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -287,7 +272,26 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <p><code>Kotlin</code> 是一种在 <code>Java</code> 虚拟机上运行的静态类型编程语言，被称之为 <code>Android</code>世界的<code>Swift</code>，由 <code>JetBrains</code>设计开发并开源。</p>
+<p><code>Kotlin</code> 可以编译成<code>Java</code>字节码，也可以编译成 <code>JavaScript</code>，方便在没有<code>JVM</code> 的设备上运行。</p>
+<p>在<code>Google I/O 2017</code>中，<code>Google</code> 宣布<code>Kotlin</code> 成为 <code>Android</code>官方开发语言。</p>
+<a id="more"></a>
+
+<h2 id="1-1-第一个-Kotlin-程序"><a href="#1-1-第一个-Kotlin-程序" class="headerlink" title="1.1  第一个 Kotlin 程序"></a>1.1  第一个 <code>Kotlin</code> 程序</h2><p><code>Kotlin</code> 程序文件以 <strong><code>.kt</code></strong> 结尾，如：<code>hello.kt</code>、<code>app.kt</code>。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hello                      <span class="comment">//  可选的包头</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;    <span class="comment">// 包级可见的函数，接受一个字符串数组作为参数</span></span><br><span class="line">   println(<span class="string">"Hello World!"</span>)         <span class="comment">// 分号可以省略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span></span>(<span class="keyword">val</span> name: String) &#123;</span><br><span class="line">   <span class="function"><span class="keyword">fun</span> <span class="title">greet</span><span class="params">()</span></span> &#123; </span><br><span class="line">      println(<span class="string">"Hello, <span class="variable">$name</span>"</span>)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">   Greeter(<span class="string">"World!"</span>).greet()          <span class="comment">// 创建一个对象不用 new 关键字</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-为什么选择-Kotlin？"><a href="#1-2-为什么选择-Kotlin？" class="headerlink" title="1.2  为什么选择 Kotlin？"></a>1.2  为什么选择 <code>Kotlin</code>？</h2><p><code>Kotlin</code> 非常适合开发服务器端应用程序，可以让你编写简明且表现力强的代码， 同时保持与现有基于<code>Java</code>的技术栈的完全兼容性以及平滑的学习曲线：</p>
+<ul>
+<li><strong>表现力</strong>：<code>Kotlin</code> 的革新式语言功能，例如支持<a href="https://www.kotlincn.net/docs/reference/type-safe-builders.html" target="_blank" rel="noopener">类型安全的构建器</a>和<a href="https://www.kotlincn.net/docs/reference/delegated-properties.html" target="_blank" rel="noopener">委托属性</a>，有助于构建强大而易于使用的抽象。</li>
+<li><strong>可伸缩性</strong>：<code>Kotlin</code>对<a href="https://www.kotlincn.net/docs/reference/coroutines.html" target="_blank" rel="noopener">协程</a>的支持有助于构建服务器端应用程序， 伸缩到适度的硬件要求以应对大量的客户端。</li>
+<li><strong>互操作性</strong>：<code>Kotlin</code> 与所有基于<code>Java</code> 的框架完全兼容，可以让你保持熟悉的技术栈，同时获得更现代化语言的优势。</li>
+<li><strong>迁移</strong>：<code>Kotlin</code> 支持大型代码库从 <code>Java</code> 到 <code>Kotlin</code>逐步迁移。你可以开始用 <code>Kotlin</code>编写新代码，同时系统中较旧部分继续用<code>Java</code>。</li>
+<li><strong>工具</strong>：除了很棒的<code>IDE</code>支持之外，<code>Kotlin</code> 还为<code>IntelliJ IDEA Ultimate</code>的插件提供了框架特定的工具（例如 <code>Spring</code>）。</li>
+<li><strong>学习曲线</strong>：对于 <code>Java</code> 开发人员，<code>Kotlin</code>入门很容易。包含在 <code>Kotlin</code> 插件中的自动<code>Java</code> 到 <code>Kotlin</code> 的转换器有助于迈出第一步。<a href="https://www.kotlincn.net/docs/tutorials/koans.html" target="_blank" rel="noopener">Kotlin 心印</a> 通过一系列互动练习提供了语言主要功能的指南。</li>
+</ul>
+
     
 
     
@@ -350,6 +354,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Kotlin</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -414,15 +429,6 @@
 
 
 <nav id="article-nav">
-  
-    <a href="/2020/05/14/No-1-Kotlin%E7%AE%80%E4%BB%8B-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          No.1 Kotlin简介
-        
-      </div>
-    </a>
   
   
     <a href="/2020/05/14/No-3-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MongoDB/" id="article-nav-older" class="article-nav-link-wrap">
