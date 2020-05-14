@@ -9,34 +9,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.lajos.top">
-  <title>Archives: 2020/5 | Lajos的博客</title>
+  <title>No.3 Python与数据库--MongoDB | Lajos的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lajos的博客">
-<meta property="og:url" content="https://www.lajos.top/archives/2020/05/index.html">
+  <meta name="description" content="3.3.1. MongoDB简介 MongoDB是一个基于分布式文件存储 的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。它是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。更多的介绍可查看，菜鸟教程(https:&#x2F;&#x2F;www.runoob.com&#x2F;mongodb&#x2F;mongodb-intro.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No.3 Python与数据库--MongoDB">
+<meta property="og:url" content="https://www.lajos.top/2020/05/14/No-3-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MongoDB/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="在职小猿一枚，从事Python后端开发，了解前沿技术">
+<meta property="og:description" content="3.3.1. MongoDB简介 MongoDB是一个基于分布式文件存储 的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。它是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。更多的介绍可查看，菜鸟教程(https:&#x2F;&#x2F;www.runoob.com&#x2F;mongodb&#x2F;mongodb-intro.html">
+<meta property="og:image" content="https://github.com/lajos182/python-essay/blob/master/images/mongodb_download.png">
+<meta property="article:published_time" content="2020-05-14T01:12:18.000Z">
+<meta property="article:modified_time" content="2020-05-14T01:18:44.712Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="django">
-<meta property="article:tag" content="flask">
-<meta property="article:tag" content="scrapy">
-<meta property="article:tag" content="mySql">
-<meta property="article:tag" content="redis">
-<meta property="article:tag" content="mongoDB">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="MongoDB">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/lajos182/python-essay/blob/master/images/mongodb_download.png">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
   
@@ -232,41 +222,424 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-No-3-Python与数据库-MongoDB" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/14/No-3-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MongoDB/" class="archive-article-date">
-        <time datetime="2020-05-14T01:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/14/No-3-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MongoDB/">No.3 Python与数据库--MongoDB</a>
-	
+    <h1 class="article-title" itemprop="name">
+      No.3 Python与数据库--MongoDB
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/05/14/No-3-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MongoDB/" class="archive-article-date">
+        <time datetime="2020-05-14T01:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">3.9k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">16分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="3-3-1-MongoDB简介"><a href="#3-3-1-MongoDB简介" class="headerlink" title="3.3.1. MongoDB简介"></a>3.3.1. <code>MongoDB</code>简介</h3><ul>
+<li>MongoDB是一个基于分布式文件存储 的数据库。由<code>C++</code>语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。它是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。更多的介绍可查看，<a href="https://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">菜鸟教程(https://www.runoob.com/mongodb/mongodb-intro.html</a></li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li><p><code>MongoDB</code>的安装(<code>linux</code>)</p>
+<ul>
+<li><p>直接安装：<code>sudo apt-get install mongodb</code>，此安装可能无法安装最新稳定版本</p>
+</li>
+<li><p>自定义安装：</p>
+<ul>
+<li><p>按转包下载：到<code>MongoDB</code>官方网站<a href="https://www.mongodb.com/download-center/community" target="_blank" rel="noopener">https://www.mongodb.com/download-center/community</a>下载对应版本的安装包，例如，下载<code>mongodb-linux-x86_64-ubuntu 16.04-4.2.1.tgz</code>，对应的官网链接为<code>https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-4.2.1.tgz</code><br><img src="https://github.com/lajos182/python-essay/blob/master/images/mongodb_download.png" alt="`MongoDB`的下载"></p>
+</li>
+<li><p>使用<code>curl</code>命令下载：<code>curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-4.2.1.tgz</code></p>
+</li>
+<li><p>解压：<code>tar -xzvf mongodb-linux-x86_64-ubuntu1604-4.2.1.tgz</code></p>
+</li>
+<li><p>将解压包拷贝至指定没目录：<code>sudo mv mongodb-linux-x86_64-ubuntu1604-4.2.1 /usr/local/mongodb</code></p>
+</li>
+<li><p>添加至系统环境变量：<code>sudo vim /etc/profile</code>——&gt;在最后一行添加<code>export PATH=/usr/local/mongodb/bin:$PATH</code>——&gt;<code>source /etc/profile</code></p>
+</li>
+<li><p>添加相关配置文件：<code>sudo vim /etc/mongod.conf</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">verbose=<span class="literal">true</span></span><br><span class="line">port=27017</span><br><span class="line">logpath=/var/<span class="built_in">log</span>/mongodb/logs/mongodb.log</span><br><span class="line">logappend=<span class="literal">true</span></span><br><span class="line">dbpath=/var/lib/mongodb/db</span><br><span class="line">directoryperdb=<span class="literal">true</span></span><br><span class="line">auth=<span class="literal">false</span></span><br><span class="line">fork=<span class="literal">true</span></span><br><span class="line">quiet=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建数据库存储、日志文件：<code>sudo mkdir /var/log/mongodb/logs/ -p</code>——&gt;<code>sudo touch /var/log/mongodb/logs/mongodb.log</code>——&gt;<code>sudo mkdir /var/lib/mongodb/db –p</code></p>
+</li>
+<li><p>注册开机启动：<code>sudo vim /ect/init.d/mongodb</code></p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## BEGIN INIT INFO</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Provides: mongodb</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Required-Start:</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Required-Stop:</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Default-Start: 2 3 4 5</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Default-Stop: 0 1 6</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Short-Description: mongodb</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Description: mongo db server</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## END INIT INFO</span></span></span><br><span class="line">. /lib/lsb/init-functions</span><br><span class="line">PROGRAM=/usr/local/mongodb/bin/mongod</span><br><span class="line">MONGOPID=`ps -ef | grep 'mongod' | grep -v grep | awk '&#123;print $2&#125;'`</span><br><span class="line">test -x $PROGRAM || exit 0</span><br><span class="line">case "$1" in</span><br><span class="line">start)</span><br><span class="line">ulimit -n 3000</span><br><span class="line">log_begin_msg "Starting MongoDB server"</span><br><span class="line"><span class="meta">$</span><span class="bash">PROGRAM -f /etc/mongod.conf</span></span><br><span class="line">log_end_msg 0</span><br><span class="line">;;</span><br><span class="line">stop)</span><br><span class="line">log_begin_msg "Stopping MongoDB server"</span><br><span class="line">if [ ! -z "$MONGOPID" ]; then</span><br><span class="line">kill -15 $MONGOPID</span><br><span class="line">fi</span><br><span class="line">log_end_msg 0</span><br><span class="line">;;</span><br><span class="line">status)</span><br><span class="line">;;</span><br><span class="line">*)</span><br><span class="line">log_success_msg "Usage: /etc/init.d/mongodb &#123;start|stop|status&#125;"</span><br><span class="line">exit 1</span><br><span class="line">esac</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+
+<p>  <code>sudo chmod +x /etc/init.d/mongodb</code></p>
+</li>
+<li><p>注册开机脚本：<code>sudo update-rc.d mongodb defaults</code>(注意：移除使用<code>sudo update-rc.d –f mongodb remove</code>)</p>
+</li>
+<li><p>启动服务：<code>sudo service mongodb start</code></p>
+</li>
+<li><p>客户端连接：<code>mongo</code>(若无法连接，可查看环境变量，或者重新开启会话)</p>
+</li>
+</ul>
+</li>
+<li><p>官方安装：</p>
+<ul>
+<li>导入<code>MongoDB</code>公共<code>GPG</code>密钥：<code>wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -</code>(注意是大写<code>O</code>)，如果收到指示<code>gnupg</code>未安装的错误，则输入命令<code>sudo apt-get install gnupg</code>，安装成功后重新输入<code>GPG</code>密钥</li>
+<li>创建<code>MongoDB</code>相关文件：选择合适的<code>MongoDB</code>版本，例如<code>Ubuntu16.04</code>，需要执行命令<code>echo &quot;deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list</code></li>
+<li>重新加载本地软件包数据库：<code>sudo apt-get update</code></li>
+<li>安装<code>MongoDB</code>：可以选择安装最新版本(<code>sudo apt-get install -y mongodb-org</code>)，也可指定版本安装(<code>sudo apt-get install -y mongodb-org=4.2.1 mongodb-org-server=4.2.1 mongodb-org-shell=4.2.1 mongodb-org-mongos=4.2.1 mongodb-org-tools=4.2.1</code>)。</li>
+<li>配置文件：<code>/ect/mongod.conf</code></li>
+<li>启动服务：<code>sudo service mongod start</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>MongoDB</code>与<code>MySQL</code>比较</p>
+<table>
+<thead>
+<tr>
+<th>MySQL</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>database</td>
+<td>db(数据库)</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection(集合)</td>
+</tr>
+<tr>
+<td>一条数据</td>
+<td>document(文档)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="3-3-2-MongoDB基本操作"><a href="#3-3-2-MongoDB基本操作" class="headerlink" title="3.3.2. MongoDB基本操作"></a>3.3.2. <code>MongoDB</code>基本操作</h3><ul>
+<li><p><code>db</code>操作</p>
+<ul>
+<li>查看所有数据库：<code>show dbs</code></li>
+<li>查看当前数据库：<code>db</code>或者<code>db.getName()</code></li>
+<li>创建或切换数据库：<code>use python</code></li>
+<li>若使用的数据库不存在则创建然后切换，存在直接切换</li>
+<li>新建的数据库没有数据时，<code>show dbs</code>显示不出来</li>
+<li>删除当前使用的数据库：<code>db.dropDatabase()</code></li>
+<li>退出：<code>exit</code>或<code>quit()</code></li>
+<li>查看帮助：<code>help</code></li>
+</ul>
+</li>
+<li><p><code>collection</code>操作</p>
+<ul>
+<li>查看当前数据库的所有集合：<code>show collections</code></li>
+<li>创建集合：<ul>
+<li>单纯创建：<code>db.createCollection(&#39;star&#39;)</code>，创建一个空集合</li>
+<li>按需创建：<code>db.stu.insert({name:&#39;lufei&#39;, age:22})</code>，直接使用不存在的集合，并插入数据</li>
+</ul>
+</li>
+<li>删除当前数据库指定的集合：<code>db.stu.drop()</code></li>
+</ul>
+</li>
+<li><p><code>document</code>操作</p>
+<ul>
+<li><p>增加文档：</p>
+<ul>
+<li><p><code>insert</code></p>
+<ul>
+<li>插入一条：<code>db.star.insert({name:&#39;linjunjie&#39;, age:32, treasure:200, isDelete:0})</code></li>
+<li>插入多条：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">db.star.insert([</span><br><span class="line">&#123;name:&#39;zhoujielun&#39;, age:41, treasure:500, isDelete:0&#125;, </span><br><span class="line">&#123;name: &#39;baijingting&#39;, age:26, treasure:80, isDelete:0&#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>save</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 不指定_id字段，功能等价于insert</span><br><span class="line">db.star.save(&#123;name:&#39;xiaozhan&#39;,age:31,treasure:90,isDelete:1&#125;)</span><br><span class="line"># 指定_id字段，相当于更新操作</span><br><span class="line">db.star.save(&#123;_id:ObjectId(&quot;5dd63af30246a3087b2054ce&quot;), name:&quot;xiaozhan&quot;, age: 31, treasure: 90, isDelete: 0 &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新文档：</p>
+<ul>
+<li><p><code>save</code>：保存文档时，需要指定<code>_id</code>字段</p>
+</li>
+<li><p><code>update</code>：<code>db.集合.update(query, update, {upsert: &lt;boolean&gt;, multi: &lt;boolean&gt;})</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">db.star.update(&#123;name: &#39;zhoujielun&#39;&#125;, &#123;$set: &#123;age: 40&#125;&#125;)</span><br><span class="line">db.star.update(&#123;isDelete: 0&#125;, &#123;$inc: &#123;age: 3&#125;&#125;)</span><br><span class="line">db.star.update(&#123;isDelete: 0&#125;, &#123;$set: &#123;isDelete: 1&#125;&#125;, &#123;multi: true&#125;)</span><br><span class="line">db.star.update(&#123;name: &#39;zhoujie&#39;&#125;, &#123;$set: &#123;age: 40&#125;&#125;, &#123;upsert: true&#125;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>query</code>：表示查询条件<br><br><code>update</code>：表示跟新设置<br><br><code>$set</code>：表示设置<br><br><code>$inc</code>：表示增加<br><br><code>upsert</code>：更新的查询结果不存在，是否作为新数据插入<br><br><code>multi</code>：符合条件的数据是否全部更新，<code>true</code>表示全部更新，<code>false</code>只更新一条，默认为<code>false</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>删除文档：<code>remove</code>：<code>db.集合.remove(query, {justOne: &lt;boolean&gt;})</code>，默认为<code>false</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 默认删除所有匹配到的文档</span><br><span class="line">db.star.remove(&#123;name: &#39;zhoujie&#39;&#125;)</span><br><span class="line"># 只删除一条匹配到的文档</span><br><span class="line">db.star.remobe(&#123;age: 26&#125;, &#123;justOne: true&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询文档：<code>db.star.find()</code></p>
+<ul>
+<li>格式：<code>db.集合.find(query, {key1: 0, key2: 0})</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.star.find(&#123;name: &#39;xiaozhan&#39;&#125;)</span><br><span class="line">db.star.find(&#123;name: &#39;xiaozhan&#39;&#125;, &#123;name: 1, age: 1&#125;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>query</code>表示查询条件；<br><br>第二个参数值为1表示要显示的字段，为0表示不显示的字段；<br><br>选择字段时或排序字段只能选择一种情况，要么都选择，要么都排除</p>
+</blockquote>
+<ul>
+<li><code>pretty()</code>：格式化显示文档以字典的形式，<code>db.star.find().pretty()</code></li>
+<li><code>findOne()</code>：查询一条文档，<code>db.star.findOne()</code></li>
+<li><code>count()</code>：统计查询文档的个数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-3-MongoDB进阶操作"><a href="#3-3-3-MongoDB进阶操作" class="headerlink" title="3.3.3. MongoDB进阶操作"></a>3.3.3. <code>MongoDB</code>进阶操作</h3><ul>
+<li>查询条件操作符<ul>
+<li>大于：<code>$gt</code>，格式是<code>db.集合.find({&lt;key&gt;: {$gt: &lt;value&gt;}})</code>，如<code>db.star.find({age: {$gt: 35}})</code></li>
+<li>大于等于：<code>$gte</code></li>
+<li>小于：<code>$lt</code></li>
+<li>小于等于：<code>$lte</code></li>
+<li>等于：不写符合就是等于</li>
+<li>多个条件：<code>db.star.find({age: {$gt: 31, $lt: 40}})</code></li>
+<li>正则：格式是<code>db.集合.find({&lt;key&gt;: /正则表达式/})</code>，如<code>db.star.find({name: /an$/})</code></li>
+</ul>
+</li>
+<li>条件合并<code>and/or</code><ul>
+<li><code>and</code>：表示并且，格式：<code>db.集合.find({条件1，条件2})</code>，如，<code>db.star.find({isDelete: 0, age: {$gt: 35}})</code></li>
+<li><code>or</code>：表示或者，格式：<code>db.集合.find({$or: [{条件1}，{条件2}])</code>，如，<code>db.star.find({$or: [{age: {$gt: 35}}, {age: {$lt: 31}}]})</code></li>
+</ul>
+</li>
+<li>限制结果集<ul>
+<li>限制：<code>limit</code>，如，<code>db.star.find().limit(2)</code></li>
+<li>跳过：<code>skip</code>，如，<code>db.star.find().skip(1).limit(1)</code></li>
+</ul>
+</li>
+<li>结果集排序<ul>
+<li>格式：<code>db.集合.find().sort({&lt;key&gt;: 1/-1})</code>，1表示升序，-1表示降序</li>
+<li>示例：<code>db.star.find().sort({age: 1})</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-4-权限认证"><a href="#3-3-4-权限认证" class="headerlink" title="3.3.4. 权限认证"></a>3.3.4. 权限认证</h3><ul>
+<li><p><code>mongod.conf</code>配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">  mmapv1:</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  wiredTiger:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">where</span> to write logging data.</span></span><br><span class="line">systemLog:</span><br><span class="line">  destination: file</span><br><span class="line">  logAppend: true</span><br><span class="line">  path: /var/log/mongodb/mongod.log</span><br><span class="line">  quiet: true</span><br><span class="line"><span class="meta">  #</span><span class="bash"> timeStampFormat: iso8601-utc </span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> nework interfaces</span></span><br><span class="line">net:</span><br><span class="line"> port: 27017</span><br><span class="line"> bindIp：127.0.0.1</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> how the process runs</span></span><br><span class="line">processManagement:</span><br><span class="line">  timeZoneInfo：/usr/share/zoneinfo</span><br><span class="line">  </span><br><span class="line">security:</span><br><span class="line">  authorization: enabled</span><br><span class="line">  </span><br><span class="line"><span class="meta">#</span><span class="bash">operationsProfiling:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">replication</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">sharding</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Enterprise-Only Options:</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">auditLog</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">snmp</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li><strong><code>systemLog</code></strong>：<ul>
+<li><code>systemLog.verbosity</code>：<code>integer</code>，日志文件输入的级别，越大级别越低</li>
+<li><code>systemLog.quiet</code>：<code>boolean</code>，该模式下会限制输出信息，数据库命令输出，副本集活动，连接接受事件，连接关闭事件。</li>
+<li><code>systemLog.traceAllExceptions</code>：<code>string</code>，打印<code>verbose</code>信息来调试，用来记录额外的异常日志</li>
+<li><code>systemLog.syslogFacility</code>：<code>string</code>，默认为<code>user</code>，指定<code>syslog</code>日志信息的设备级别。需要指定<code>--syslog</code>来使用这个选项</li>
+<li><code>systemLog.path</code>：<code>string</code>，发送所有的诊断日志，默认重启后会覆盖</li>
+<li><code>systemLog.logAppend</code>：<code>boolean</code>，是否启用追加日志</li>
+<li><code>systemLog.destination</code>：<code>string</code>，指定一个文件或<code>syslog</code>，如果指定为文件，必须同时指定<code>systemLog.path</code></li>
+<li><code>systemLog.timeStampFormat</code>：<code>string</code>，默认为<code>iso8601-local</code></li>
+</ul>
+</li>
+<li><strong><code>processManagement</code></strong>：<ul>
+<li><code>processManagement.pidFilePath</code>：<code>string</code>，指定进程的<code>ID</code>，与<code>--fork</code>配合使用，不指定则不会创建</li>
+<li><code>processManagement.fork</code>：<code>boolean</code>，默认为<code>false</code>，<code>true</code>表示守护进程在后台运行</li>
+<li><code>processManagement.timeZoneInfo</code>：<code>string</code>，如，<code>/usr/share/zoneinfo</code>，时区</li>
+</ul>
+</li>
+<li><code>net</code>：<ul>
+<li><code>net.port</code>：<code>interger</code>，默认<code>27017</code>，<code>mongodb</code>实例监听的端口号</li>
+<li><code>net.bindIp</code>：<code>string</code>，2.6版本默认为<code>127.0.0.1</code>，指定<code>mongodb</code>实例绑定的<code>ip</code>，为了绑定多个<code>ip</code>，可以使用逗号分隔</li>
+<li><code>net.maxIncomingConnections</code>：<code>integer</code>， 默认为1000000，<code>mongodb</code>实例接受的最多连接数，如果高于操作系统接受的最大线程数，设置无效</li>
+<li><code>net.wireObjectCheck</code>：<code>boolean</code>，默认为<code>true</code>，检查文档的有效性。会稍微影响性能</li>
+<li><code>net.http.enabled</code>：<code>boolean</code>，默认为<code>false</code>， 打开<code>http</code>端口，会导致更多的不安全因素</li>
+<li><code>net.unixDomainSocket.enabled</code>：<code>boolean</code>，默认为<code>false</code>， 停止<code>UNIX domain socket</code>监听。 <code>mongodb</code>实例会一直监听<code>UNIX socket</code>，除非<code>net.unixDomainSocket.enabled</code>设置为<code>true</code>，<code>bindIp</code>没有设置，<code>bindIp</code>没有默认指定为<code>127.0.0.1</code></li>
+<li><code>net.unixDomainSocket.pathPrefix</code>：<code>string</code>，默认为<code>/tmp unix Socket</code>所在的路径</li>
+<li><code>net.ipv6</code>：<code>boolean</code>，默认为<code>false</code>，打开<code>IPV6</code>功能，默认为关闭的</li>
+<li><code>net.http.JSONPEnabled</code>：<code>boolean</code>，默认为<code>false</code>，运行<code>json</code>访问<code>http</code>端口，打开会导致更多的不安全因素</li>
+<li><code>net.http.RESTInterfaceEnabled</code>：<code>boolean</code>，默认为<code>false</code>， 即使<code>http</code>接口选项关闭，打开也会暴露<code>http</code>接口，会导致更多的不安全因素。</li>
+</ul>
+</li>
+<li><strong><code>security</code></strong>：<ul>
+<li><code>security.keyFile</code>：<code>string</code>， 指定分片集或副本集成员之间身份验证的<code>key</code>文件存储位置</li>
+<li><code>security.clusterAuthMode</code>：<code>string</code>， 集群认证中利用到这个模式，如果使用<code>x.509</code>安全机制，可以在这里指定</li>
+<li><code>keyFile,sendKeyFile,sendX509,x509</code>：默认的<code>mongodb</code>发行版是不支持<code>ssl</code>的，可以使用专业版的或重新自行编译<code>mongodb</code></li>
+<li><code>security.authorization</code>：<code>string</code>，默认为<code>disabled</code> ，<code>enabled</code>表示打开访问数据库和进行操作的用户角色认证</li>
+</ul>
+</li>
+<li><strong><code>operationProfiling</code></strong>：<ul>
+<li><code>operationProfiling.slowOpThresholdMs</code>：<code>integer</code>，默认100 指定慢查询时间，单位毫秒，如果打开功能，则向<code>system.profile</code>集合写入数据</li>
+<li><code>operationProfiling.mode</code>：<code>integer</code>，默认0，改变分析日志输出级别。 0，1，2,分别对应关闭，仅打开慢查询，记录所有操作</li>
+</ul>
+</li>
+<li><strong><code>storage</code></strong>：<ul>
+<li><code>storage.dbPath</code>：<code>string</code>，指定数据文件的路径</li>
+<li><code>storage.directoryPerDB</code>：<code>boolean</code>，默认关闭。指定存储每个数据库文件到单独的数据目录。如果在一个已存在的系统使用该选项，需要事先把存在的数据文件移动到目录。</li>
+<li><code>storage.indexBuildRetry</code>：<code>boolean</code>，,默认为<code>true</code> 。指定数据库在索引建立过程中停止，重启后是否重新建立索引。</li>
+<li><code>storage.preallocDataFiles</code>：<code>boolean</code>，默认<code>true</code>， 是否预先分片好数据文件。</li>
+<li><code>storage.nsSize</code>：<code>integer</code>,默认16 指定命名空间的大小，即<code>.ns</code>后缀的文件。最大为2047MB,16M文件可以提供大约24000个命名空间。</li>
+<li><code>storage.quota.enforced</code>：<code>boolean</code>,默认<code>false</code> 限制每个数据库的数据文件数目。可以通过<code>maxFilesPerDB</code>调整数目。</li>
+<li><code>storage.quota.maxFilesPerDB</code>：<code>integer</code>,默认为8 限制每个数据库的数据文件数目。</li>
+<li><code>storage.smallFiles</code>：<code>boolean</code>,默认为<code>false</code> 限制<code>mongodb</code>数据文件大小为512MB，减小<code>journal</code>文件从1G到128M,适用于有很多数量小的数据文件。</li>
+<li><code>storage.syncPeriodSecs</code>：<code>number</code>,默认60。<code>mongodb</code>文件刷新频率，尽量不要在生产环境下修改。</li>
+<li><code>storage.repairPath</code>：<code>string</code>，默认为指定<code>dbpath</code>下的<code>_tmp</code>目录。 指定包含数据文件的根目录，进行<code>--repair</code>操作。</li>
+<li><code>storage.journal.enabled</code>：<code>boolean</code>,默认<code>64bit</code>为<code>true</code>，<code>32bit</code>为<code>false</code>记录操作日志，防止数据丢失。</li>
+<li><code>storage.journal.debugFlags</code>：<code>integer</code> 提供数据库在非正常关闭下的功能测试。</li>
+<li><code>storage.journal.commitIntervalMs</code>：<code>number</code>，默认为100或30，<code>journal</code>操作的最大间隔时间。可以是2-300<code>ms</code>之间的值，低的值有助于持久化，但是会增加磁盘的额外负担。 如果<code>journal</code>和数据文件在同一磁盘上，默认为100<code>ms</code>。如果在不同的磁盘上为30<code>ms</code>。 如果强制<code>mongod</code>提交日志文件，可以指定<code>journal</code>: <code>true</code>，指定后，时间变为原来的三分之一。</li>
+</ul>
+</li>
+<li><strong><code>replication</code></strong>：<ul>
+<li><code>replication.oplogSizeMB</code>：<code>integer</code>,默认为磁盘的5% 指定<code>oplog</code>的最大尺寸。对于已经建立过<code>oplog.rs</code>的数据库，指定无效。</li>
+<li><code>replication.replSetName</code>：<code>string</code> 指定副本集的名称。</li>
+<li><code>replication.secondaryIndexPrefetch</code>：<code>string</code>，默认为all 指定副本集成员在接受<code>oplog</code>之前是否加载索引到内存。默认会加载所有的索引到内存。<code>none</code>，不加载；<code>all</code>，加载所有；<code>_id_only</code>，仅加载<code>_id</code>。</li>
+</ul>
+</li>
+<li><strong><code>sharding</code></strong>：<ul>
+<li><code>sharding.clusterRole</code>：<code>string</code>，指定分片集的<code>mongodb</code>角色。 <code>configsvr</code>,配置服务器，端口27019;<code>shardsvr</code>,分片实例，端口27018。</li>
+<li><code>sharding.archiveMovedChunks</code>：<code>integer</code>在块移动过程中，该选项强制mongodb实例保存所有移动的文档到moveChunk目录。</li>
+</ul>
+</li>
+<li><strong><code>auditLog</code></strong>：<ul>
+<li><code>auditLog.destination</code>：<code>string</code>, <code>syslog</code>,以<code>json</code>格式保存身份验证到<code>syslog</code>，<code>windows</code>下不可用，<code>serverity</code>级别为<code>info</code>，<code>facility</code>级别为<code>user</code>。<code>console</code>以<code>json</code>格式输出信息到标准输出。 <code>file</code>以<code>json</code>格式输出信息到文件。</li>
+<li><code>auditLog.forma</code>t：<code>string</code> 指定输出文件的格式<code>JSON</code>,输出<code>json</code>格式文件;<code>BSON</code>,输出<code>bson</code>二进制格式文件。</li>
+<li><code>auditLog.path</code>：如果<code>--auditDestination</code>的值为<code>file</code>，则该选项指定文件路径。</li>
+<li><code>auditLog.filter</code>：<code>document</code>, 指定过滤系统身份验证的格式为:</li>
+</ul>
+</li>
+<li><strong><code>snmp</code></strong>：<ul>
+<li><code>snmp.subagent</code>：<code>boolean</code> 运行<code>SNMP</code>为一个子代理。</li>
+<li><code>snmp.master</code>：<code>boolean</code>运行<code>SNMP</code>为一个主进程。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>在<code>admin</code>数据库中创建认证用户：<code>mongo</code>—&gt;<code>use admin</code>—&gt;<code>db.createUser({user: &#39;lajos&#39;, pwd: &#39;123456&#39;, &#39;roles&#39;: [{role: &#39;root&#39;, &#39;db&#39;: &#39;admin&#39;}]})</code>—&gt;<code>show users</code>或<code>db.system.users.find()</code></p>
+<ul>
+<li><p><code>role</code>：指定用户的角色，可选的角色有以下几种</p>
+<ul>
+<li>数据库用户角色：<code>read</code>、<code>readWrite</code></li>
+<li>数据库管理角色：<code>dbAdmin</code>、<code>dbOwner</code>、<code>userAdmin</code></li>
+<li>集群管理角色：<code>clusterAdmin</code>、<code>clusterManager</code>、<code>clusterMonitor</code>、<code>hostManager</code></li>
+<li>备份恢复角色：<code>backup</code>、<code>restore</code></li>
+<li>所有数据库角色：<code>readAnyDatabase</code>、<code>readWriteAnyDatabase</code>、<code>userAdminAnyDatabase</code>、<code>dbAdminAnyDatabase</code></li>
+<li>超级用户角色：<code>root</code></li>
+<li>内部角色：<code>__system</code></li>
+</ul>
+<blockquote>
+<p>(1)<code>Read</code>：允许用户读取指定数据库<br><br>(2)<code>readWrite</code>：允许用户读写指定数据库<br><br>(3)<code>dbAdmin</code>：允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问<code>system.profile</code><br><br>(4)<code>userAdmin</code>：允许用户向<code>system.users</code>集合写入，可以找指定数据库里创建、删除和管理用户<br><br>(5)<code>clusterAdmin</code>：只在<code>admin</code>数据库中可用，赋予用户所有分片和复制集相关函数的管理权限<br><br>(6)<code>readAnyDatabase</code>：只在<code>admin</code>数据库中可用，赋予用户所有数据库的读权限<br><br>(7)<code>readWriteAnyDatabase</code>：只在<code>admin</code>数据库中可用，赋予用户所有数据库的读写权限<br><br>(8)<code>userAdminAnyDatabase</code>：只在<code>admin</code>数据库中可用，赋予用户所有数据库的<code>userAdmin</code>权限<br><br>(9)<code>dbAdminAnyDatabase</code>：只在<code>admin</code>数据库中可用，赋予用户所有数据库的<code>dbAdmin</code>权限<br><br>(10)<code>root</code>：只在<code>admin</code>数据库中可用。超级账号，超级权限</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>修改配置文件做认证：<code>vim /etc/mongod.conf</code>—&gt;将<code>security</code>中的<code>authorization</code>改为<code>enabled</code></p>
+</li>
+<li><p>重启<code>mongod</code>服务：<code>sudo service mongod restart</code></p>
+</li>
+<li><p>认证：<code>mongo</code>—&gt;<code>use admin</code>—&gt;<code>db.auth(&#39;lajos&#39;, &#39;123456&#39;)</code></p>
+</li>
+</ul>
+<h3 id="3-3-5-Python操作MongoDB"><a href="#3-3-5-Python操作MongoDB" class="headerlink" title="3.3.5. Python操作MongoDB"></a>3.3.5. <code>Python</code>操作<code>MongoDB</code></h3><ul>
+<li><p>安装扩展库：<code>pip install pymongo</code></p>
+</li>
+<li><p>创建连接及相关操作:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymogo</span><br><span class="line"><span class="comment"># 创建连接</span></span><br><span class="line">connect = pymongo.MongoClient(host=<span class="string">'localhost'</span>, port=<span class="number">27017</span>)</span><br><span class="line"><span class="comment"># 选择数据库, test是数据库名称</span></span><br><span class="line"><span class="comment"># 如果mongodb设置账户和密码校验，先要进行校验</span></span><br><span class="line">admin = connect.admin</span><br><span class="line">admin.authentication(username=<span class="string">'lajos'</span>, password=<span class="string">'123456'</span>)</span><br><span class="line"></span><br><span class="line">db = connnect.test</span><br><span class="line"><span class="comment"># 查看当前数据库的所有集合</span></span><br><span class="line">print(db.collection_names())</span><br><span class="line"><span class="comment"># 查询文档, 得到的结果是一个生成器，需要遍历才可以获取结果</span></span><br><span class="line">ret = db.star.find()</span><br><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> ret])</span><br><span class="line"><span class="comment"># 增加文档，得到的返回值是对应的_id</span></span><br><span class="line">ret1 = db.star.insert(&#123;<span class="string">'name'</span>: <span class="string">'lajos'</span>, age: <span class="number">18</span>&#125;)</span><br><span class="line">ret2 = db.star.insert_one((&#123;<span class="string">'name'</span>: <span class="string">'lajos'</span>, age: <span class="number">18</span>&#125;)</span><br><span class="line">ret3 = db.star.insert([</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'wjk'</span>, age: <span class="number">20</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'yyqx'</span>, age: <span class="number">21</span>&#125;,</span><br><span class="line">])</span><br><span class="line">ret4 = db.star.insert_many([</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'wjk'</span>, age: <span class="number">20</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'yyqx'</span>, age: <span class="number">21</span>&#125;,</span><br><span class="line">])</span><br><span class="line"><span class="comment"># 根据_id查询，需要注意要将id值转化为bson类型</span></span><br><span class="line"><span class="keyword">from</span> bson.objectid <span class="keyword">import</span> ObjectId</span><br><span class="line">ret = db.star.find(&#123;<span class="string">'_id'</span>: ObjectId(<span class="string">'5dd6518225d1748cf88d0d3b'</span>)&#125;)</span><br><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> ret])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Lajos
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://www.lajos.top/2020/05/14/No-3-Python与数据库-MongoDB/" title="No.3 Python与数据库--MongoDB" target="_blank">https://www.lajos.top/2020/05/14/No-3-Python与数据库-MongoDB/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -282,450 +655,143 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://www.lajos.top/2020/05/14/No-3-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MongoDB/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/13/No-2-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-Redis/" class="archive-article-date">
-        <time datetime="2020-05-13T10:29:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/13/No-2-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-Redis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">No.2 Python与数据库--Redis</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/13/No-2-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-Redis/">No.2 Python与数据库--Redis</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-MongoDB简介"><span class="toc-number">1.</span> <span class="toc-text">3.3.1. MongoDB简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-MongoDB基本操作"><span class="toc-number">2.</span> <span class="toc-text">3.3.2. MongoDB基本操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-MongoDB进阶操作"><span class="toc-number">3.</span> <span class="toc-text">3.3.3. MongoDB进阶操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-4-权限认证"><span class="toc-number">4.</span> <span class="toc-text">3.3.4. 权限认证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-5-Python操作MongoDB"><span class="toc-number">5.</span> <span class="toc-text">3.3.5. Python操作MongoDB</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/12/No-1-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MySql/" class="archive-article-date">
-        <time datetime="2020-05-12T05:40:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
-</a>
-
-        </div>
-    	 
+  <div id="gitment-ctn"></div>
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/12/No-1-Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93-MySql/">No.1 Python与数据库--MySql</a>
-	
-    </h1>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
+  <script>
+    <!-- id: "No.3 Python与数据库--MongoDB" -->
+    var gitment = new Gitment({
+      id: "20200514091218",
+      owner: 'lajos182',
+      repo: 'lajos182.github.io',
+      oauth: {
+        client_id: 'bea4e3d4c31d7696856b',
+        client_secret: 'c4ecc1802f4bf45791573d8dc166043f2aea366d',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/12/No-12-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2020-05-12T03:41:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/12/No-12-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">No.12 Python语言基础--网络编程</a>
-	
-    </h1>
   
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/07/hexo-github%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-        <time datetime="2020-05-07T01:06:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/07/hexo-github%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">hexo+github快速制作个人博客</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/" class="archive-article-date">
-        <time datetime="2020-05-05T14:55:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/">No.11 Python语言基础--异步IO</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">异步</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/05/No-10-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2020-05-05T14:32:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/05/No-10-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E7%BA%BF%E7%A8%8B/">No.10 Python语言基础--线程</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/04/No-9-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E8%BF%9B%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2020-05-04T04:26:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/04/No-9-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E8%BF%9B%E7%A8%8B/">No.9 Python语言基础--进程</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">进程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/03/No-8-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-        <time datetime="2020-05-03T02:51:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/03/No-8-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">No.8 Python语言基础--面向对象</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/03/No-7-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="archive-article-date">
-        <time datetime="2020-05-03T02:43:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/03/No-7-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">No.7 Python语言基础--异常处理</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/05/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/05/page/2/">下一页 &gt;&gt;</a>
-    </nav>
-  
 
 
           </div>
@@ -766,8 +832,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
