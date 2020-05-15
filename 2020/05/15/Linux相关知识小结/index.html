@@ -9,21 +9,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.lajos.top">
-  <title>No.4 Python语言基础--模块使用 | Lajos的博客</title>
+  <title>Linux相关知识小结 | Lajos的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="模块：模块就像一个工具包一样，里面有很多工具(函数、类)，使用时需要通过import导入。  分类： ①标准库：random、sys、os、time； ②第三方：已经写好的特定功能的模块，你可以直接使用pip命令安装； ③自定义：自己写的">
+  <meta name="description" content="1. Linux系统简介 操作系统严格意义上来讲就是一个内核，是一套管理软硬件资源的软件组件。我们平时所说的操作系统其实是发行版，包括：内核 + 桌面环境 + 常用软件，常见的内核有windows、Linux  常见的操作系统：  桌面版：windows系列、Ubuntu(桌面)、MacOS 服务器：windows server、Linux系列、Unix系列 移动端：Android、iOS、Sym">
 <meta property="og:type" content="article">
-<meta property="og:title" content="No.4 Python语言基础--模块使用">
-<meta property="og:url" content="https://www.lajos.top/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="Linux相关知识小结">
+<meta property="og:url" content="https://www.lajos.top/2020/05/15/Linux%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%B0%8F%E7%BB%93/index.html">
 <meta property="og:site_name" content="Lajos的博客">
-<meta property="og:description" content="模块：模块就像一个工具包一样，里面有很多工具(函数、类)，使用时需要通过import导入。  分类： ①标准库：random、sys、os、time； ②第三方：已经写好的特定功能的模块，你可以直接使用pip命令安装； ③自定义：自己写的">
-<meta property="article:published_time" content="2020-04-29T14:04:41.000Z">
-<meta property="article:modified_time" content="2020-04-30T09:56:43.291Z">
+<meta property="og:description" content="1. Linux系统简介 操作系统严格意义上来讲就是一个内核，是一套管理软硬件资源的软件组件。我们平时所说的操作系统其实是发行版，包括：内核 + 桌面环境 + 常用软件，常见的内核有windows、Linux  常见的操作系统：  桌面版：windows系列、Ubuntu(桌面)、MacOS 服务器：windows server、Linux系列、Unix系列 移动端：Android、iOS、Sym">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/linux.png">
+<meta property="og:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/document_permission.png">
+<meta property="article:published_time" content="2020-05-15T01:05:03.000Z">
+<meta property="article:modified_time" content="2020-05-15T01:23:58.129Z">
 <meta property="article:author" content="Lajos">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/lajos/image_bucket/raw/master/skill/linux.png">
   
     <link rel="alternative" href="/atom.xml" title="Lajos的博客" type="application/atom+xml">
   
@@ -219,14 +222,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-No-4-Python语言基础-模块使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux相关知识小结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      No.4 Python语言基础--模块使用
+      Linux相关知识小结
     </h1>
   
 
@@ -238,8 +241,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2020-04-29T14:04:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+<a href="/2020/05/15/Linux%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%B0%8F%E7%BB%93/" class="archive-article-date">
+        <time datetime="2020-05-15T01:05:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
 </a>
 
   
@@ -252,7 +255,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">636字</span>
+      <span class="post-count">5.6k字</span>
     </span>
   </span>
 
@@ -261,7 +264,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">21分</span>
     </span>
   </span>
 </div>
@@ -272,40 +275,1074 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><strong>模块</strong>：模块就像一个工具包一样，里面有很多工具(函数、类)，使用时需要通过<code>import</code>导入。</p>
-<ul>
-<li>分类：<ul>
-<li>①标准库：<code>random</code>、<code>sys</code>、<code>os</code>、<code>time</code>；</li>
-<li>②第三方：已经写好的特定功能的模块，你可以直接使用pip命令安装；</li>
-<li>③自定义：自己写的</li>
-</ul>
+    <h2 id="1-Linux系统简介"><a href="#1-Linux系统简介" class="headerlink" title="1. Linux系统简介"></a>1. <code>Linux</code>系统简介</h2><ul>
+<li><p>操作系统严格意义上来讲就是一个内核，是一套管理软硬件资源的软件组件。我们平时所说的操作系统其实是发行版，包括：内核 + 桌面环境 + 常用软件，常见的内核有<code>windows</code>、<code>Linux</code></p>
 </li>
+<li><p>常见的操作系统：</p>
+<ul>
+<li>桌面版：<code>windows</code>系列、<code>Ubuntu</code>(桌面)、<code>MacOS</code></li>
+<li>服务器：<code>windows server</code>、<code>Linux</code>系列、<code>Unix</code>系列</li>
+<li>移动端：<code>Android</code>、<code>iOS</code>、<code>Symbian</code>、<code>windows phone</code>、<code>Ali OS</code></li>
 </ul>
 <a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import random					# 导入</span><br><span class="line">import random as rdm			# 导入并起别名</span><br><span class="line">from time import sleep			# 指定导入</span><br><span class="line">from time import sleep as sp	# 指定导入并起别名</span><br><span class="line">from random import *            # 模糊导入</span><br></pre></td></tr></table></figure>
-
-<p><strong>自定义模块</strong>：新建一个文件，不与其他模块同名，该文件名就是模块，导入方式于官方的相同。文件名(模块名)就是命名空间，不同命名空间下的标识符可以同名，当使用几个模块中相同的（函数）标识符时，可以通过命名空间或起别名解决。</p>
-<p><strong>测试模块</strong>：当一个模块作为主模块运行时，<code>__ name __</code>的值为<code>&#39;__ main __&#39;</code>，当被其他模块导入使用时，值为模块名。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    print(&#39;测试代码&#39;)</span><br></pre></td></tr></table></figure>
-
-<p><strong>包</strong>：多个模块放在同一目录下，目录下有一个<code>__ init __.py</code>文件，这个目录就是一个包。一个目录要想成为一个包，必须包含一个<code>__ init __.py</code>文件，即使该文件为空(可以简化导入书写)</p>
-<p><strong>修改pip源</strong>：</p>
+</li>
+<li><p>32位和64位的区别：简单理解：就相当于4车道与8车道，本质上是寻址空间的区别。</p>
 <ul>
-<li><p><code>Windows</code>：进入用户的家目录(在<code>windows</code>文件管理器中,输入<code>%APPDATA%</code>)，在该目录下新建<code>pip</code>文件夹，并创建<code>pip.ini</code>，然后添加对应的镜像源；</p>
+<li>32位：理论值4<em>2^10</em>2^10*2^10，即4<code>G</code>，大概可用内存为3.25<code>G</code></li>
+<li>64位：理论值2^64，现在主流的主板一般最大支持128<code>G</code></li>
+</ul>
 </li>
-<li><p><code>Linux</code>：进入用户的加目录(<code>cd ~</code>)，然后创建<code>.pip</code>文件夹(<code>mkdir .pip</code>)并创建<code>pip.conf</code>(<code>touch pip.conf</code>)文件，然后对应的镜像源；</p>
+<li><p><code>Linux</code>是一套免费使用和自由传播的类<code>Unix</code>操作系统，是一个基于<code>POSIX</code>和<code>UNIX</code>的多用户、多任务、支持多线程和多<code>CPU</code>的操作系统。它能运行主要的<code>UNIX</code>工具软件、应用程序和网络协议。它支持32位和64位硬件。<code>Linux</code>继承了<code>Unix</code>以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
 </li>
-<li><p>国内常用的<code>pip</code>镜像</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">清华：https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br><span class="line"></span><br><span class="line">阿里云：http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple&#x2F;</span><br><span class="line"></span><br><span class="line">中国科技大学 https:&#x2F;&#x2F;pypi.mirrors.ustc.edu.cn&#x2F;simple&#x2F;</span><br><span class="line"></span><br><span class="line">华中理工大学：http:&#x2F;&#x2F;pypi.hustunique.com&#x2F;</span><br><span class="line"></span><br><span class="line">山东理工大学：http:&#x2F;&#x2F;pypi.sdutlinux.org&#x2F; </span><br><span class="line"></span><br><span class="line">豆瓣：http:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
+<li><p><code>Linux</code>发行版就是在内核的基础上，添加特定桌面环境和常用软件，省去了自己组装的麻烦。常见的桌面版有<code>ubuntu(desktop)</code>、<code>Ubuntu kylin</code>、<code>deepin</code>，服务器有<code>debian</code>、<code>redhat</code>、<code>Ubuntu(server)</code>、<code>centos</code><br><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/linux.png" alt="Linux发行版"></p>
 </li>
-<li><p>使用方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url &#x3D; http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple&#x2F;</span><br><span class="line">trusted-host &#x3D; mirrors.aliyun.com</span><br></pre></td></tr></table></figure>
+<li><p><code>Linux</code>启动过程：<code>Linux</code>系统的启动过程可以分为5个阶段</p>
+<ul>
+<li>内核的引导：计算机打开电源后，首先是<code>BIOS</code>开机自检，按照<code>BIOS</code>中设置的启动设备（通常是硬盘）来启动。操作系统接管硬件以后，首先读入<code>/boot</code>目录下的内核文件。</li>
+<li>运行<code>init</code>：<code>init</code>进程是系统所有进程的起点，<code>init</code>程序首先是需要读取配置文件<code>/etc/inittab</code>，里面记录系统的运行级别，<code>Linux</code>系统级别有7个：<ul>
+<li>0：关机模式</li>
+<li>1：单用户模式，<code>root</code>权限</li>
+<li>2 ~ 5：多用户模式(桌面)</li>
+<li>6：重启</li>
+</ul>
+</li>
+<li>系统初始化：执行对应级别目录下的脚本，如级别5，对应<code>/etc/rc5.d</code>目录；解析用户自定义的启动脚本，如，<code>/etc/rc.local</code></li>
+<li>建立终端：<code>rc</code>执行完毕后，返回<code>init</code>，<code>init</code>会打开6个终端，以便用户登录系统</li>
+<li>用户登录系统：命令行登录、<code>ssh</code>登录、图形界面登录</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-Linux目录结构及vim"><a href="#2-Linux目录结构及vim" class="headerlink" title="2. Linux目录结构及vim"></a>2. <code>Linux</code>目录结构及<code>vim</code></h2><ul>
+<li><p>文件系统：操作管理存储设备或分区上的文件的方法和数据结构，也就是存储设备上组织文件的方式。操作系统中<strong>负责管理和存储文件信息</strong>的软件机构叫文件管理系统，简称为文件系统。常见的文件系统有：</p>
+<ul>
+<li><code>fat16(MS-DOS 6.X)</code>，分区最大2<code>G</code></li>
+<li><code>fat32(windows 95)</code>，单个文件最大4<code>G</code>，性能较弱，容易产生碎片</li>
+<li><code>ntfs(window nt)</code>，提升了<code>fat</code>32文件系统的稳定性</li>
+<li><code>ext4(Linux)</code>，扩展型日志文件系统</li>
+<li><code>hfs[+] (Mac)</code>，苹果设备的文件系统</li>
+<li><code>exfat(win/mac)</code>，可以支持4<code>G</code>以上的单个文件，适合于闪存</li>
+</ul>
+</li>
+<li><p>根目录结构：</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/</code></td>
+<td>根目录</td>
+</tr>
+<tr>
+<td><code>/bin</code></td>
+<td>大多数的操作命令</td>
+</tr>
+<tr>
+<td><code>/boot</code></td>
+<td>系统启动相关文件</td>
+</tr>
+<tr>
+<td><code>/cdrom</code></td>
+<td>挂在光盘</td>
+</tr>
+<tr>
+<td><code>/dev</code></td>
+<td>设备文件(<code>linux</code>下有一切设备皆文件之称)</td>
+</tr>
+<tr>
+<td><code>/etc</code></td>
+<td>配置文件目录(经常使用)</td>
+</tr>
+<tr>
+<td><code>/home</code></td>
+<td>所有普通用户的家目录，一个用户对应该目录下的一个文件夹</td>
+</tr>
+<tr>
+<td><code>/lib</code></td>
+<td>库文件</td>
+</tr>
+<tr>
+<td><code>/lib64</code></td>
+<td>64位库文件</td>
+</tr>
+<tr>
+<td><code>/lost+found</code></td>
+<td>系统出现异常时保存信息以便恢复，平时是空的</td>
+</tr>
+<tr>
+<td><code>/media</code></td>
+<td>自动识别设备的挂载点</td>
+</tr>
+<tr>
+<td><code>/mnt</code></td>
+<td><code>mount</code>，专门用于挂载的目录</td>
+</tr>
+<tr>
+<td><code>/opt</code></td>
+<td><code>option</code>，用于安装可选软件</td>
+</tr>
+<tr>
+<td><code>/proc</code></td>
+<td>虚拟的文件系统，可以映射硬件信息</td>
+</tr>
+<tr>
+<td><code>/root</code></td>
+<td>超级用户(<code>root</code>)的家目录</td>
+</tr>
+<tr>
+<td><code>/run</code></td>
+<td>存放系统运行时的文件，如：进程文件</td>
+</tr>
+<tr>
+<td><code>/sbin</code></td>
+<td>超级用户使用的命令存放目录</td>
+</tr>
+<tr>
+<td><code>/snap</code></td>
+<td><code>Ubuntu</code>自己搞的一个包管理系统</td>
+</tr>
+<tr>
+<td><code>/srv</code></td>
+<td><code>service</code>，存储本机提供的数据或服务</td>
+</tr>
+<tr>
+<td><code>/sys</code></td>
+<td>类似于<code>proc</code>，可以映射内核信息</td>
+</tr>
+<tr>
+<td><code>/tmp</code></td>
+<td>保存随时可能销毁的临时文件</td>
+</tr>
+<tr>
+<td><code>/usr</code></td>
+<td>之前的功能同<code>home</code>，现在是<code>unix system resource</code>，用户安装软件的目录</td>
+</tr>
+<tr>
+<td><code>/var</code></td>
+<td>系统产生的不会自动销毁的文件，如：日志文件</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>隐藏文件：以’.’开头的文件就是隐藏文件<br><br>‘.’：表示当前目录<br><br>‘..’：表示上一级目录<br><br>‘~’：表示当前用户的家目录<br></p>
+</blockquote>
+</li>
+<li><p><code>VIM</code>编辑器：<code>vi</code>发展出来的一个文本编辑器，被誉为”终端编辑器之神”，可以直接使用<code>sudo apt-get install vim</code>进行安装，有三种工作模式：</p>
+<ul>
+<li><p>正常模式(命令模式)：使用vim打开的默认模式</p>
+<table>
+<thead>
+<tr>
+<th>命令/操作</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>vim filename</code></td>
+<td>打开/新建一个文件</td>
+</tr>
+<tr>
+<td><code>ESC</code></td>
+<td>切换到正常模式</td>
+</tr>
+<tr>
+<td><code>ZZ（shift + zz）</code></td>
+<td>保存退出……</td>
+</tr>
+<tr>
+<td><code>!v</code></td>
+<td>打开最后使用<code>vim</code>打开的文件</td>
+</tr>
+<tr>
+<td>光标定位</td>
+<td></td>
+</tr>
+<tr>
+<td><code>vim filename +n</code></td>
+<td>打开文件，将光标定位到第<code>n</code>行</td>
+</tr>
+<tr>
+<td><code>vim filename +</code></td>
+<td>打开文件，将光标定位到尾行</td>
+</tr>
+<tr>
+<td><code>gg</code></td>
+<td>定位到首行</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>定位到尾行</td>
+</tr>
+<tr>
+<td><code>ngg</code></td>
+<td>定位到第<code>n</code>行</td>
+</tr>
+<tr>
+<td><code>^/0</code></td>
+<td>定位到行首</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>定位到行尾</td>
+</tr>
+<tr>
+<td><code>k</code></td>
+<td><code>↑</code></td>
+</tr>
+<tr>
+<td><code>j</code></td>
+<td><code>↓</code></td>
+</tr>
+<tr>
+<td><code>h</code></td>
+<td><code>←</code></td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td><code>→</code></td>
+</tr>
+<tr>
+<td><code>ctrl + f</code></td>
+<td>下翻一页</td>
+</tr>
+<tr>
+<td><code>ctrl + b</code></td>
+<td>上翻一页</td>
+</tr>
+<tr>
+<td><code>ctrl + d</code></td>
+<td>下翻半页</td>
+</tr>
+<tr>
+<td><code>ctrl + u</code></td>
+<td>上翻半页</td>
+</tr>
+<tr>
+<td>内容处理</td>
+<td></td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>向右删除一个字符</td>
+</tr>
+<tr>
+<td><code>nx</code></td>
+<td>向右删除<code>n</code>个字符，<code>n</code>表示个数</td>
+</tr>
+<tr>
+<td><code>X</code></td>
+<td>向左删除一个字符</td>
+</tr>
+<tr>
+<td><code>nX</code></td>
+<td>向左删除<code>n</code>个字符，<code>n</code>表示个数</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>删除光标所在行</td>
+</tr>
+<tr>
+<td><code>ndd</code></td>
+<td>删除光标开始的<code>n</code>行</td>
+</tr>
+<tr>
+<td></td>
+<td>粘贴剪切板中的内容</td>
+</tr>
+<tr>
+<td><code>yy</code></td>
+<td>复制光标所在行</td>
+</tr>
+<tr>
+<td><code>nyy</code></td>
+<td>复制光标开始的<code>n</code>行</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>撤销</td>
+</tr>
+<tr>
+<td><code>ctrl + r</code></td>
+<td>反撤销</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>插入模式(输入模式)：可以完成文件内容的输入编辑等，输入一下字符可以进入该模式：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>i</code></td>
+<td>在光标位置插入</td>
+</tr>
+<tr>
+<td><code>I</code></td>
+<td>在第一个非空字符插入</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>在光标的下一个字符输入</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>在行尾插入</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>在光标所在的行下面插入空行</td>
+</tr>
+<tr>
+<td><code>O</code></td>
+<td>在光标所在的行上面插入空行</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>删除光标所在字符，并进入输入模式</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td>删除光标所在行，并进入输入模式</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>单行模式(编辑模式)：可以完成文件的整体编辑保存等操作，输入’:’即可进入</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:w</code></td>
+<td>保存</td>
+</tr>
+<tr>
+<td><code>:q</code></td>
+<td>退出</td>
+</tr>
+<tr>
+<td><code>:wq</code></td>
+<td>保存退出</td>
+</tr>
+<tr>
+<td><code>:x</code></td>
+<td>保存退出</td>
+</tr>
+<tr>
+<td><code>:w!</code></td>
+<td>强制保存</td>
+</tr>
+<tr>
+<td><code>:q!</code></td>
+<td>强制退出，不保存修改</td>
+</tr>
+<tr>
+<td><code>:e!</code></td>
+<td>放弃修改，恢复到修改之前的状态</td>
+</tr>
+<tr>
+<td><code>:w newfile</code></td>
+<td>文件另存为</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>:set nu[mber]</code></td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td><code>:set nonu[mber]</code></td>
+<td>隐藏行号</td>
+</tr>
+<tr>
+<td><code>:set tabstop=4</code></td>
+<td>设置一个tab缩进4个字符</td>
+</tr>
+<tr>
+<td><code>:set mouse=a</code></td>
+<td>启用鼠标的点击功能</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[:]/</code>内容</td>
+<td>查找指定内容，<code>n</code>下翻，<code>N</code>上翻</td>
+</tr>
+<tr>
+<td><code>[:]?</code>内容</td>
+<td>查找指定内容，<code>N</code>下翻，<code>n</code>上翻</td>
+</tr>
+<tr>
+<td><code>:%s/</code>原内容<code>/</code>新内容<code>/[g]</code></td>
+<td>所有行内容替换，<code>g</code>表示全局(默认只能替换一行中第一处)</td>
+</tr>
+<tr>
+<td><code>:m,ns/</code>原内容<code>/</code>新内容<code>/[g]</code></td>
+<td><code>m</code>到<code>n</code>行内容替换，<code>g</code>用法同上</td>
+</tr>
+<tr>
+<td>光标定位</td>
+<td></td>
+</tr>
+<tr>
+<td><code>:n</code></td>
+<td>将光标定位到第<code>n</code>行，<code>n</code>表示行号</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>若非正常关闭了<code>vim</code>，可能会产生临时的交换文件，再次打开时会出现特定的界面，可以根据提示进行内容的恢复以及交换文件的删除，也可以手动将交换文件删除，下次就<code>OK</code>了。交换文件时隐藏的(<code>ls -a</code>)<br><br>vim配置文件：打开文件后的配置是临时的，关闭后就失效了</p>
+<ul>
+<li>在用户家目录创建一个文件<code>.vimrc</code></li>
+<li>将<code>vim</code>相关的配置写在文件中</li>
+<li>若文件没有生效，需要重新加载一次<code>source ~/.vimrc</code></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>help</code>的使用：查看命令的帮助文档，如<code>ls --help</code>。</p>
+</li>
+<li><p><code>man</code>的使用：是<code>manul</code>的缩写，是一个命令，可以查询系统中标准的帮助文档</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>man name</code></td>
+<td>查看指定内容(命令/函数)的帮助文档</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>退出查询</td>
+</tr>
+<tr>
+<td><code>↓</code> 或 <code>enter</code></td>
+<td>向下翻一行</td>
+</tr>
+<tr>
+<td><code>↑</code></td>
+<td>向上翻一行</td>
+</tr>
+<tr>
+<td><code>pageup</code></td>
+<td>向上翻一页</td>
+</tr>
+<tr>
+<td><code>pagedown</code>或 空格键</td>
+<td>向下翻一页</td>
+</tr>
+<tr>
+<td><code>?</code>内容</td>
+<td>在帮助文档进行查找指定内容</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="3-文件操作"><a href="#3-文件操作" class="headerlink" title="3. 文件操作"></a>3. 文件操作</h2><p><code>Linux</code>系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，<code>Linux</code>系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。</p>
+<h3 id="3-1-常识命令"><a href="#3-1-常识命令" class="headerlink" title="3.1. 常识命令"></a>3.1. 常识命令</h3><ul>
+<li><p><code>ls</code>：查看指定目录的内容，不指定目录是查看当前工作目录</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-a</code></td>
+<td>显示所有文件，包括隐藏文件</td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>列表显示，详细信息</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>人性化的显示大小，如：<code>K/M/G</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>例如，<code>ls -l</code>显示的结果如下，格式为：类型及权限  引用数  用户  用户组  大小  月  日  年/时间  名称 </p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@www /]# ls -l</span><br><span class="line">total 64</span><br><span class="line">dr-xr-xr-x   2 root root 4096 Dec 14  2012 bin</span><br><span class="line">dr-xr-xr-x   4 root root 4096 Apr 19  2012 boot</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件类型：<code>ls -l</code>显示结果中的第一部分的第一列</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-</code></td>
+<td>普通文件</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>目录文件</td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td>链接文件</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>字符设备文件</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>块设备文件</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>套接字文件</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>管道文件</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><code>cd</code>：切换工作目录</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.</code></td>
+<td>当前目录</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>上一级目录</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>当前用户的家目录</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>表示上次切换之前的目录</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>表示根目录</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>(1)使用<code>cd</code>时，不指定目标地址，会切换到家目录<br>(2)凡是以<code>/</code>开头的目录都是绝对目录<br>(3)凡是以<code>.</code>或<code>..</code>开头的目录都是相对目录</p>
+</blockquote>
+</li>
+<li><p><code>pwd</code>：查看当前工作目录</p>
+</li>
+<li><p><code>alias</code>：给命令起别名，如<code>l</code>、<code>la</code>、<code>ll</code>等</p>
+</li>
+</ul>
+<h3 id="3-2-查看文件"><a href="#3-2-查看文件" class="headerlink" title="3.2. 查看文件"></a>3.2. 查看文件</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>cat</code></td>
+<td>从上到下，显示文件全部内容</td>
+</tr>
+<tr>
+<td><code>tac</code></td>
+<td>从下到上，显示文件全部内容</td>
+</tr>
+<tr>
+<td><code>head</code></td>
+<td>查看开头指定行数的内容，不指定时默认10行，如：<code>head -20 filename</code></td>
+</tr>
+<tr>
+<td><code>tail</code></td>
+<td>查看文件末尾指定行数的内容，不指定时默认10行，如：<code>tail -5 filename</code></td>
+</tr>
+<tr>
+<td><code>nl</code></td>
+<td>功能与cat相同，但是多显示了行号</td>
+</tr>
+<tr>
+<td><code>wc</code></td>
+<td>统计显示，内容：行数 单词数 字符数 文件名</td>
+</tr>
+<tr>
+<td><code>more</code></td>
+<td>一点一点查看内容</td>
+</tr>
+<tr>
+<td><code>less</code></td>
+<td>一点一点查看内容</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><code>more/less</code>使用说明：</p>
+<ul>
+<li>显示一屏就停止</li>
+<li><code>q</code>退出查看</li>
+<li><code>enter</code>下翻一行</li>
+<li>空格下翻一屏</li>
+<li><code>more</code>查看完毕会自动退出，<code>less</code>不会</li>
+<li><code>less</code>可以使用上下按钮上下翻看，<code>more</code>不可以</li>
+<li>经常集合管道使用：<code>ls /etc | more</code></li>
+</ul>
+</blockquote>
+<h3 id="3-3-文件及目录"><a href="#3-3-文件及目录" class="headerlink" title="3.3. 文件及目录"></a>3.3. 文件及目录</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>touch</code></td>
+<td>新建文件，可以是多个</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>删除文件或目录(删除目录时要传递’-r’选项)</td>
+</tr>
+<tr>
+<td><code>cp</code></td>
+<td>拷贝文件或目录(拷贝目录是要传递’-r’选项)</td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td>移动文件或目录</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>创建目录，可以是多个</td>
+</tr>
+<tr>
+<td><code>rmdir</code></td>
+<td>删除空目录</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>选项说明</p>
+<ul>
+<li><code>-r</code>：删除或拷贝目录时需要添加，表示递归操作</li>
+<li><code>-f</code>：表示强制操作，没有提示信息</li>
+<li><code>*</code>：表示模糊匹配，如：<code>rm *.py</code>，表示删除所有的<code>py</code>文件</li>
+<li><code>-p</code>：创建目录时若需要创建中间目录，可以添加此选项</li>
+</ul>
+</blockquote>
+<h3 id="3-4-用户及用户组"><a href="#3-4-用户及用户组" class="headerlink" title="3.4. 用户及用户组"></a>3.4. 用户及用户组</h3><ul>
+<li><p>相关命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>whoami</code></td>
+<td>查看当前登录的用户名</td>
+</tr>
+<tr>
+<td><code>useradd</code></td>
+<td>新建用户，<code>-d</code>指定家目录，<code>-m</code>不存在，<code>-s</code>指定<code>shell</code></td>
+</tr>
+<tr>
+<td><code>userdel</code></td>
+<td>删除用户，<code>-r</code>会删除用户家目录</td>
+</tr>
+<tr>
+<td><code>passwd</code></td>
+<td>设置指定用户的密码，没有指定用户时设置时当前用户的密码</td>
+</tr>
+<tr>
+<td><code>su -</code></td>
+<td>切换用户，一定要加上<code>&#39;-&#39;</code>，否则只会切换家目录，但是环境没有切换，不指定用户时默认切换到<code>root</code>用户(记得先给<code>root</code>用户设置密码)</td>
+</tr>
+<tr>
+<td><code>sudo</code></td>
+<td>以指定用户(root)身份执行命令</td>
+</tr>
+<tr>
+<td><code>visudo</code></td>
+<td>专门用于编辑<code>/etc/sudoers</code>文件的命令，需要将指定用户添加进去才可以使用<code>sudo</code>命令，如：<code>test ALL=(ALL:ALL) ALL</code>；使用<code>sudo update-alternatives --config editor</code>可以修改系统默认编辑器(<code>nano</code>)</td>
+</tr>
+<tr>
+<td><code>groupadd</code></td>
+<td>新建用户组</td>
+</tr>
+<tr>
+<td><code>groupdel</code></td>
+<td>删除用户组</td>
+</tr>
+<tr>
+<td><code>gpasswd</code></td>
+<td>向指定组添加/删除指定的用户，如：<code>gpasswd -a/-d  user group</code></td>
+</tr>
+<tr>
+<td><code>groups</code></td>
+<td>查看指定用户的组信息</td>
+</tr>
+<tr>
+<td><code>chsh</code></td>
+<td>修改指定用户的shell解析器，如：<code>sudo chsh test -s /usr/sbin/nologin</code>(禁止登陆)</td>
+</tr>
+<tr>
+<td><code>chown</code></td>
+<td>修改文件所属用户[及用户组]，如：<code>sudo chown test[:test] 1.py</code>，递归操作需要加’<code>-R</code>‘选项</td>
+</tr>
+<tr>
+<td><code>chgrp</code></td>
+<td>修改文件所属用户组，如：<code>sudo chgrp test 1.py</code></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>涉及文件</p>
+<ul>
+<li><code>/etc/passwd</code>：系统中的用户信息</li>
+<li><code>/etc/group</code>：系统中的用户组信息</li>
+<li><code>/etc/shadow</code>：系统中的用户密码信息</li>
+</ul>
+</li>
+<li><p>相关名词</p>
+<ul>
+<li><code>uid</code>：用户唯一标识</li>
+<li><code>gid</code>：用户组唯一标识</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-文件权限"><a href="#4-文件权限" class="headerlink" title="4. 文件权限"></a>4. 文件权限</h2><p><code>Linux</code>系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，<code>Linux</code>系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。在<code>linux</code>下，所有的文件都涉及权限，分为<strong>所有者</strong>、<strong>所属组</strong>、<strong>其他</strong>三组，所有文件的权限可分为<strong>可读(<code>r</code>)</strong>、<strong>可写(<code>w</code>)</strong>、<strong>可执行(<code>x)</code></strong>，<code>-</code>表示没有改权限。</p>
+<p>在<code>Linux</code>下使用命令<code>ls -l</code>可以显示一个文件的属性及其文件所属的用户和组，如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@www /]# ls -l</span><br><span class="line">total 64</span><br><span class="line">dr-xr-xr-x   2 root root 4096 Dec 14  2012 bin</span><br><span class="line">dr-xr-xr-x   4 root root 4096 Apr 19  2012 boot</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/lajos/image_bucket/raw/master/skill/document_permission.png" alt="Linux文件权限"></p>
+<ul>
+<li><p><code>chgrp</code>：更改文件属组，<code>chgrp [-R] 属组名 文件名</code>，<code>-R</code>表示递归更改文件属组，就是在更改某个目录文件的属组时，如果加上这个参数，那么该目录下的所有文件的属组都会更改。</p>
+</li>
+<li><p><code>chown</code>：更改文件属主，也可以同时更改文件属组，<code>chown [-R] 属主名 文件名</code>或<code>chown [-R] 属主名:属组名 文件名</code>，例如：<code>sudo chmod root:root install.log</code></p>
+</li>
+<li><p><code>chmod</code>：修改文件9个属性，<code>chmod [-R] [身份] [操作] [权限] 文件</code>，<code>-R</code>表示进行递归(<code>recursive</code>)的持续变更，亦即连同次目录下的所有文件都会变更。该设置可通过<strong>数字</strong>或<strong>符号</strong>来进行设置。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>选项</th>
+<th>操作</th>
+<th>权限</th>
+<th>文件或目录</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>chmod</code></td>
+<td><code>u</code>(所有者)</td>
+<td><code>+</code>(加入)</td>
+<td><code>r</code>(可读)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>g</code>(所属组)</td>
+<td><code>-</code>(去掉)</td>
+<td><code>w</code>(可写)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>o</code>(其他)</td>
+<td><code>=</code>(设置)</td>
+<td><code>x</code>(可执行)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>a</code>(去除权限但不改变其他已存在的权限使用)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>例如：给其他用户添加可写的权限，<code>sudo chmod o+x test.py</code></li>
+<li>本质：使用一组(3位)八进制的数据来表示权限，如，0755，展开如下，可以简化<code>sudo chmod 0755 test.py</code></li>
+</ul>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">转化为二进制：0755 =&gt;   111    101  101</span><br><span class="line">对应三组身份          所有者  所属组 其他</span><br><span class="line">每一组的权限：都包括可读、可写、可执行</span><br><span class="line">实例解析：所有者可读可写可执行，所属组可读可执行，其他可读可执行</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>umask</code>：用来限定新建文件的默认权限，权限与该值相反，<code>umask [value]</code>，查看或设置掩码</p>
+</li>
+</ul>
+<h2 id="5-文件搜索"><a href="#5-文件搜索" class="headerlink" title="5. 文件搜索"></a>5. 文件搜索</h2><ul>
+<li><code>find</code>：用于任意文件的搜索，格式<code>find [目录] 条件选项</code></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-name：指定名字    sudo find / -name passwd</span><br><span class="line">-maxdepth：指定最大层级深度		sudo find / -maxdepth 2 -name passwd</span><br><span class="line">-type：指定类型（d/l/s/p/c/b）</span><br><span class="line">-size：指定大小，单位：k/m/g，+表示大于，-表示小于，如：find -size +5k，查找大于5k的文件</span><br><span class="line">-mtime/-atime/-ctime：指定修改/访问/创建时间，单位是天，+表示几天前，-表示几天内</span><br><span class="line">-mmin/-amin/-cmin：功能同上，单位是分</span><br><span class="line">-user：指定用户</span><br><span class="line">-group：指定用户组</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>whereis</code>：显示命令的详细信息，如<code>whereis ls</code>，结果如下：</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls: /bin/ls /usr/share/man/man1/ls.1.gz</span><br><span class="line">命令名  命令位置  帮助文档</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>grep</code>：正则表达式搜索(文件内容)，<code>-i</code>表示忽略大小写，<code>-n</code>显示行号</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查找/etc/passwd文件中包含/bin/bash的行，并显示行号</span></span><br><span class="line">ubuntu@VM-0-6-ubuntu:~$ grep -n /bin/bash /etc/passwd</span><br><span class="line">1:root:x:0:0:root:/root:/bin/bash</span><br><span class="line">30:ubuntu:x:500:500:ubuntu,,,:/home/ubuntu:/bin/bash</span><br><span class="line"><span class="meta">#</span><span class="bash"> 在2.py中查找包含abc的行，不考虑大小写</span></span><br><span class="line">ubuntu@VM-0-6-ubuntu:~$ grep -i abc 2.py</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看/bin下以<span class="string">'m'</span>开头的命令</span></span><br><span class="line">ubuntu@VM-0-6-ubuntu:~$ ls /bin | grep '^m'</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>ln</code>：链接文件，创建一个文件或目录的链接，格式为<code>ln [-s] 原文件 新文件</code>，<code>ls -l</code>结果中的第一列第一个为<code>l</code>就表示链接文件</p>
+</li>
+<li><p>软链接和硬链接的区别：</p>
+<ul>
+<li>硬链接：使用<code>ln</code>时不加<code>-s</code>选项创建的链接，相当于一个文件多起了一个名字而已，极少用到<ul>
+<li>不能给目录创建</li>
+<li>不能跨文件系统</li>
+</ul>
+</li>
+<li>软链接：使用<code>ln</code>是添加<code>-s</code>选项创建的链接，相当于<code>windows</code>中的快捷方式，比较常用<ul>
+<li>可以给目录创建</li>
+<li>可以跨文件系统</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-系统服务"><a href="#6-系统服务" class="headerlink" title="6. 系统服务"></a>6. 系统服务</h2><h3 id="6-1-压缩与解压"><a href="#6-1-压缩与解压" class="headerlink" title="6.1. 压缩与解压"></a>6.1. 压缩与解压</h3><ul>
+<li><p><code>zip/unzip</code>：文件后缀为<code>.zip</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 压缩</span></span><br><span class="line">zip 123.zip *.txt</span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压</span></span><br><span class="line">unzip 123.zip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>gzip/gunzip</code>：文件后缀为<code>.gz</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 压缩，会生成1.txt.gz压缩文件</span></span><br><span class="line">gzip 1.txt</span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压</span></span><br><span class="line">gunzip 1.txt.gz</span><br><span class="line">gzip -d 1.txt.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>bzip2/bunzip2</code>：文件后缀为<code>.bz2</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 压缩，会生成1.txt.bz2压缩文件</span></span><br><span class="line">bzip2 1.txt			</span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压，添加<span class="string">'-k'</span>选项可以保留压缩包</span></span><br><span class="line">bunzip2 1.txt.bz2	</span><br><span class="line">bzip2 -d 1.txt.bz2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>tar</code>：打包解包工具，后缀为<code>.tar</code></p>
+<ul>
+<li><p><code>-c</code>：创建新文件</p>
+<ul>
+<li><code>-x</code>：解包</li>
+</ul>
+<ul>
+<li><p><code>-t</code>：查看(不解包)</p>
+<blockquote>
+<p>说明：以上三个选项不能同时使用</p>
+</blockquote>
+</li>
+<li><p><code>-f</code>：指定操作文件</p>
+</li>
+<li><p><code>-v</code>：显示相信信息</p>
+</li>
+<li><p><code>-z</code>：调用<code>gzip/gunzip</code>进行压缩解压</p>
+</li>
+<li><p><code>-j</code>：调用<code>bzip2/bunzip2</code>进行压缩解压</p>
+</li>
+<li><p><code>-C</code>：指定解压位置</p>
+</li>
+<li><p><code>--exclude</code>：排除指定文件</p>
+<ul>
+<li>示例：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf 12.tar 1.txt 2.txt			# 将1.txt，2.txt打包成12.tar</span><br><span class="line">tar -tf 12.tar						# 查看包内容</span><br><span class="line">tar -xvf 12.tar						# 解包12.tar文件</span><br><span class="line">tar -zcvf 12.tar.gz	12.tar			# 调用gzip进行压缩</span><br><span class="line">tar -jcvf 12.tar.bz2 12.tar			# 调用bzip2进行压缩</span><br><span class="line">tar -zcvf 12.tar.gz *.txt --exclude 3.txt	# 打包压缩除3.txt以外的所有txt文件</span><br><span class="line">tar -zxvf 12.tar.gz				# 解压</span><br><span class="line">tar -jxvf 12.tar.bz2			# 解压</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>提示：<code>.tar.gz</code>可简写为<code>.tgz</code>；<code>.tar.bz2</code>可简写为<code>.tbz2</code>或<code>.tbz</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-2-网络服务"><a href="#6-2-网络服务" class="headerlink" title="6.2. 网络服务"></a>6.2. 网络服务</h3><ul>
+<li><p><code>ping</code>：检查网络连通性，<code>-c</code>选项指定发送测试包的次数</p>
+</li>
+<li><p><code>ifconfig</code>：查看或设置网卡信息</p>
+</li>
+<li><p><code>ifup</code>：启动网卡</p>
+</li>
+<li><p><code>ifdown</code>：关闭网卡</p>
+</li>
+<li><p><code>service networking start|stop|restart</code>：控制</p>
+</li>
+</ul>
+<h3 id="6-3-服务监测"><a href="#6-3-服务监测" class="headerlink" title="6.3. 服务监测"></a>6.3. 服务监测</h3><ul>
+<li><p><code>netstat</code></p>
+<ul>
+<li>作用：查看网络端口占用情况</li>
+<li>使用：<code>netstat -tunpl</code></li>
+</ul>
+</li>
+<li><p><code>free</code></p>
+<ul>
+<li>作用：查看内存使用情况</li>
+<li>使用：<code>free -h</code>，<code>-h</code>人性化查看大小</li>
+</ul>
+</li>
+<li><p><code>w</code></p>
+<ul>
+<li>作用：查看当前正在做的事情</li>
+</ul>
+</li>
+<li><p><code>top</code></p>
+<ul>
+<li><p>说明：<code>w</code>的详细信息，3<code>S</code>会刷新一次，<code>q</code>退出查看</p>
+</li>
+<li><p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一行：与&#96;w&#96;相同</span><br><span class="line">第二行：任务信息</span><br><span class="line">第三行：&#96;CPU&#96;使用</span><br><span class="line">第四行：内存使用</span><br><span class="line">第五行：交换分区</span><br><span class="line">其他行：系统进程信息</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<p><strong>pip命令</strong>：安装软件包，自动会安装相关的依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">安装软件包：pip install 包名</span><br><span class="line">卸载软件包：pip uninstall 包名</span><br><span class="line">列表显示包：pip list</span><br><span class="line">查看指定包：pip show 包</span><br><span class="line">检测哪些包需要更新：pip list --outdated</span><br><span class="line">升级包：pip install --upgrade 包名</span><br><span class="line">输出已安装的包列表：pip freeze &gt; requirements.txt</span><br><span class="line">pip帮助：pip help</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="6-4-进程管理"><a href="#6-4-进程管理" class="headerlink" title="6.4. 进程管理"></a>6.4. 进程管理</h3><ul>
+<li><code>ps</code><ul>
+<li>作用：查看进行信息</li>
+<li>使用：<ul>
+<li><code>ps -ef</code></li>
+<li><code>ps aux</code></li>
+<li>说明：经常在查询进程号的时候结合<code>grep</code>进行过滤</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>kill</code><ul>
+<li>作用：杀死进程</li>
+<li>示例：<code>kill -9 PID</code></li>
+<li>说明：强制杀死指定进程</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-5-防火墙-ufw"><a href="#6-5-防火墙-ufw" class="headerlink" title="6.5. 防火墙(ufw)"></a>6.5. 防火墙(<code>ufw</code>)</h3><ul>
+<li><p>说明：简单版本的防火墙，底层依赖于<code>iptables</code></p>
+</li>
+<li><p>安装：<code>sudo apt-get install ufw</code></p>
+</li>
+<li><p>查看状态：<code>sudo ufw status</code></p>
+</li>
+<li><p>开启/关闭：<code>sudo ufw enable|disable</code></p>
+</li>
+<li><p>默认允许/禁止：<code>sudo ufw default allow|deny</code></p>
+</li>
+<li><p>允许/禁止：<code>sudo ufw allow|deny port/服务</code>，如：<code>sudo ufw allow 5900</code></p>
+</li>
+<li><p>删除规则：<code>sudo ufw delete allow 5900</code></p>
+</li>
+</ul>
+<h3 id="6-6-远程连接-ssh-22"><a href="#6-6-远程连接-ssh-22" class="headerlink" title="6.6. 远程连接(ssh:22)"></a>6.6. 远程连接(<code>ssh:22</code>)</h3><ul>
+<li><p>说明：默认<code>ubuntu</code>是没有自带的<code>ssh</code>服务，需要手动安装</p>
+</li>
+<li><p>安装：<code>sudo apt-get install openssh-server</code></p>
+</li>
+<li><p>控制：<code>sudo service ssh start|stop|restart</code></p>
+</li>
+<li><p>连接：<code>putty</code> | <code>xshell</code> 工具，类<code>unix</code>也可以是终端：<code>ssh user@host</code></p>
+</li>
+<li><p>设置<code>root</code>用户远程连接：修改<code>/etc/ssh/sshd_config</code>文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin yes</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改完配置文件，需要重启服务：<code>sudo service ssh restart</code></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="6-7-软件安装"><a href="#6-7-软件安装" class="headerlink" title="6.7. 软件安装"></a>6.7. 软件安装</h3><ul>
+<li><p><code>apt-get</code>安装：无需考虑复杂的软件依赖关系</p>
+<ul>
+<li><code>install</code>：安装</li>
+<li><code>remove</code>：卸载</li>
+<li><code>update</code>：取回更新软件包的类表信息</li>
+<li><code>upgrade</code>：进行一次更新</li>
+</ul>
+</li>
+<li><p><code>dpkg</code>安装：文件后缀为<code>.deb</code>，可能需要进行依赖包的安装</p>
+<ul>
+<li><p><code>-i</code>：安装</p>
+</li>
+<li><p><code>-r</code>：卸载</p>
+</li>
+<li><p><code>-l</code>：查看软件包信息</p>
+</li>
+<li><p><code>-L</code>：查看软件安装目录</p>
+</li>
+<li><p>示例：安装<code>wps</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1.安装wps</span></span><br><span class="line">sudo dpkg -i wps-office_10.1.0.5672~a21_amd64.deb</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.安装字体库</span></span><br><span class="line">unzip wps_symbol_fonts.zip</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将字体库移动到/usr/share/fonts目录</span></span><br><span class="line">sudo mv *.ttf *.TTF /usr/share/fonts</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>源码安装：需要对源文件进行编译</p>
+<ul>
+<li>基本步骤：<ul>
+<li>配置：<code>configure</code></li>
+<li>编译：<code>make</code></li>
+<li>安装：<code>make install</code></li>
+</ul>
+</li>
+<li>命令执行：<ul>
+<li><code>cmd1; cmd2</code>            # 执行完<code>cmd1</code>后，执行<code>cmd2</code>，无论前面的命令成功与否<br><code>cmd1 || cmd2</code>           # 先执行<code>cmd1</code>，<code>cmd1</code>执行失败才会执行<code>cmd2</code></li>
+<li><code>cmd1 &amp;&amp; cmd2</code>            # 先执行<code>cmd1</code>，执行成功后才执行<code>cmd2</code></li>
+<li>示例：<code>make &amp;&amp; make install</code></li>
+</ul>
+</li>
+<li>示例演示：安装<code>nginx</code><ul>
+<li>解压软件压缩包：<code>tar -zxvf nginx-1.13.7.tar.gz</code></li>
+<li>进入解压的目录：<code>cd nginx-1.13.7</code></li>
+<li>编译前的配置：<code>./configure --prefix=/usr/local/nginx</code><ul>
+<li><code>--prefix</code>：配置安装目录</li>
+<li>配置出错多数是因为缺少先关的依赖库或者编译器</li>
+<li>如：<code>sudo apt-get install gcc libpcre3-dev zlib1g-dev</code></li>
+</ul>
+</li>
+<li>编译和安装：<code>make &amp;&amp; make install</code><ul>
+<li>如果没有权限常见目录，切换到<code>root</code>用户</li>
+</ul>
+</li>
+<li><code>nginx</code>介绍<ul>
+<li><code>sbin/nginx</code>：可执行程序，进入<code>sbin</code>目录，启动：<code>./nginx</code></li>
+<li><code>html</code>：默认站点目录</li>
+<li>测试：在浏览器中输入<code>localhost</code>，看到<code>welcome to nginx</code>即表示成功</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-8-管道及xargs"><a href="#6-8-管道及xargs" class="headerlink" title="6.8. 管道及xargs"></a>6.8. 管道及<code>xargs</code></h3><ul>
+<li><p><code>l</code>：将前面命令的输出作为后面命令的参数。如：<code>ls /bin | grep &#39;^m&#39;</code></p>
+</li>
+<li><p><code>xargs</code>：有些命令无法接收管道作为参数，可以通过<code>xargs</code>解决。如：<code>find -name 2.txt | xargs rm -rf</code></p>
+</li>
+</ul>
+<h3 id="6-9-重定向"><a href="#6-9-重定向" class="headerlink" title="6.9. 重定向"></a>6.9. 重定向</h3><ul>
+<li><p>标准输入(<code>stdin</code>)、标准输出(<code>stdout</code>)、标准错误(<code>stderr</code>)</p>
+</li>
+<li><p>在<code>Linux</code>中，创建任意进程，系统会自动创建上面三个数据流及三个文件，其实就是三个文件</p>
+</li>
+<li><p>三个文件的描述符分别是：0、1、2，都指向了终端</p>
+</li>
+<li><p>重定向就是改变原来默认的表现位置</p>
+</li>
+<li><p>演示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 输出重定向，&gt;会新建文件，若文件已存在会清空；&gt;&gt;会追加到文件末尾，若文件不存在则只创建</span></span><br><span class="line">ls &gt; 1.txt</span><br><span class="line">ls &gt;&gt; 1.txt</span><br><span class="line"><span class="meta">#</span><span class="bash"> 错误重定向，2&gt;表示将标准错误重定向</span></span><br><span class="line">ls /xxx 2&gt; 1.txt</span><br><span class="line"><span class="meta">#</span><span class="bash"> 同时重定向输出和错误，&amp;&gt;将标准输出和错误重定向</span></span><br><span class="line">ls /xxx /home &amp;&gt; 1.txxt</span><br></pre></td></tr></table></figure></li>
+</ul>
+
     
 
     
@@ -351,7 +1388,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://www.lajos.top/2020/04/29/No-4-Python语言基础-模块使用/" title="No.4 Python语言基础--模块使用" target="_blank">https://www.lajos.top/2020/04/29/No-4-Python语言基础-模块使用/</a>
+          <a href="https://www.lajos.top/2020/05/15/Linux相关知识小结/" title="Linux相关知识小结" target="_blank">https://www.lajos.top/2020/05/15/Linux相关知识小结/</a>
         </li>
         
         <li>
@@ -373,7 +1410,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -429,7 +1466,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://www.lajos.top/2020/04/29/No-4-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://www.lajos.top/2020/05/15/Linux%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%B0%8F%E7%BB%93/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -444,18 +1481,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/04/30/No-5-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          No.5 Python语言基础--正则
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/28/No-3-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">No.3 Python语言基础--函数及其常用函数的使用</div>
+    <a href="/2020/05/14/No-1-Kotlin%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">No.1 Kotlin简介</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -474,6 +1502,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Linux系统简介"><span class="toc-number">1.</span> <span class="toc-text">1. Linux系统简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Linux目录结构及vim"><span class="toc-number">2.</span> <span class="toc-text">2. Linux目录结构及vim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-文件操作"><span class="toc-number">3.</span> <span class="toc-text">3. 文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-常识命令"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. 常识命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-查看文件"><span class="toc-number">3.2.</span> <span class="toc-text">3.2. 查看文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-文件及目录"><span class="toc-number">3.3.</span> <span class="toc-text">3.3. 文件及目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-用户及用户组"><span class="toc-number">3.4.</span> <span class="toc-text">3.4. 用户及用户组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-文件权限"><span class="toc-number">4.</span> <span class="toc-text">4. 文件权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-文件搜索"><span class="toc-number">5.</span> <span class="toc-text">5. 文件搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-系统服务"><span class="toc-number">6.</span> <span class="toc-text">6. 系统服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-压缩与解压"><span class="toc-number">6.1.</span> <span class="toc-text">6.1. 压缩与解压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-网络服务"><span class="toc-number">6.2.</span> <span class="toc-text">6.2. 网络服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-服务监测"><span class="toc-number">6.3.</span> <span class="toc-text">6.3. 服务监测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-进程管理"><span class="toc-number">6.4.</span> <span class="toc-text">6.4. 进程管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-防火墙-ufw"><span class="toc-number">6.5.</span> <span class="toc-text">6.5. 防火墙(ufw)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-远程连接-ssh-22"><span class="toc-number">6.6.</span> <span class="toc-text">6.6. 远程连接(ssh:22)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-7-软件安装"><span class="toc-number">6.7.</span> <span class="toc-text">6.7. 软件安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-8-管道及xargs"><span class="toc-number">6.8.</span> <span class="toc-text">6.8. 管道及xargs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-9-重定向"><span class="toc-number">6.9.</span> <span class="toc-text">6.9. 重定向</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -496,9 +1537,9 @@
     <script src="/lib/gitment.js"></script>
   
   <script>
-    <!-- id: "No.4 Python语言基础--模块使用" -->
+    <!-- id: "Linux相关知识小结" -->
     var gitment = new Gitment({
-      id: "20200429220441",
+      id: "20200515090503",
       owner: 'lajos182',
       repo: 'lajos182.github.io',
       oauth: {
