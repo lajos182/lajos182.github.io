@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Lajos的博客">
 <meta property="og:description" content="Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库。它是一种非关系型数据库，经常用过缓存，拥有丰富的数据类型：字符串、哈希、列表、集合和有序集合。 2.1. Redis的安装与连接测试 直接安装：sudo apt-get install redis-server，该安装只是Linux的稳定版本，如果想安装Redis官方稳定版本需要采用源">
 <meta property="article:published_time" content="2020-05-13T10:29:47.000Z">
-<meta property="article:modified_time" content="2020-08-13T05:58:06.951Z">
+<meta property="article:modified_time" content="2020-08-13T08:18:16.399Z">
 <meta property="article:author" content="Lajos">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Redis">
@@ -253,7 +253,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.6k字</span>
+      <span class="post-count">1.8k字</span>
     </span>
   </span>
 
@@ -262,7 +262,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">6分</span>
+      <span class="post-count">7分</span>
     </span>
   </span>
 </div>
@@ -286,7 +286,7 @@
 <li>解压下载的安装包，将解压后的文件放至指定的安装目录，<code>sudo mv redis-5.0.7 /usr/local/redis  cd /usr/local/redis</code></li>
 <li>编译安装：<code>sudo make</code>——&gt;<code>sudo make test</code>——&gt;<code>sudo make install</code></li>
 <li>测试：<code>/usr/local/redis/src/redis-server</code>——&gt;<code>/usr/local/redis/src/redis-cli</code>——&gt;<code>set name lajos</code>——&gt;<code>get name</code></li>
-<li>创建相关目录：<code>sudo makdir /etc/redis</code>(配置文件路径)——&gt;<code>sudo mkdir /var/lib/redis</code>(redis数据库存储路径)</li>
+<li>创建相关目录：<code>sudo makdir /etc/redis</code>(配置文件路径)——&gt;<code>sudo mkdir /var/lib/redis</code>(<code>redis</code>数据库存储路径)</li>
 <li>安装服务：<code>cd /usr/local/redis/utils</code>——&gt;<code>sudo ./install_server.sh</code></li>
 <li>重启服务：<code>ps ajx | grep redis</code>——&gt;<code>sudo kill -9 对应的进程号</code></li>
 <li>测试：<code>redis-server</code>——&gt;<code>redis-cli</code></li>
@@ -378,6 +378,17 @@
 <li>订阅者</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pythonRedis <span class="keyword">import</span> RedisHelper</span><br><span class="line"></span><br><span class="line">sub = RedisHelper()</span><br><span class="line">redis_sub = sub.subscribe()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    msg = redis_sub.parse_response()</span><br><span class="line">    print(msg)</span><br><span class="line"><span class="comment"># 运行结果</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="string">'message'</span>, <span class="string">'lajos'</span>, <span class="string">'hello'</span>]</span><br><span class="line">[<span class="string">'message'</span>, <span class="string">'lajos'</span>, <span class="string">'world'</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-常见问题"><a href="#2-4-常见问题" class="headerlink" title="2.4 常见问题"></a>2.4 常见问题</h2><ul>
+<li><p>在使用源码安装<code>redis</code>时，当在<code>/usr/local/redis/utils</code>下执行<code>sudo ./install_server.sh</code>时出现：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Welcome to the redis service installer</span><br><span class="line">This script will help you easily set up a running redis server</span><br><span class="line"></span><br><span class="line">This systems seems to use systemd.</span><br><span class="line">Please take a look at the provided example service unit files in this directory, and adapt and install them. Sorry!</span><br></pre></td></tr></table></figure>
+
+<p>此时，需要去修改<code>/usr/local/redis/utils/install_server.sh</code>这个文件，将下面的内容注释掉，然后重新执行<code>sudo ./install_server.sh</code>就可以正常安装。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">bail <span class="keyword">if</span> this system is managed by systemd</span></span><br><span class="line"><span class="meta">#</span><span class="bash">_pid_1_exe=<span class="string">"<span class="variable">$(readlink -f /proc/1/exe)</span>"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$&#123;_pid_1_exe##*/&#125;</span>"</span> = systemd ]</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="keyword">then</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">       <span class="built_in">echo</span> <span class="string">"This systems seems to use systemd."</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">       <span class="built_in">echo</span> <span class="string">"Please take a look at the provided example service unit files in this directory, and adapt and install them. Sorry!"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">       <span class="built_in">exit</span> 1</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="keyword">fi</span></span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
     
 
     
@@ -558,7 +569,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Redis的安装与连接测试"><span class="toc-number">1.</span> <span class="toc-text">2.1. Redis的安装与连接测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Redis命令"><span class="toc-number">2.</span> <span class="toc-text">2.2. Redis命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Python操作Redis"><span class="toc-number">3.</span> <span class="toc-text">2.3. Python操作Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-简单连接"><span class="toc-number">3.1.</span> <span class="toc-text">2.3.1. 简单连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-连接池"><span class="toc-number">3.2.</span> <span class="toc-text">2.3.2. 连接池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-详细操作命令"><span class="toc-number">3.3.</span> <span class="toc-text">2.3.3. 详细操作命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-4-管道-pipeline"><span class="toc-number">3.4.</span> <span class="toc-text">2.3.4. 管道(pipeline)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-5-发布和订阅"><span class="toc-number">3.5.</span> <span class="toc-text">2.3.5. 发布和订阅</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Redis的安装与连接测试"><span class="toc-number">1.</span> <span class="toc-text">2.1. Redis的安装与连接测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Redis命令"><span class="toc-number">2.</span> <span class="toc-text">2.2. Redis命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Python操作Redis"><span class="toc-number">3.</span> <span class="toc-text">2.3. Python操作Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-简单连接"><span class="toc-number">3.1.</span> <span class="toc-text">2.3.1. 简单连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-连接池"><span class="toc-number">3.2.</span> <span class="toc-text">2.3.2. 连接池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-详细操作命令"><span class="toc-number">3.3.</span> <span class="toc-text">2.3.3. 详细操作命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-4-管道-pipeline"><span class="toc-number">3.4.</span> <span class="toc-text">2.3.4. 管道(pipeline)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-5-发布和订阅"><span class="toc-number">3.5.</span> <span class="toc-text">2.3.5. 发布和订阅</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-常见问题"><span class="toc-number"></span> <span class="toc-text">2.4 常见问题</span></a>
                     </div>
                 </span>
             </div>
