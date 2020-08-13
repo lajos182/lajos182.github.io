@@ -873,3 +873,68 @@ session.close()
 + `SQLAlchemy`是一个关系型数据库框架，它提供了高层的`ORM`和底层的原生数据库的操作，让开发者不用直接和`SQL`语句打交道，而是通过`Python`对象来操作数据库，在舍弃一些性能开销的同时，换来的是开发效率的较大提升。一句话：就是对数据库的抽象！
 
 + `Flask-SQLAlchemy`是一个简化了`SQLAlchemy`操作的`flask`扩展，是`SQLAlchemy`的具体实现，封装了对数据库的基本操作。举例：如果说动物园是`SQLAlchemy`，那`Flask-SQLAlchemy`只是其中的一只。
+
+## 1.14 常见问题
+
++ `Linux 20.04`采用`sudo apt-get install mysql-server`时，安装的版本其实是`mysql 8.0`，安装成功后无法使用`root`账户进入数据库？
+
+  （1）查看默认配置文件：
+
+  ```shell
+  sudo cat /etc/mysql/debian.cnf
+  # Automatically generated for Debian scripts. DO NOT TOUCH!
+  [client]
+  host     = localhost
+  user     = debian-sys-maint
+  password = qe7CxSdH2HczVtwL
+  socket   = /var/run/mysqld/mysqld.sock
+  [mysql_upgrade]
+  host     = localhost
+  user     = debian-sys-maint
+  password = qe7CxSdH2HczVtwL
+  socket   = /var/run/mysqld/mysqld.sock
+  ```
+
+  （2）以默认配置登录`mysql`,`mysql -udebian-sys-maint -p`，然后输入密码`qe7CxSdH2HczVtwL`
+
+  （3）更改`root`密码：
+
+  ```shell
+  use mysql;
+  # 下一行，密码改为了yourpassword，可以设置成其他的
+  update mysql.user set authentication_string=password('yourpassword') where user='root' and Host ='localhost';
+  update user set plugin="mysql_native_password"; 
+  flush privileges;
+  quit;
+  ```
+
+  （4）重启`mysql`：`sudo service mysql restart`
+
++ `Mysql`数据库远程主机无法连接是什么问题？
+
+  （1）需要开启用户的访问权限
+
+  ```mysql
+  mysql –uroot –p
+  use mysql;
+  update user set host = '%' where user = 'test';
+  grant all privileges on test.* to 'test'@'%' identified by '123456';
+  flush privileges;
+  quit;
+  ```
+
+  （2）需要修改`mysqld.cnf`中的`ip`绑定
+
+  ```shell
+  sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+  bind-address = 0.0.0.0
+  # 保存退出
+  # 重启服务
+  sudo service mysql restart
+  ```
+
+  （3）进入服务器后台，添加相应的安全策略组规则（入方向），例如阿里云服务器后台配置：
+
+| 授权策略 | 优先级 | 协议类型  | 端口范围        | 授权对象      | 描述            |
+| -------- | ------ | --------- | --------------- | ------------- | --------------- |
+| 允许     | 1      | 自定义TCP | 目的：3306/3306 | 源：0.0.0.0/0 | MySQL数据库连接 |

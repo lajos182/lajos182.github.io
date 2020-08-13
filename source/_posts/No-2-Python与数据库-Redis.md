@@ -19,7 +19,7 @@ toc: true
   - 解压下载的安装包，将解压后的文件放至指定的安装目录，`sudo mv redis-5.0.7 /usr/local/redis  cd /usr/local/redis`
   - 编译安装：`sudo make`——>`sudo make test`——>`sudo make install`
   - 测试：`/usr/local/redis/src/redis-server`——>`/usr/local/redis/src/redis-cli`——>`set name lajos`——>`get name`
-  - 创建相关目录：`sudo makdir /etc/redis`(配置文件路径)——>`sudo mkdir /var/lib/redis`(redis数据库存储路径)
+  - 创建相关目录：`sudo makdir /etc/redis`(配置文件路径)——>`sudo mkdir /var/lib/redis`(`redis`数据库存储路径)
   - 安装服务：`cd /usr/local/redis/utils`——>`sudo ./install_server.sh`
   - 重启服务：`ps ajx | grep redis`——>`sudo kill -9 对应的进程号`
   - 测试：`redis-server`——>`redis-cli`
@@ -249,3 +249,30 @@ while True:
 ['message', 'lajos', 'world']
 
 ```
+
+## 2.4 常见问题
+
++ 在使用源码安装`redis`时，当在`/usr/local/redis/utils`下执行`sudo ./install_server.sh`时出现：
+
+  ```shell
+  Welcome to the redis service installer
+  This script will help you easily set up a running redis server
+  
+  This systems seems to use systemd.
+  Please take a look at the provided example service unit files in this directory, and adapt and install them. Sorry!
+  ```
+
+  此时，需要去修改`/usr/local/redis/utils/install_server.sh`这个文件，将下面的内容注释掉，然后重新执行`sudo ./install_server.sh`就可以正常安装。
+
+  ```shell
+  #bail if this system is managed by systemd
+  #_pid_1_exe="$(readlink -f /proc/1/exe)"
+  #if [ "${_pid_1_exe##*/}" = systemd ]
+  #then
+  #       echo "This systems seems to use systemd."
+  #       echo "Please take a look at the provided example service unit files in this directory, and adapt and install them. Sorry!"
+  #       exit 1
+  #fi
+  ```
+
+  
