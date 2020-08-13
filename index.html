@@ -239,6 +239,111 @@
             
 
   
+    <article id="post-Linux服务器的相关部署与配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/08/13/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%85%8D%E7%BD%AE/">Linux服务器的相关部署与配置</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/08/13/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+        <time datetime="2020-08-13T06:05:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-13</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="1-用户的创建与Python环境安装"><a href="#1-用户的创建与Python环境安装" class="headerlink" title="1. 用户的创建与Python环境安装"></a>1. 用户的创建与<code>Python</code>环境安装</h2><h3 id="1-1-创建用户并授予权限"><a href="#1-1-创建用户并授予权限" class="headerlink" title="1.1. 创建用户并授予权限"></a>1.1. 创建用户并授予权限</h3><ul>
+<li><p>新的虚拟机或服务器，首先添加用户：<code>useradd -m lajos</code>(位于/home/下)</p>
+</li>
+<li><p>为用户添加密码：<code>passwd lajos</code></p>
+</li>
+<li><p>新建的用户不能使用<code>sudo</code>，为创建的普通用户添加sudo权限：</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">usermod -a -G adm lajos</span><br><span class="line">usermod -a -G sudo lajos</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+    
+    <a class="article-more-a" href="/2020/08/13/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%85%8D%E7%BD%AE/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/08/13/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%85%8D%E7%BD%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-No-2-Kotlin基础语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1100,103 +1205,9 @@
 
 
   
-    <article id="post-No-11-Python语言基础-异步IO" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/">No.11 Python语言基础--异步IO</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/" class="archive-article-date">
-        <time datetime="2020-05-05T14:55:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="11-1-计算密集型与IO密集型"><a href="#11-1-计算密集型与IO密集型" class="headerlink" title="11.1. 计算密集型与IO密集型"></a>11.1. 计算密集型与<code>IO</code>密集型</h3><ul>
-<li>计算密集型：要进行大量的计算，消耗CPU资源，比如计算圆周率、对视频进行高清解码等等，全靠CPU的运算能力。这种计算密集型任务虽然也可以用多任务完成，但是任务越多，花在任务切换的时间就越多，CPU执行任务的效率就越低，所以，要最高效地利用CPU，计算密集型任务同时进行的数量应当等于CPU的核心数。计算密集型任务由于主要消耗CPU资源，因此，代码运行效率至关重要。Python这样的脚本语言运行效率很低，完全不适合计算密集型任务。对于计算密集型任务，最好用C语言编写。</li>
-</ul>
-    
-    <a class="article-more-a" href="/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">异步</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/05/No-11-Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80-%E5%BC%82%E6%AD%A5IO/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &gt;&gt;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页 &gt;&gt;</a>
     </nav>
   
 
@@ -1400,6 +1411,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
             
             <div class="clearfix"></div>
